@@ -1,0 +1,10 @@
+[
+	{
+		"file": "game:config/remaps.json",
+		"op": "add",
+		"path": "/automacao:sentinela-v1",
+		"value": [
+			"/bir remapq automacao:sentinela-south sentinela:sentinela force"
+		]
+	}
+]

@@ -1,0 +1,84 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "luz": "game:block/machine/statictranslocator/rustyglow"
+ },
+ "elements": [
+  {
+   "name": "brilho3",
+   "from": [
+    9.8,
+    11.75,
+    10.3
+   ],
+   "to": [
+    12.2,
+    11.8,
+    12.7
+   ],
+   "faces": {
+    "north": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      2.3999999999999986,
+      0.5
+     ],
+     "glow": 220
+    },
+    "south": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      2.3999999999999986,
+      0.5
+     ],
+     "glow": 220
+    },
+    "east": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      2.3999999999999986,
+      0.5
+     ],
+     "glow": 220
+    },
+    "west": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      2.3999999999999986,
+      0.5
+     ],
+     "glow": 220
+    },
+    "up": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      2.3999999999999986,
+      2.3999999999999986
+     ],
+     "glow": 220
+    },
+    "down": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      2.3999999999999986,
+      2.3999999999999986
+     ],
+     "glow": 220
+    }
+   }
+  }
+ ]
+}

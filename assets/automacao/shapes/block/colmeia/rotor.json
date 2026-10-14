@@ -1,0 +1,356 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "honeycomb": "game:block/reed/beehive/honeycomb",
+  "darkwood": "game:block/wood/debarked/aged"
+ },
+ "elements": [
+  {
+   "name": "rotor_eixo",
+   "from": [
+    11.1,
+    2.25,
+    7.6
+   ],
+   "to": [
+    11.9,
+    10.4,
+    8.4
+   ],
+   "faces": {
+    "north": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      8.15
+     ]
+    },
+    "south": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      8.15
+     ]
+    },
+    "east": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      8.15
+     ]
+    },
+    "west": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      8.15
+     ]
+    },
+    "up": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.8000000000000007
+     ]
+    },
+    "down": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.8000000000000007
+     ]
+    }
+   }
+  },
+  {
+   "name": "quadro1",
+   "from": [
+    9,
+    3,
+    7.75
+   ],
+   "to": [
+    14,
+    8,
+    8.25
+   ],
+   "faces": {
+    "north": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      5,
+      5
+     ]
+    },
+    "south": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      5,
+      5
+     ]
+    },
+    "east": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      0.5,
+      5
+     ]
+    },
+    "west": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      0.5,
+      5
+     ]
+    },
+    "up": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "quadro2",
+   "from": [
+    11.25,
+    3.05,
+    5.5
+   ],
+   "to": [
+    11.75,
+    7.95,
+    10.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.9
+     ]
+    },
+    "south": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.9
+     ]
+    },
+    "east": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      5.0,
+      4.9
+     ]
+    },
+    "west": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      5.0,
+      4.9
+     ]
+    },
+    "up": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      0.5,
+      5.0
+     ]
+    },
+    "down": {
+     "texture": "#honeycomb",
+     "uv": [
+      0,
+      0,
+      0.5,
+      5.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "quadro_aro1",
+   "from": [
+    9,
+    8,
+    7.7
+   ],
+   "to": [
+    14,
+    8.4,
+    8.3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.6000000000000005,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.6000000000000005,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      5,
+      0.6000000000000005
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      5,
+      0.6000000000000005
+     ]
+    }
+   }
+  },
+  {
+   "name": "quadro_aro2",
+   "from": [
+    11.2,
+    8.4,
+    5.5
+   ],
+   "to": [
+    11.8,
+    8.8,
+    10.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.6000000000000014,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.6000000000000014,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.6000000000000014,
+      5.0
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.6000000000000014,
+      5.0
+     ]
+    }
+   }
+  }
+ ]
+}

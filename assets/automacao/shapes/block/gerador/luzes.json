@@ -1,0 +1,148 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "luz": "game:block/machine/statictranslocator/rustyglow",
+  "ember": "game:block/coal/ember"
+ },
+ "elements": [
+  {
+   "name": "fornalha_brasa",
+   "from": [
+    4,
+    3,
+    14.45
+   ],
+   "to": [
+    8,
+    5.5,
+    14.55
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      4,
+      2.5
+     ]
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      4,
+      2.5
+     ]
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      2.5
+     ]
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      2.5
+     ]
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      4,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      4,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lampada_bulbo",
+   "from": [
+    13.1,
+    3.3,
+    1.35
+   ],
+   "to": [
+    14.4,
+    4.6,
+    2.65
+   ],
+   "faces": {
+    "north": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.2999999999999998
+     ]
+    },
+    "south": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.2999999999999998
+     ]
+    },
+    "east": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.2999999999999998,
+      1.2999999999999998
+     ]
+    },
+    "west": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.2999999999999998,
+      1.2999999999999998
+     ]
+    },
+    "up": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.2999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.2999999999999998
+     ]
+    }
+   }
+  }
+ ]
+}

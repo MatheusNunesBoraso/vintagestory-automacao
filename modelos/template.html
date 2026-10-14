@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modelos 3D novos</title>
+<style>
+  :root {
+    --bg: #1b1d22; --panel: #24272e; --panel2: #2c3038; --text: #e8e6e1; --muted: #9aa0a8;
+    --accent: #e0a64a; --line: #3a3f49; --danger: #d9534f;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font: 13px/1.4 system-ui, Segoe UI, sans-serif; }
+  #app { display: grid; grid-template-columns: 1fr 360px; height: 100vh; }
+  #view { position: relative; overflow: hidden; }
+  #view canvas { display: block; }
+  #top { position: absolute; left: 12px; top: 12px; right: 12px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; pointer-events: none; }
+  #top > * { pointer-events: auto; }
+  #models { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  #models .grp { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .5px; margin: 0 2px 0 6px; }
+  #models .grp:first-child { margin-left: 0; }
+  #models button { font-size: 14px; padding: 8px 14px; }
+  #models .autorow { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; width: 100%; padding: 6px; border: 1px solid #3c6f7a; border-radius: 8px; background: #6fe8ff10; }
+  #models .autorow button { font-size: 13px; padding: 6px 10px; }
+  #hud { display: flex; flex-wrap: wrap; gap: 6px; max-width: calc(100% - 24px); }
+  #models button, #hud button, .btn { background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; cursor: pointer; font: inherit; }
+  #models button.on, #hud button.on { border-color: var(--accent); color: var(--accent); }
+  .btn:hover, #hud button:hover, #models button:hover { border-color: var(--accent); }
+  #hud .sep { width: 1px; background: var(--line); margin: 0 4px; }
+  #desc { max-width: 460px; color: var(--muted); font-size: 12.5px; background: #0006; padding: 8px 10px; border-radius: 6px; }
+  #help { position: absolute; left: 12px; bottom: 10px; color: var(--muted); font-size: 12px; }
+  aside { background: var(--panel); border-left: 1px solid var(--line); display: flex; flex-direction: column; min-height: 0; }
+  aside header { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  aside h1 { font-size: 15px; margin: 0 0 8px; }
+  #icons { display: none; position: absolute; inset: 120px 16px 40px 16px; overflow: auto; z-index: 5;
+           grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; padding: 16px;
+           background: rgba(16,17,22,0.96); border: 1px solid #333; border-radius: 10px; align-content: start; }
+  #icons figure { margin: 0; text-align: center; }
+  #icons img { width: 128px; height: 128px; image-rendering: auto; }
+  #icons figcaption { font-size: 12px; color: #ccc; margin-top: 4px; }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tabs button { flex: 1; }
+  .tabs button.on { border-color: var(--accent); color: var(--accent); }
+  #list { overflow: auto; padding: 8px 10px; flex: 1; min-height: 0; }
+  .el { border: 1px solid var(--line); border-radius: 8px; padding: 8px; margin-bottom: 8px; background: var(--panel2); }
+  .el.sel { border-color: var(--accent); }
+  .el .top { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; }
+  .el input[type=text] { flex: 1; }
+  .el .top select { width: 110px; flex: none; }
+  .row { display: grid; grid-template-columns: 34px repeat(3, 1fr); gap: 4px; align-items: center; margin-top: 4px; }
+  .row span { color: var(--muted); font-size: 11px; }
+  input, select { background: #1d2026; color: var(--text); border: 1px solid var(--line); border-radius: 4px; padding: 3px 5px; font: inherit; width: 100%; min-width: 0; }
+  .x { background: none; border: none; color: var(--danger); cursor: pointer; font-size: 16px; padding: 0 4px; }
+  footer { padding: 10px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  #toast { position: absolute; right: 12px; bottom: 12px; background: var(--accent); color: #1b1d22; padding: 8px 12px; border-radius: 6px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  @media (max-width: 800px) {
+    #app { grid-template-columns: 1fr; grid-template-rows: 60vh 40vh; }
+    aside { border-left: none; border-top: 1px solid var(--line); }
+    #desc { display: none; }
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="view">
+    <div id="top"><div id="models"></div>
+    <div id="hud"></div>
+    <div id="desc"></div></div>
+    <div id="icons"></div>
+    <div id="help">Arraste: girar · Botão direito: mover · Rodinha: zoom · 1 quadrado da grade = 1 bloco (16 unidades)</div>
+    <div id="toast"></div>
+  </div>
+  <aside>
+    <header>
+      <h1 id="title">Peças</h1>
+      <div class="tabs" id="parts"></div>
+    </header>
+    <div id="list"></div>
+    <footer>
+      <button class="btn" id="bAdd">+ Peça</button>
+      <button class="btn" id="bCopy">Copiar JSON da parte</button>
+      <button class="btn" id="bCopyAll" style="grid-column: span 2">Copiar o modelo todo pro Claude</button>
+    </footer>
+  </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+// ===== Dados gerados a partir do gen_modelos.py =====
+const MODELS = /*MODELS*/null;
+const TEXTURES = /*TEXTURES*/null;   // código -> imagem em base64 (texturas do próprio jogo)
+
+// Como cada modelo se mexe e o que dá pra ver em cada modo
+const CONFIG_PROF = {};
+const CONFIG = {
+  moedor: {
+    desc: 'Fica na beira de um rio: a roda d\'água gira a mó sozinha. Bota grão ou minério no funil (em cima) e a farinha / minério moído sai pela bica num bauzinho. Receita: pedras, tábuas e engrenagem enferrujada.',
+    pivots: { mo: { pos: [8, 0, 8] }, roda: { pos: [17.5, 8, 8] } },
+    modes: [['parado', 'Parado'], ['ligado', 'Funcionando']],
+    defaultMode: 'ligado',
+    cam: { pos: [3.5, 1.6, 2.3], target: [0.8, 0.45, 0.5] },
+  },
+  peneira: {
+    desc: 'Mesma família do Moedor: fica na beira do rio com a roda dentro da água. A roda move a biela que chacoalha a peneira, e os achados (mesma tabela da peneira de madeira do jogo) caem no bauzinho. Sem água a roda para. Receita: peneira de madeira, engrenagem enferrujada e tábuas.',
+    pivots: { pan: { pos: [8, 14, 8] }, roda: { pos: [17.5, 8, 8] } },
+    modes: [['parado', 'Parado'], ['ligado', 'Funcionando']],
+    defaultMode: 'ligado',
+    cam: { pos: [3.5, 1.6, 2.3], target: [0.8, 0.45, 0.5] },
+  },
+  espantalho: {
+    desc: 'Fica no meio da horta. Espanta coelhos, raposas e passarinhos num raio e não deixa pisarem na plantação. Quando vê um bicho a lanterna acende. Clique direito mostra o que está pronto pra colher. Receita: palha, gravetos e pano.',
+    pivots: { corpo: { pos: [8, 0, 8] }, lanterna: { pos: [16.6, 18, 8], parent: 'corpo' } },
+    modes: [['calmo', 'Calmo'], ['alerta', 'Viu um bicho!']],
+    defaultMode: 'calmo',
+    cam: { pos: [2.6, 1.8, 3.4], target: [0.5, 1.0, 0.5] },
+  },
+  defumador: {
+    desc: 'Pendure carne ou peixe nos ganchos e acenda a brasa embaixo: defuma sozinho e dura muito mais. Clique direito mostra o tempo que falta. Receita: gravetos, corda e pedras.',
+    pivots: {},
+    modes: [['vazio', 'Vazio'], ['crua', 'Carne crua'], ['defumada', 'Defumada']],
+    defaultMode: 'crua',
+    toggles: [['fogo', 'Brasa acesa', true]],
+    cam: { pos: [2.9, 1.9, 3.2], target: [0.5, 0.8, 0.5] },
+  },
+  carvoeira: {
+    desc: 'Forno de barro: coloque lenha pela porta, feche e acenda. Depois de algumas horas a lenha vira carvão — sem precisar montar o poço de carvão do jogo. Mostra o progresso e avisa se apagou. Receita: barro, pedras e gravetos.',
+    pivots: { porta: { pos: [4.5, 0, 15.5] } },
+    modes: [['vazia', 'Vazia'], ['queimando', 'Queimando'], ['pronta', 'Carvão pronto']],
+    defaultMode: 'queimando',
+    toggles: [['portaAberta', 'Porta aberta', false]],
+    smoke: { from: [0.5, 17.4 / 16, 0.5], spread: 0.15, top: 2.6 },
+    cam: { pos: [2.3, 1.6, 3.0], target: [0.5, 0.5, 0.5] },
+  },
+  bancada: {
+    desc: 'Conserta ferramentas e armaduras gastas com material barato do mesmo tipo (sílex para as de pedra, pepitas para as de metal, couro para as de couro). Recupera parte da durabilidade. Receita: tábuas, sílex e couro.',
+    pivots: { rebolo: { pos: [13.5, 17, 8] } },
+    modes: [['parada', 'Parada'], ['consertando', 'Consertando']],
+    defaultMode: 'consertando',
+    cam: { pos: [2.4, 1.8, 2.9], target: [0.5, 0.75, 0.5] },
+  },
+  pesca: {
+    desc: 'Roda de pesca, da família do Moedor e da Peneira: fica na beira do rio com a roda dentro da água. A correnteza gira a roda, os cestos de junco pegam os peixes e despejam na calha que leva até a caixa. Precisa de água "funda" em volta (rio/lago, não poça). Receita: tábuas, pedras, junco/corda e engrenagem enferrujada.',
+    pivots: { roda: { pos: [17.5, 8, 8] } },
+    modes: [['parado', 'Parado'], ['ligado', 'Pescando']],
+    defaultMode: 'ligado',
+    cam: { pos: [3.4, 1.7, 2.6], target: [0.8, 0.5, 0.5] },
+  },
+  cogumelos: {
+    desc: 'Tora velha e musgosa sobre pedras. Clique com um cogumelo pra semear: aquele tipo fica gravado na tora e ela solta cogumelos de tempos em tempos na bandejinha da frente. Precisa de sombra e não pode estar congelando. Receita: tora, musgo/palha e pedras.',
+    pivots: {},
+    modes: [['vazia', 'Sem semente'], ['nascendo', 'Nascendo'], ['pronta', 'Pronta pra colher']],
+    defaultMode: 'pronta',
+    toggles: [['bandejaCheia', 'Bandeja cheia', true]],
+    cam: { pos: [2.2, 1.3, 2.6], target: [0.5, 0.35, 0.5] },
+  },
+  bruxa: {
+    desc: 'Espantalho-bruxa: coloque perto da horta e ela colhe sozinha, numa área em volta, as frutinhas maduras dos arbustos e as plantas prontas da horta — replanta com a semente e guarda tudo no cesto (ou num baú do lado). Receita: palha, gravetos, pano preto e um cesto.',
+    pivots: { corpo: { pos: [8, 0, 8] }, vassoura: { pos: [16.1, 19.75, 8], parent: 'corpo' }, cesto: { pos: [-0.15, 18.75, 8], parent: 'corpo' } },
+    modes: [['vigiando', 'Vigiando'], ['colhendo', 'Colhendo']],
+    defaultMode: 'colhendo',
+    toggles: [['cestoCheio', 'Cesto cheio', true]],
+    cam: { pos: [2.6, 1.9, 3.6], target: [0.5, 1.1, 0.5] },
+  },
+  minion: {
+    desc: 'Minion Colhedor — um trabalhador pequenininho (tipo os Oompa-Loompas), com a cara do jogo: pele laranja, cabelo verde, sobrancelha branca, macacão de uniforme e chapéu de palha da colheita. Um por casa: coloque a cabaninha no chão e ele sai pela porta, colhe frutinhas e a horta na área, replanta, volta e guarda tudo no bauzinho do lado. Clique na casa: baú + configuração (girar, mostrar área, aumentar área…). Quando termina, faz uma dancinha.',
+    pivots: { minion: { pos: [8, 0, 8] } },
+    modes: [['casa', 'Em casa'], ['trabalhando', 'Andando'], ['colhendo', 'Colhendo'], ['dancando', 'Dancinha'], ['acenando', 'Acenando pra você']],
+    defaultMode: 'trabalhando',
+    cam: { pos: [1.6, 1.3, 3.4], target: [0.6, 0.35, 0.6] },
+  },
+  serraria: {
+    desc: 'Mesma família do Moedor e da Peneira: fica na beira do rio e a roda d\'água move a serra. Coloque toras no funil e saem tábuas no bauzinho, sem gastar serrote. Sem água a roda para. Receita: tábuas, pedras e engrenagem enferrujada.',
+    pivots: { serra: { pos: [8, 8, 8] }, roda: { pos: [17.5, 8, 8] }, tora: { pos: [8, 12, 0] } },
+    modes: [['parado', 'Parado'], ['ligado', 'Serrando']],
+    defaultMode: 'ligado',
+    cam: { pos: [3.3, 1.8, 2.8], target: [0.8, 0.5, 0.5] },
+  },
+  lancheira: {
+    desc: 'Lancheira: marmita de lata velha. Não precisa equipar: só de estar no inventário ela mostra 3 espaços a mais (aparecem do lado do inventário quando você abre). Coloque comida ali e o personagem come sozinho quando a fome chegar no nível que você escolher. Come primeiro o que está mais perto de estragar.',
+    pivots: { tampa: { pos: [8, 6.1, 4.8] } },
+    modes: [['fechada', 'Fechada'], ['aberta', 'Aberta (com comida)']],
+    defaultMode: 'aberta',
+    cam: { pos: [1.55, 1.25, 1.95], target: [0.5, 0.22, 0.55] },
+  },
+  sino: {
+    desc: 'Sino velho num poste: toca sozinho quando um drifter, lobo, urso ou outro bicho bravo chega perto (raio configurável), e avisa no chat de quem estiver por perto de onde veio. Puxar a corda toca na mão. Receita: cobre, corda e gravetos.',
+    pivots: { sino: { pos: [12.5, 24, 8] } },
+    modes: [['calmo', 'Calmo'], ['tocando', 'Tocando!']],
+    defaultMode: 'tocando',
+    cam: { pos: [2.6, 1.9, 3.4], target: [0.6, 1.1, 0.5] },
+  },
+  colmeia: {
+    desc: 'Colmeia de palha em cima de uma bandeja com gaveta: as abelhas trabalham e o mel e a cera caem na gaveta sozinhos. Clique direito pega o que juntou — sem quebrar a colmeia e sem levar picada. Receita: palha, tábuas e corda.',
+    pivots: {},
+    modes: [['vazia', 'Gaveta vazia'], ['cheia', 'Gaveta cheia']],
+    defaultMode: 'cheia',
+    cam: { pos: [2.4, 1.5, 2.9], target: [0.5, 0.55, 0.5] },
+  },
+  _peneira_antiga_removida: {
+    desc: 'A Peneira Automática como está instalada hoje (0.1.0): fica dentro do rio, roda pequena colada na gaiola. Está aqui só pra comparar com a nova.',
+    pivots: { pan: { pos: [8, 12, 8] }, wheel: { pos: [16.5, 6, 8] } },
+    modes: [['parado', 'Parado'], ['ligado', 'Funcionando']],
+    defaultMode: 'ligado',
+    cam: { pos: [3.0, 1.7, 2.6], target: [0.6, 0.4, 0.5] },
+  },
+  sentinela: {
+    desc: 'Torre de ferro enferrujado que vigia girando e atira virotes em drifters, lobos, ursos... Munição infinita, configura no clique direito. Receita: corda, tábuas, sílex, gravetos e engrenagem enferrujada.',
+    pivots: { head: { pos: [8, 0, 8] } },
+    modes: [['vigiando', 'Vigiando'], ['alerta', 'Viu um inimigo!']],
+    defaultMode: 'vigiando',
+    cam: { pos: [2.6, 1.9, 3.0], target: [0.5, 0.7, 0.5] },
+  },
+  armazem: {
+    desc: 'Armário de registro velho: gavetinhas etiquetadas, livro de contas aberto, tinteiro com pena e canos enferrujados atrás descendo pro chão (como se puxassem dos baús). Abre a janela com todos os baús num raio, o inventário, o crafting e o Livro de receitas. Receita: 8 tábuas em volta de 1 sílex.',
+    pivots: {},
+    modes: [['parado', 'Parado']],
+    defaultMode: 'parado',
+    cam: { pos: [2.3, 1.6, 2.8], target: [0.5, 0.55, 0.5] },
+  },
+};
+for (const [k, m] of Object.entries(MODELS)) {
+  if (!m.profissao || CONFIG[k]) continue;
+  const pivots = { minion: { pos: [8, 0, 8] } };
+  for (const [ek, e] of Object.entries(m.profissao.extras || {})) pivots[ek] = { pos: e.pivot };
+  CONFIG[k] = {
+    desc: m.profissao.desc, pivots,
+    modes: [['casa', 'Em casa'], ['trabalhando', 'Andando'], ['colhendo', 'Trabalhando'], ['dancando', 'Dancinha'], ['acenando', 'Acenando pra você']],
+    defaultMode: 'acenando',
+    cam: { pos: [1.7, 1.35, 3.3], target: [0.55, 0.45, 0.75] },
+  };
+}
+
+// Automação: tudo vem do model.auto (gerado pelos auto_*.py)
+const AUTO_MODES = [['parado', 'Sem energia'], ['ligado', 'Ligado']];
+for (const [k, m] of Object.entries(MODELS)) {
+  const a = m.auto;
+  if (!a) continue;
+  const pivots = {};
+  for (const [pk, pos] of Object.entries(a.pivots || {})) pivots[pk] = { pos };
+  const modes = a.modes || AUTO_MODES;
+  CONFIG[k] = { desc: a.desc, pivots, modes, defaultMode: a.default || modes[modes.length - 1][0],
+                cam: a.cam || { pos: [2.6, 1.8, 3.2], target: [0.5, 0.55, 0.5] },
+                toggles: [...(a.ranges ? [['alcance', 'Mostrar alcance', true]] : []),
+                          ...(Object.values(a.fx || {}).flat().some(f => f.type === 'beam') ? [['conexoes', 'Ver conexões', false]] : [])] };
+}
+const autoOn = (a, when) => when ? when.includes(mode) : mode !== (a.modes || AUTO_MODES)[0][0];
+
+
+// ===== Cena =====
+const view = document.getElementById('view');
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(window.devicePixelRatio);
+view.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x1b1d22);
+const camera = new THREE.PerspectiveCamera(40, 1, 0.05, 200);
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+
+scene.add(new THREE.HemisphereLight(0xffffff, 0x404050, 0.75));
+const sun = new THREE.DirectionalLight(0xffffff, 0.75);
+sun.position.set(3, 5, 2);
+scene.add(sun);
+
+const grid = new THREE.GridHelper(8, 8, 0x555b66, 0x33373f);
+grid.position.set(0.5, 0, 0.5);
+scene.add(grid);
+
+const blockBox = new THREE.LineSegments(
+  new THREE.EdgesGeometry(new THREE.BoxGeometry(1, 1, 1)),
+  new THREE.LineBasicMaterial({ color: 0xe0a64a })
+);
+blockBox.position.set(0.5, 0.5, 0.5);
+blockBox.visible = false;
+scene.add(blockBox);
+
+// ===== Texturas =====
+const manager = new THREE.LoadingManager();
+const loader = new THREE.TextureLoader(manager);
+const baseTex = {};
+for (const [code, data] of Object.entries(TEXTURES)) {
+  const t = loader.load(data);
+  t.magFilter = THREE.NearestFilter;
+  t.minFilter = THREE.NearestFilter;
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  baseTex[code] = t;
+}
+
+// Ordem das faces no three.js: +X(leste) -X(oeste) +Y(cima) -Y(baixo) +Z(sul) -Z(norte)
+const FACE_ORDER = ['east', 'west', 'up', 'down', 'south', 'north'];
+
+let swaps = {};          // troca de textura conforme o modo (ex.: carne crua -> defumada)
+let noGlow = new Set();   // texturas que perdem o brilho (brasa apagada)
+let forceGlow = new Set(); // texturas que brilham no modo atual (lente acesa)
+const firstTex = () => Object.keys(baseTex)[0];
+const invisible = new THREE.MeshBasicMaterial({ visible: false });
+
+function faceMaterial(face) {
+  // Face que não existe no modelo (ou desligada): não desenha
+  if (!face || face.enabled === false || !face.texture) return invisible;
+  let code = face.texture.replace('#', '');
+  code = swaps[code] || code;
+  const glow = (face.glow && !noGlow.has(code)) || forceGlow.has(code);
+  const texMap = MODELS[modelKey].textures || {};
+  const src = baseTex[texMap[code]] || baseTex[firstTex()];
+  const t = src.clone();
+  t.needsUpdate = true;
+  const uv = face?.uv || [0, 0, 16, 16];
+  t.repeat.set((uv[2] - uv[0]) / 16, (uv[3] - uv[1]) / 16);
+  t.offset.set(uv[0] / 16, 1 - uv[3] / 16);
+  if (glow) return new THREE.MeshBasicMaterial({ map: t, transparent: true, alphaTest: 0.1 });
+  return new THREE.MeshLambertMaterial({ map: t, transparent: true, alphaTest: 0.1 });
+}
+
+function buildMesh(el) {
+  const f = el.from, t = el.to;
+  const w = Math.max(0.01, t[0] - f[0]), h = Math.max(0.01, t[1] - f[1]), d = Math.max(0.01, t[2] - f[2]);
+  const geo = new THREE.BoxGeometry(w / 16, h / 16, d / 16);
+  const mats = FACE_ORDER.map(n => faceMaterial(el.faces?.[n]));
+  const mesh = new THREE.Mesh(geo, mats);
+  const center = new THREE.Vector3((f[0] + w / 2) / 16, (f[1] + h / 2) / 16, (f[2] + d / 2) / 16);
+
+  // Rotação em volta do ponto de origem (mesma ordem do jogo: X, Y, Z)
+  const o = el.rotationOrigin || [f[0] + w / 2, f[1] + h / 2, f[2] + d / 2];
+  const pivot = new THREE.Group();
+  pivot.position.set(o[0] / 16, o[1] / 16, o[2] / 16);
+  pivot.rotation.set(
+    THREE.MathUtils.degToRad(el.rotationX || 0),
+    THREE.MathUtils.degToRad(el.rotationY || 0),
+    THREE.MathUtils.degToRad(el.rotationZ || 0), 'XYZ');
+  mesh.position.copy(center).sub(pivot.position);
+  pivot.add(mesh);
+  pivot.userData.el = el;
+  pivot.userData.disposeMesh = mesh;
+  if (el.name) namedPivots[el.name] = { pivot, rot: pivot.rotation.clone(), pos: pivot.position.clone() };
+
+  // Peças filhas (modelos do jogo): posição relativa ao "de" da peça pai, giram junto com ela
+  if (el.children?.length) {
+    const kids = new THREE.Group();
+    kids.position.set((f[0] - o[0]) / 16, (f[1] - o[1]) / 16, (f[2] - o[2]) / 16);
+    for (const c of el.children) kids.add(buildMesh(c));
+    pivot.add(kids);
+  }
+  return pivot;
+}
+
+// ===== Modelo atual: cada parte num grupo que pode girar em volta do seu pivô =====
+let modelKey = Object.keys(MODELS).find(k => MODELS[k].auto) || 'moedor';
+let mode = '';
+const toggles = {};
+const root = new THREE.Group();
+scene.add(root);
+let parts = {};     // nome -> { pivot, inner }
+let namedPivots = {}; // nome da peça -> pivô (para tocar as animações do jogo)
+let hidden = new Set();
+
+function clearRoot() {
+  root.traverse(o => {
+    const m = o.userData?.disposeMesh;
+    if (m) { m.geometry.dispose(); m.material.forEach(x => { if (x === invisible) return; x.map?.dispose(); x.dispose(); }); }
+  });
+  while (root.children.length) root.remove(root.children[0]);
+}
+
+function rebuild() {
+  clearRoot();
+  parts = {};
+  namedPivots = {};
+  const model = MODELS[modelKey], cfg = CONFIG[modelKey];
+  // Primeiro os grupos (pais antes dos filhos)
+  const names = Object.keys(model.parts).sort((a, b) => (cfg.pivots[a]?.parent ? 1 : 0) - (cfg.pivots[b]?.parent ? 1 : 0));
+  for (const name of names) {
+    const pv = cfg.pivots[name];
+    const pivot = new THREE.Group(), inner = new THREE.Group();
+    const p = pv?.pos || [0, 0, 0];
+    pivot.position.set(p[0] / 16, p[1] / 16, p[2] / 16);
+    inner.position.set(-p[0] / 16, -p[1] / 16, -p[2] / 16);
+    pivot.add(inner);
+    (pv?.parent ? parts[pv.parent].inner : root).add(pivot);
+    parts[name] = { pivot, inner };
+    for (const el of model.parts[name].elements) {
+      if (hidden.has(el.name)) continue;
+      inner.add(buildMesh(el));
+    }
+  }
+  extras.visible = true;
+  updateHighlight();
+}
+
+let selected = null;
+const highlight = new THREE.BoxHelper(undefined, 0xe0a64a);
+highlight.visible = false;
+scene.add(highlight);
+
+function updateHighlight() {
+  let m = null;
+  root.traverse(o => { if (o.userData?.el === selected) m = o; });
+  highlight.visible = !!m;
+  if (m) highlight.setFromObject(m);
+}
+
+// ===== Coisas de cena por modelo (água, bicho, fumaça, luzes) =====
+const extras = new THREE.Group();
+scene.add(extras);
+
+const water = new THREE.Mesh(new THREE.BoxGeometry(1, 5 / 16, 2),
+  new THREE.MeshLambertMaterial({ color: 0x2f6e9e, transparent: true, opacity: 0.55 }));
+water.position.set(1.5, 2.5 / 16, 0.5);
+extras.add(water);
+const bank = new THREE.Mesh(new THREE.BoxGeometry(1, 0.2, 2), new THREE.MeshLambertMaterial({ color: 0x5b4a36 }));
+bank.position.set(1.5, -0.1, 0.5);
+extras.add(bank);
+
+const bunny = new THREE.Group();
+const bunnyMat = new THREE.MeshLambertMaterial({ color: 0x8a6a4a });
+const bBody = new THREE.Mesh(new THREE.BoxGeometry(0.22, 0.18, 0.32), bunnyMat);
+const bHead = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.14, 0.14), bunnyMat);
+bHead.position.set(0, 0.1, 0.19);
+const bEar1 = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.14, 0.03), bunnyMat);
+bEar1.position.set(-0.04, 0.23, 0.17);
+const bEar2 = bEar1.clone(); bEar2.position.x = 0.04;
+bunny.add(bBody, bHead, bEar1, bEar2);
+extras.add(bunny);
+
+const smoke = [];
+const smokeGeo = new THREE.BoxGeometry(0.12, 0.12, 0.12);
+
+const sparks = [];
+const sparkGeo = new THREE.BoxGeometry(0.02, 0.02, 0.02);
+const sparkMat = new THREE.MeshBasicMaterial({ color: 0xffb040 });
+const dustMat = new THREE.MeshLambertMaterial({ color: 0xc8a46a });
+const magicMat = new THREE.MeshBasicMaterial({ color: 0xb46cff });
+const temporalMat = new THREE.MeshBasicMaterial({ color: 0x6fe8ff });
+
+// Abelhas: corpinho amarelo com listra preta
+const bees = [];
+for (let i = 0; i < 7; i++) {
+  const b = new THREE.Group();
+  const body = new THREE.Mesh(new THREE.BoxGeometry(0.035, 0.03, 0.05), new THREE.MeshBasicMaterial({ color: 0xf2c230 }));
+  const stripe = new THREE.Mesh(new THREE.BoxGeometry(0.037, 0.032, 0.012), new THREE.MeshBasicMaterial({ color: 0x1a1a1a }));
+  const wing = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.004, 0.025), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.6 }));
+  wing.position.y = 0.02;
+  b.add(body, stripe, wing);
+  b.visible = false;
+  extras.add(b);
+  bees.push(b);
+}
+
+const glowLight = new THREE.PointLight(0xffa040, 0, 3);
+scene.add(glowLight);
+
+// Cena grande (Rede ligada): rio do tamanho que o modelo pedir + grade grande
+const river = new THREE.Mesh(new THREE.BoxGeometry(1, 5 / 16, 1),
+  new THREE.MeshLambertMaterial({ color: 0x2f6e9e, transparent: true, opacity: 0.55 }));
+const riverBed = new THREE.Mesh(new THREE.BoxGeometry(1, 0.2, 1), new THREE.MeshLambertMaterial({ color: 0x5b4a36 }));
+const bigGrid = new THREE.GridHelper(40, 40, 0x555b66, 0x2c3037);
+extras.add(river, riverBed); scene.add(bigGrid);
+function setupExtras() {
+  const ar = MODELS[modelKey].auto || {};
+  river.visible = riverBed.visible = !!ar.rio;
+  if (ar.rio) {
+    const [x0, z0, x1, z1] = ar.rio;
+    river.scale.set(x1 - x0, 1, z1 - z0); river.position.set((x0 + x1) / 2, 2.5 / 16, (z0 + z1) / 2);
+    riverBed.scale.set(x1 - x0, 1, z1 - z0); riverBed.position.set((x0 + x1) / 2, -0.1, (z0 + z1) / 2);
+  }
+  bigGrid.visible = !!ar.gradeGrande;
+  if (ar.gradeGrande) bigGrid.position.set(ar.gradeGrande[0], 0.001, ar.gradeGrande[1]);
+  grid.visible = !ar.gradeGrande;
+  water.visible = bank.visible = (!!ar.agua && !ar.rio) || modelKey === 'moedor' || modelKey === 'peneira' || modelKey === 'serraria' || modelKey === 'pesca';
+  bunny.visible = modelKey === 'espantalho' && mode === 'alerta';
+  for (const s of smoke) extras.remove(s);
+  smoke.length = 0;
+  drawRanges();
+  if (typeof drops !== 'undefined') {
+    for (const d of drops) extras.remove(d);
+    drops.length = 0;
+    for (const b of beams) extras.remove(b);
+    beams.length = 0;
+    if (bolt) { extras.remove(bolt); bolt = null; }
+    flash = 0;
+  }
+  scene.background.setRGB(0.106, 0.114, 0.133); glowLight.color.set(0xffa040);
+}
+
+// ===== Modos =====
+function applyMode() {
+  swaps = {}; noGlow = new Set(); forceGlow = new Set(); hidden = new Set();
+  if (modelKey === 'sentinela' && mode === 'alerta') { swaps = { lens: 'lensglow' }; forceGlow.add('lensglow'); }
+  if (modelKey === 'espantalho') {
+    if (mode !== 'alerta') hidden.add('chama');
+  }
+  if (modelKey === 'carvoeira') {
+    if (mode === 'vazia') ['brasa', 'brasa_cima'].forEach(n => hidden.add(n));
+    if (mode === 'pronta') { swaps.ember = 'coal'; noGlow.add('ember'); }
+  }
+  if (modelKey === 'cogumelos') {
+    if (mode === 'vazia') ['cog1_pe', 'cog1_chapeu', 'cog2_pe', 'cog2_chapeu', 'cog3_pe', 'cog3_chapeu', 'orelha1', 'orelha2', 'orelha3'].forEach(n => hidden.add(n));
+    if (mode === 'nascendo') ['cog1_chapeu', 'cog3_chapeu', 'orelha2', 'orelha3'].forEach(n => hidden.add(n));
+    if (!toggles.bandejaCheia) ['colhido1', 'colhido2', 'colhido3'].forEach(n => hidden.add(n));
+  }
+  if (modelKey === 'bruxa' && !toggles.cestoCheio) ['frutas1', 'frutas2'].forEach(n => hidden.add(n));
+  if (modelKey === 'colmeia' && mode === 'vazia') ['favo1', 'favo2', 'cera'].forEach(n => hidden.add(n));
+  if (modelKey === 'defumador') {
+    if (mode === 'vazio') ['carne1', 'peixe2', 'carne3'].forEach(n => hidden.add(n));
+    if (mode === 'defumada') swaps = { raw: 'smoked', fishraw: 'fishsmoked' };
+    if (!toggles.fogo) { swaps.ember = 'coal'; noGlow.add('ember'); }
+  }
+  const am = MODELS[modelKey].auto;
+  if (am) {
+    for (const [n, ms] of Object.entries(am.show || {})) {
+      if (ms.includes(mode)) continue;
+      const pt = MODELS[modelKey].parts[n];
+      if (pt) pt.elements.forEach(e => hidden.add(e.name)); else hidden.add(n);
+    }
+    if (autoOn(am, am.glow)) (am.glowTex || ['luz']).forEach(t => forceGlow.add(t));
+  }
+  glowLight.intensity = 0;
+  if (modelKey === 'espantalho' && mode === 'alerta') { glowLight.intensity = 1.4; }
+  if (modelKey === 'defumador' && toggles.fogo) { glowLight.intensity = 1.1; glowLight.position.set(0.5, 0.15, 0.5); }
+  if (modelKey === 'carvoeira' && mode === 'queimando') { glowLight.intensity = 0.9; glowLight.position.set(0.5, 0.25, 1.2); }
+  rebuild();
+  setupExtras();
+  renderHud();
+}
+
+// ===== Animações do próprio jogo (formato dos shapes de entidade) =====
+const ANIM_PROPS = ['rotationX', 'rotationY', 'rotationZ', 'offsetX', 'offsetY', 'offsetZ'];
+function playAnim(code, t) {
+  const anims = MODELS[modelKey].animations || [];
+  const anim = anims.find(a => a.code === code);
+  if (!anim || !anim.keyframes?.length) return;
+  const n = anim.quantityframes || 30;
+  const f = (t * 30) % n;
+  const names = new Set();
+  anim.keyframes.forEach(k => Object.keys(k.elements || {}).forEach(e => names.add(e)));
+  for (const name of names) {
+    const np = namedPivots[name];
+    if (!np) continue;
+    const ks = anim.keyframes.filter(k => k.elements?.[name]).sort((a, b) => a.frame - b.frame);
+    let prev = ks[ks.length - 1], next = ks[0];
+    for (let i = 0; i < ks.length; i++) {
+      if (ks[i].frame <= f) prev = ks[i];
+      if (ks[i].frame > f) { next = ks[i]; break; }
+      if (i === ks.length - 1) next = ks[0];
+    }
+    let span = next.frame - prev.frame; if (span <= 0) span += n;
+    let into = f - prev.frame; if (into < 0) into += n;
+    const k = span > 0 ? into / span : 0;
+    const v = {};
+    for (const p of ANIM_PROPS) {
+      const a = prev.elements[name][p] ?? 0, b = next.elements[name][p] ?? 0;
+      v[p] = a + (b - a) * k;
+    }
+    const D = THREE.MathUtils.degToRad;
+    np.pivot.rotation.set(np.rot.x + D(v.rotationX), np.rot.y + D(v.rotationY), np.rot.z + D(v.rotationZ));
+    np.pivot.position.set(np.pos.x + v.offsetX / 16, np.pos.y + v.offsetY / 16, np.pos.z + v.offsetZ / 16);
+  }
+}
+
+// ===== Animação =====
+const clock = new THREE.Clock();
+let time = 0, spin = 0, smokeTimer = 0;
+function animate() {
+  requestAnimationFrame(animate);
+  const dt = Math.min(0.05, clock.getDelta());
+  time += dt;
+
+  if (modelKey === 'serraria') {
+    const on = mode === 'ligado';
+    spin += on ? dt : 0;
+    if (parts.roda) parts.roda.pivot.rotation.x = -spin * 1.3;
+    if (parts.serra) parts.serra.pivot.rotation.x = -spin * 9;
+    // Tora vai passando pela serra e recomeça
+    if (parts.tora) parts.tora.pivot.position.z = on ? ((spin * 0.25) % 1) * 0.55 : 0;
+    if (on && Math.random() < 0.35) {
+      const s = new THREE.Mesh(sparkGeo, dustMat);
+      s.position.set(0.5, 10.2 / 16, 0.5 + 0.28);
+      s.userData = { life: 0, v: new THREE.Vector3((Math.random() - 0.5) * 0.6, 0.3 + Math.random() * 0.4, 0.4 + Math.random() * 0.4) };
+      extras.add(s);
+      sparks.push(s);
+    }
+  }
+
+  if (modelKey === 'armazem_novo' && parts.gaveta) {
+    // Gaveta do meio desliza pra fora quando a janela está aberta
+    const want = mode === 'aberto' ? 5 / 16 : 0;
+    const p = parts.gaveta.pivot.position;
+    p.z += (8 / 16 + want - p.z) * Math.min(1, dt * 6);
+  }
+
+  if (modelKey === 'bruxa') {
+    const work = mode === 'colhendo';
+    if (parts.corpo) {
+      parts.corpo.pivot.rotation.z = Math.sin(time * (work ? 1.4 : 0.8)) * 0.025;
+      // Colhendo: vira de um lado pro outro "olhando" a horta
+      parts.corpo.pivot.rotation.y = work ? Math.sin(time * 0.6) * 0.9 : 0;
+    }
+    if (parts.vassoura) parts.vassoura.pivot.rotation.x = work ? Math.sin(time * 4) * 0.45 : Math.sin(time * 0.9) * 0.05;
+    if (parts.cesto) parts.cesto.pivot.rotation.x = Math.sin(time * 1.3) * (work ? 0.12 : 0.05);
+    if (work && Math.random() < 0.25) {
+      const s = new THREE.Mesh(sparkGeo, magicMat);
+      const a = Math.random() * Math.PI * 2, r = 0.6 + Math.random() * 1.2;
+      s.position.set(0.5 + Math.cos(a) * r, 0.1 + Math.random() * 0.4, 0.5 + Math.sin(a) * r);
+      s.userData = { life: 0, v: new THREE.Vector3(0, 0.5 + Math.random() * 0.4, 0) };
+      extras.add(s);
+      sparks.push(s);
+    }
+  }
+
+  const am = MODELS[modelKey].auto;
+  if (am) animAuto(am, dt);
+
+  // Pás que giram e sino que balança (versões minion das máquinas)
+  const prof = MODELS[modelKey].profissao;
+  if (prof) for (const [ek, e] of Object.entries(prof.extras || {})) {
+    if (!parts[ek]) continue;
+    if (e.spin) parts[ek].pivot.rotation[e.spin] = time * 1.2;
+    if (e.swing) parts[ek].pivot.rotation[e.swing] = Math.sin(time * (mode === 'acenando' ? 5 : 1.2)) * (mode === 'acenando' ? 0.45 : 0.06);
+  }
+
+  if ((modelKey === 'minion' || prof) && parts.minion) {
+    // Volta todas as peças pra pose base antes de tocar a animação do modo atual
+    for (const np of Object.values(namedPivots)) { np.pivot.rotation.copy(np.rot); np.pivot.position.copy(np.pos); }
+    const g = parts.minion.pivot;
+    g.scale.setScalar(0.7);
+    g.visible = mode !== 'casa';
+    if (mode === 'acenando') {
+      g.position.set(0.4, 0, 1.6);
+      g.rotation.set(0, 0, 0);
+      playAnim('parado', time);
+      playAnim('acenar', time);
+    } else if (mode === 'dancando') {
+      g.position.set(0.4, 0, 1.5);
+      g.rotation.set(0, 0, 0);
+      playAnim('dancar', time);
+    } else if (mode === 'colhendo') {
+      g.position.set(1.7, 0, 1.2);
+      g.rotation.set(0, Math.PI / 2, 0);
+      playAnim('colher', time);
+    } else if (mode === 'trabalhando') {
+      // Anda em volta da casinha (frente do modelo = +z)
+      const a = time * 0.6, r = 1.6;
+      g.position.set(0.5 + Math.cos(a) * r, 0, 0.5 + Math.sin(a) * r);
+      g.rotation.set(0, -a, 0);
+      playAnim('andar', time);
+    }
+    // Fumacinha da chaminé quando ele está em casa
+    if (mode === 'casa' && Math.random() < 0.08) {
+      const sp = new THREE.Mesh(sparkGeo, dustMat);
+      sp.position.set(9.5 / 16 + (Math.random() - 0.5) * 0.05, 15.2 / 16, 4.9 / 16);
+      sp.scale.setScalar(2);
+      sp.userData = { life: 0, v: new THREE.Vector3(0.03, 0.25, 0), float: true };
+      extras.add(sp);
+      sparks.push(sp);
+    }
+  }
+
+  if (modelKey === 'lancheira' && parts.tampa) {
+    const want = mode === 'aberta' ? -1.75 : 0;
+    const cur = parts.tampa.pivot.rotation.x;
+    parts.tampa.pivot.rotation.x = cur + (want - cur) * Math.min(1, dt * 4);
+  }
+
+  if (modelKey === 'sino' && parts.sino) {
+    const ring = mode === 'tocando';
+    parts.sino.pivot.rotation.x = ring ? Math.sin(time * 5) * 0.55 : Math.sin(time * 0.8) * 0.03;
+  }
+
+  if (modelKey === 'moedor' || modelKey === 'peneira' || modelKey === 'peneira_atual' || modelKey === 'pesca') {
+    const on = mode === 'ligado';
+    spin += on ? dt : 0;
+    const wheel = parts.roda || parts.wheel;
+    if (wheel) wheel.pivot.rotation.x = -spin * 1.3;
+    if (parts.mo) parts.mo.pivot.rotation.y = spin * 0.9;
+    if (parts.pan) {
+      // Chacoalha no ritmo da roda (vai e volta)
+      const k = on ? Math.sin(spin * 2.6) : 0;
+      parts.pan.pivot.position.x = 8 / 16 + k * 0.035;
+      parts.pan.pivot.rotation.z = k * 0.03;
+    }
+  }
+
+  if (modelKey === 'sentinela' && parts.head) {
+    // Vigiando: gira devagar de um lado pro outro; alerta: segue um alvo dando a volta
+    const alert = mode === 'alerta';
+    const yaw = alert ? time * 0.9 : Math.sin(time * 0.8) * 0.9;
+    parts.head.pivot.rotation.y = yaw;
+    glowLight.position.set(0.5 + Math.sin(yaw) * 0.8, 1.2, 0.5 + Math.cos(yaw) * 0.8);
+    glowLight.intensity = alert ? 1.0 : 0;
+  }
+
+  if (modelKey === 'espantalho') {
+    const alert = mode === 'alerta';
+    const sway = Math.sin(time * (alert ? 2.2 : 0.9)) * (alert ? 0.05 : 0.025);
+    if (parts.corpo) parts.corpo.pivot.rotation.z = sway;
+    if (parts.lanterna) {
+      parts.lanterna.pivot.rotation.x = Math.sin(time * 1.7) * (alert ? 0.22 : 0.1);
+      parts.lanterna.pivot.rotation.z = -sway * 2.5;
+      const p = new THREE.Vector3(16.6 / 16, 13.5 / 16, 0.5);
+      parts.lanterna.inner.localToWorld(p);
+      glowLight.position.copy(p);
+      glowLight.intensity = alert ? 1.2 + Math.sin(time * 13) * 0.15 : 0;
+    }
+    if (alert) {
+      // Coelho chega perto, vê a lanterna e foge
+      const c = (time * 0.35) % 1;
+      const dist = c < 0.5 ? 3.2 - c * 4 : 1.2 + (c - 0.5) * 6;
+      const ang = 0.6;
+      const hop = Math.abs(Math.sin(time * (c < 0.5 ? 6 : 11))) * 0.12;
+      bunny.position.set(0.5 + Math.sin(ang) * dist, hop + 0.09, 0.5 + Math.cos(ang) * dist);
+      bunny.rotation.y = c < 0.5 ? ang + Math.PI : ang;
+    }
+  }
+
+  // Fumaça: defumador (espalha embaixo do telhado) e carvoeira (sai pela chaminé)
+  const smokeCfg = modelKey === 'defumador' && toggles.fogo ? { from: [0.5, 0.12, 0.5], spread: 0.2, top: 1.45 }
+                 : modelKey === 'carvoeira' && mode === 'queimando' ? CONFIG.carvoeira.smoke : null;
+  if (modelKey === 'defumador' && toggles.fogo) glowLight.intensity = 1.0 + Math.sin(time * 9) * 0.12 + Math.sin(time * 23) * 0.06;
+  if (modelKey === 'carvoeira' && mode === 'queimando') glowLight.intensity = toggles.portaAberta ? 1.1 + Math.sin(time * 11) * 0.15 : 0.2;
+  if (smokeCfg) {
+    smokeTimer -= dt;
+    if (smokeTimer <= 0) {
+      smokeTimer = 0.12;
+      const g = 0.5 + Math.random() * 0.25;
+      const s = new THREE.Mesh(smokeGeo, new THREE.MeshBasicMaterial({ color: new THREE.Color(g, g, g), transparent: true, opacity: 0.45, depthWrite: false }));
+      const [fx, fy, fz] = smokeCfg.from, sp = smokeCfg.spread;
+      s.position.set(fx + (Math.random() - 0.5) * 2 * sp, fy, fz + (Math.random() - 0.5) * 2 * sp);
+      s.userData = { life: 0, vx: (Math.random() - 0.5) * 0.08, vz: (Math.random() - 0.5) * 0.08, top: smokeCfg.top };
+      extras.add(s);
+      smoke.push(s);
+    }
+  }
+
+  // Porta da carvoeira abre para fora (dobradiça do lado esquerdo)
+  if (modelKey === 'carvoeira' && parts.porta) {
+    const want = toggles.portaAberta ? -1.7 : 0;
+    parts.porta.pivot.rotation.y += (want - parts.porta.pivot.rotation.y) * Math.min(1, dt * 6);
+  }
+
+  // Faíscas do rebolo e abelhas da colmeia
+  if (modelKey === 'bancada') {
+    const on = mode === 'consertando';
+    if (parts.rebolo) parts.rebolo.pivot.rotation.z = -(spin += on ? dt * 6 : 0);
+    if (on && Math.random() < 0.5) {
+      const s = new THREE.Mesh(sparkGeo, sparkMat);
+      s.position.set(13.5 / 16 - 0.1, 14.6 / 16, 0.5 + (Math.random() - 0.5) * 0.1);
+      s.userData = { life: 0, v: new THREE.Vector3(-0.6 - Math.random() * 0.6, 0.5 + Math.random() * 0.6, (Math.random() - 0.5) * 0.6) };
+      extras.add(s);
+      sparks.push(s);
+    }
+  }
+  for (let i = sparks.length - 1; i >= 0; i--) {
+    const s = sparks[i];
+    s.userData.life += dt;
+    if (!s.userData.float) s.userData.v.y -= dt * 3;
+    s.position.addScaledVector(s.userData.v, dt);
+    if (s.userData.life > (s.userData.float ? 2.2 : 0.6) || s.position.y < 0) { extras.remove(s); sparks.splice(i, 1); }
+  }
+  bees.forEach((b, i) => {
+    b.visible = modelKey === 'colmeia';
+    const a = time * (1.3 + i * 0.17) + i * 2.1;
+    const r = 0.25 + (i % 3) * 0.12;
+    b.position.set(0.5 + Math.cos(a) * r, 0.6 + Math.sin(a * 2.3 + i) * 0.1 + (i % 2) * 0.12, 0.85 + Math.sin(a) * r * 0.8);
+    b.rotation.y = -a;
+  });
+
+  for (let i = smoke.length - 1; i >= 0; i--) {
+    const s = smoke[i];
+    s.userData.life += dt;
+    const l = s.userData.life;
+    // Sobe e espalha quando chega no alto (telhado do defumador / acima da chaminé)
+    const top = s.userData.top ?? 1.45;
+    s.position.y += dt * (s.position.y < top ? 0.35 : 0.06);
+    const spread = s.position.y > top - 0.15 ? 3 : 1;
+    s.position.x += s.userData.vx * dt * spread;
+    s.position.z += s.userData.vz * dt * spread;
+    s.scale.setScalar(1 + l * 1.3);
+    s.material.opacity = Math.max(0, 0.45 - l * 0.12);
+    if (l > 3.6) { extras.remove(s); s.material.dispose(); smoke.splice(i, 1); }
+  }
+
+  if (highlight.visible) updateHighlight();
+  controls.update();
+  renderer.render(scene, camera);
+}
+
+// ===== Automação: alcance sem fio (quadrado de blocos em volta do poste) =====
+const rangeGroup = new THREE.Group();
+scene.add(rangeGroup);
+function drawRanges() {
+  while (rangeGroup.children.length) { const c = rangeGroup.children.pop(); c.geometry?.dispose(); }
+  const a = MODELS[modelKey]?.auto;
+  if (!a?.ranges || !toggles.alcance) return;
+  a.ranges.forEach((r, i) => {
+    const n = 2 * r.r + 1, cor = new THREE.Color(r.color || 0x6fe8ff);
+    const fill = new THREE.Mesh(new THREE.BoxGeometry(n, 0.02, n),
+      new THREE.MeshBasicMaterial({ color: cor, transparent: true, opacity: 0.10, depthWrite: false }));
+    fill.position.set(r.at[0] + 0.5, 0.012 + i * 0.002, r.at[1] + 0.5);
+    const edge = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(n, r.h || 2, n)),
+      new THREE.LineBasicMaterial({ color: cor, transparent: true, opacity: 0.55 }));
+    edge.position.set(r.at[0] + 0.5, (r.h || 2) / 2, r.at[1] + 0.5);
+    rangeGroup.add(fill, edge);
+  });
+}
+
+// ===== Automação: animação genérica =====
+const rainMat = new THREE.MeshBasicMaterial({ color: 0x9cc4e8, transparent: true, opacity: 0.6 });
+const rainGeo = new THREE.BoxGeometry(0.008, 0.12, 0.008);
+const boltMat = new THREE.MeshBasicMaterial({ color: 0xd8f4ff });
+const drops = [], beams = [];
+const beamGeo = new THREE.BoxGeometry(0.035, 0.035, 0.035);
+let bolt = null, boltTimer = 1, flash = 0;
+function animAuto(a, dt) {
+  for (const an of a.anim || []) {
+    const pt = parts[an.part];
+    if (!pt) continue;
+    const on = autoOn(a, an.when);
+    if (an.when && !on) continue;  // animação só daquele modo: fora dele não mexe (deixa outra animar)
+    const st = an._st || (an._st = {});
+    st.t = (st.t || 0) + (on ? dt : 0);
+    const base = CONFIG[modelKey].pivots[an.part]?.pos || [0, 0, 0];
+    const at = ax => base['xyz'.indexOf(ax)] / 16;
+    if (an.spin) pt.pivot.rotation[an.spin] = st.t * (an.speed ?? 2);
+    if (an.swing) pt.pivot.rotation[an.swing] = on ? Math.sin(st.t * (an.freq ?? 1) * Math.PI * 2) * (an.amp ?? 0.3) : 0;
+    if (an.shake) pt.pivot.position[an.shake] = at(an.shake) + (on ? Math.sin(st.t * (an.freq ?? 3) * Math.PI * 2) * (an.amp ?? 0.5) / 16 : 0);
+    if (an.slide) pt.pivot.position[an.slide] = at(an.slide) + (on ? ((st.t * (an.speed ?? 0.3)) % 1) * (an.dist ?? 8) / 16 : 0);
+    if (an.viagem) {
+      // Viagem de elevador: sobe suave, espera lá em cima, desce suave, espera embaixo
+      const T = an.periodo ?? 10, f = (st.t % T) / T;
+      const ease = x => x * x * (3 - 2 * x);
+      const k = f < 0.2 ? ease(f / 0.2) : f < 0.5 ? 1 : f < 0.7 ? 1 - ease((f - 0.5) / 0.2) : 0;
+      pt.pivot.position[an.viagem] = at(an.viagem) + k * (an.amp ?? 12) / 16;
+    }
+    if (an.bob) pt.pivot.position[an.bob] = at(an.bob) + (on ? (Math.sin(st.t * (an.freq ?? 1) * Math.PI * 2) * 0.5 + 0.5) * (an.amp ?? 2) / 16 : 0);
+  }
+  const fx = (a.fx || {})[mode] || [];
+  const P = v => new THREE.Vector3(v[0] / 16, v[1] / 16, v[2] / 16);
+  for (const f of fx) {
+    if (f.type === 'rain') {
+      for (let i = 0; i < 6; i++) {
+        const d = new THREE.Mesh(rainGeo, rainMat);
+        d.position.set(0.5 + (Math.random() - 0.5) * 4, 3.2, 0.5 + (Math.random() - 0.5) * 4);
+        extras.add(d); drops.push(d);
+      }
+    } else if (f.type === 'lightning') {
+      boltTimer -= dt;
+      if (boltTimer <= 0) {
+        boltTimer = 1.6 + Math.random() * 1.4;
+        if (bolt) extras.remove(bolt);
+        bolt = new THREE.Group();
+        const end = P(f.at);
+        let x = end.x + (Math.random() - 0.5) * 0.6, z = end.z + (Math.random() - 0.5) * 0.6, y = 6;
+        while (y > end.y) {
+          const ny = Math.max(end.y, y - 0.35 - Math.random() * 0.3);
+          const last = ny === end.y;
+          const nx = last ? end.x : x + (Math.random() - 0.5) * 0.35, nz = last ? end.z : z + (Math.random() - 0.5) * 0.35;
+          const len = Math.hypot(nx - x, ny - y, nz - z);
+          const seg = new THREE.Mesh(new THREE.BoxGeometry(0.035, 0.035, len), boltMat);
+          seg.position.set((x + nx) / 2, (y + ny) / 2, (z + nz) / 2);
+          seg.lookAt(nx, ny, nz);
+          bolt.add(seg); x = nx; y = ny; z = nz;
+        }
+        extras.add(bolt); flash = 0.25;
+        for (let i = 0; i < 25; i++) spark(f.at, temporalMat, 1.2);
+      }
+    } else if (Math.random() < (f.rate ?? 0.3)) {
+      if (f.type === 'beam') {
+        if (!toggles.conexoes) continue;  // no jogo a energia é invisível; só aparece apertando "Ver conexões"
+        const b = new THREE.Mesh(beamGeo, temporalMat);
+        b.userData = { a: P(f.from), b: P(f.to), k: 0 };
+        b.position.copy(b.userData.a);
+        extras.add(b); beams.push(b);
+      }
+      else if (f.type === 'sparks') spark(f.at, sparkMat, 0.8);
+      else if (f.type === 'dust') spark(f.at, dustMat, 0.5);
+      else if (f.type === 'energy') { const s = spark(f.at, temporalMat, 0.15); s.userData.float = true; s.userData.v.set((Math.random() - 0.5) * 0.1, 0.25, (Math.random() - 0.5) * 0.1); }
+      else if (f.type === 'smoke' && Math.random() < 0.3) {
+        const g = 0.5 + Math.random() * 0.25;
+        const s = new THREE.Mesh(smokeGeo, new THREE.MeshBasicMaterial({ color: new THREE.Color(g, g, g), transparent: true, opacity: 0.45, depthWrite: false }));
+        s.position.copy(P(f.at));
+        s.userData = { life: 0, vx: (Math.random() - 0.5) * 0.08, vz: (Math.random() - 0.5) * 0.08, top: f.top ?? 2.4 };
+        extras.add(s); smoke.push(s);
+      }
+    }
+  }
+  if (!fx.some(f => f.type === 'lightning') && bolt) { extras.remove(bolt); bolt = null; }
+  if (flash > 0) {
+    flash -= dt;
+    const k = Math.max(0, flash);
+    if (bolt) bolt.visible = flash > 0;
+    scene.background.setRGB(0.106 + k * 2, 0.114 + k * 2, 0.133 + k * 2.4);
+    glowLight.color.set(0x8fe8ff);
+    glowLight.position.copy(P((fx.find(f => f.type === 'lightning') || { at: [8, 16, 8] }).at));
+    glowLight.intensity = k * 8;
+  } else {
+    if (scene.background.r > 0.107) scene.background.setRGB(0.106, 0.114, 0.133);
+    const lt = a.light && autoOn(a, a.light.when);
+    if (lt) { glowLight.color.set(a.light.color || 0x6fe8ff); glowLight.position.copy(P(a.light.at)); glowLight.intensity = (a.light.intensity ?? 0.8) * (0.9 + Math.sin(time * 7) * 0.1); }
+    else glowLight.intensity = 0;
+  }
+  for (let i = beams.length - 1; i >= 0; i--) {
+    const b = beams[i];
+    b.userData.k += dt * 0.9;
+    const k = b.userData.k;
+    b.position.lerpVectors(b.userData.a, b.userData.b, k);
+    b.position.y += Math.sin(k * Math.PI) * 0.25;
+    if (k >= 1) { extras.remove(b); beams.splice(i, 1); }
+  }
+  for (let i = drops.length - 1; i >= 0; i--) {
+    const d = drops[i];
+    d.position.y -= dt * 4.5;
+    if (d.position.y < 0) { extras.remove(d); drops.splice(i, 1); }
+  }
+}
+function spark(at, mat, speed) {
+  const s = new THREE.Mesh(sparkGeo, mat);
+  s.position.set(at[0] / 16, at[1] / 16, at[2] / 16);
+  s.userData = { life: 0, v: new THREE.Vector3((Math.random() - 0.5) * speed, Math.random() * speed, (Math.random() - 0.5) * speed) };
+  extras.add(s); sparks.push(s);
+  return s;
+}
+
+function resize() {
+  const w = view.clientWidth, h = view.clientHeight;
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+new ResizeObserver(resize).observe(view);
+resize();
+
+// ===== Botões =====
+const $ = id => document.getElementById(id);
+
+function resetCamera() {
+  const c = CONFIG[modelKey].cam;
+  camera.position.set(...c.pos);
+  controls.target.set(...c.target);
+  controls.update();
+}
+
+// ===== Ícones dos mods =====
+const ICONS = /*ICONS*/null;
+let iconsOpen = false, showOld = false;
+function renderIcons() {
+  $('icons').innerHTML = Object.entries(ICONS || {}).map(([name, src]) =>
+    `<figure><img src="${src}" alt=""><figcaption>${name}</figcaption></figure>`).join('');
+}
+
+function renderModels() {
+  const btn = k => `<button data-m="${k}" class="${k === modelKey ? 'on' : ''}">${MODELS[k].title}</button>`;
+  const keys = Object.keys(MODELS);
+  const novos = keys.filter(k => MODELS[k].group === 'novo'), feitos = keys.filter(k => MODELS[k].group === 'feito');
+  const cat = c => keys.filter(k => MODELS[k].auto?.cat === c);
+  const grp = (t, ks) => ks.length ? `<span class="grp">${t}</span>${ks.map(btn).join('')}` : '';
+  const autoRow = keys.some(k => MODELS[k].auto)
+    ? `<div class="autorow">${grp('⚡ Energia', cat('energia'))}${grp('Baterias e fios', cat('bateria'))}${grp('Rede', cat('rede'))}${grp('Máquinas', cat('maquina'))}</div>` : '';
+  const outros = showOld || !MODELS[modelKey].auto;
+  $('models').innerHTML = `${autoRow}<button id="bOld" class="${outros ? 'on' : ''}">Outros mods (${novos.length + feitos.length}) ${outros ? '▴' : '▾'}</button><button id="bIcons" class="${iconsOpen ? 'on' : ''}">Ícones</button>${outros ? grp('Novos', novos) + grp('Já feitos', feitos) : ''}`;
+  $('bOld').onclick = () => { showOld = !outros; renderModels(); };
+  $('models').querySelectorAll('button[data-m]').forEach(b => b.onclick = () => { iconsOpen = false; $('icons').style.display = 'none'; selectModel(b.dataset.m); });
+  $('bIcons').onclick = () => { iconsOpen = !iconsOpen; $('icons').style.display = iconsOpen ? 'grid' : 'none'; renderModels(); };
+}
+
+function renderHud() {
+  const cfg = CONFIG[modelKey];
+  let html = cfg.modes.map(([k, l]) => `<button data-mode="${k}" class="${k === mode ? 'on' : ''}">${l}</button>`).join('');
+  for (const [k, l] of cfg.toggles || []) html += `<button data-tg="${k}" class="${toggles[k] ? 'on' : ''}">${l}</button>`;
+  html += `<span class="sep"></span><button id="bGrid" class="${grid.visible ? 'on' : ''}">Grade</button>
+           <button id="bBox" class="${blockBox.visible ? 'on' : ''}">Limite do bloco</button><button id="bReset">Câmera</button>`;
+  $('hud').innerHTML = html;
+  $('hud').querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { mode = b.dataset.mode; applyMode(); });
+  $('hud').querySelectorAll('[data-tg]').forEach(b => b.onclick = () => { toggles[b.dataset.tg] = !toggles[b.dataset.tg]; applyMode(); });
+  $('bGrid').onclick = () => { grid.visible = !grid.visible; renderHud(); };
+  $('bBox').onclick = () => { blockBox.visible = !blockBox.visible; renderHud(); };
+  $('bReset').onclick = resetCamera;
+  $('desc').textContent = cfg.desc;
+}
+
+function selectModel(k) {
+  modelKey = k;
+  const cfg = CONFIG[k];
+  mode = cfg.defaultMode;
+  for (const [t, , def] of cfg.toggles || []) if (!(t in toggles)) toggles[t] = def;
+  part = Object.keys(MODELS[k].parts)[0];
+  selected = null;
+  spin = 0;
+  renderModels();
+  applyMode();
+  resetCamera();
+  renderParts();
+  renderList();
+}
+
+// ===== Editor de peças =====
+let part = 'base';
+
+function renderParts() {
+  const m = MODELS[modelKey];
+  $('title').textContent = m.title + ' — peças';
+  $('parts').innerHTML = Object.entries(m.parts).map(([k, p]) =>
+    `<button class="btn ${k === part ? 'on' : ''}" data-part="${k}">${p.label}</button>`).join('');
+  $('parts').querySelectorAll('button').forEach(b => b.onclick = () => { part = b.dataset.part; renderParts(); renderList(); });
+}
+
+function setAllFaces(el, tex) {
+  for (const n of FACE_ORDER) {
+    el.faces = el.faces || {};
+    el.faces[n] = el.faces[n] || { uv: [0, 0, 16, 16] };
+    el.faces[n].texture = '#' + tex;
+  }
+}
+
+function fitUv(el) {
+  const w = [0, 1, 2].map(i => el.to[i] - el.from[i]);
+  const uv = (a, b) => [0, 0, Math.max(0.5, Math.min(16, a)), Math.max(0.5, Math.min(16, b))];
+  const sizes = { north: [w[0], w[1]], south: [w[0], w[1]], east: [w[2], w[1]], west: [w[2], w[1]], up: [w[0], w[2]], down: [w[0], w[2]] };
+  for (const n of FACE_ORDER) if (el.faces?.[n]) el.faces[n].uv = uv(...sizes[n]);
+}
+
+function renderList() {
+  const list = $('list');
+  list.innerHTML = '';
+  const els = MODELS[modelKey].parts[part].elements;
+  const texCodes = Object.keys(MODELS[modelKey].textures || {});
+  els.forEach((el, i) => {
+    const div = document.createElement('div');
+    div.className = 'el' + (el === selected ? ' sel' : '');
+    const tex = (el.faces?.north?.texture || '#iron').replace('#', '');
+    div.innerHTML = `
+      <div class="top">
+        <input type="text" value="${el.name}" data-k="name">
+        <select data-k="tex">${texCodes.map(c => `<option ${c === tex ? 'selected' : ''}>${c}</option>`).join('')}</select>
+        <button class="x" title="Remover">✕</button>
+      </div>
+      <div class="row"><span>de</span>${el.from.map((v, j) => `<input type="number" step="0.25" value="${v}" data-k="from" data-j="${j}">`).join('')}</div>
+      <div class="row"><span>até</span>${el.to.map((v, j) => `<input type="number" step="0.25" value="${v}" data-k="to" data-j="${j}">`).join('')}</div>
+      <div class="row"><span>giro°</span>${['X', 'Y', 'Z'].map(a => `<input type="number" step="5" value="${el['rotation' + a] || 0}" data-k="rot" data-a="${a}">`).join('')}</div>`;
+    div.onclick = () => {
+      if (selected !== el) {
+        selected = el;
+        list.querySelectorAll('.el').forEach(x => x.classList.remove('sel'));
+        div.classList.add('sel');
+        updateHighlight();
+      }
+    };
+    div.querySelector('.x').onclick = e => {
+      e.stopPropagation();
+      els.splice(i, 1);
+      if (selected === el) selected = null;
+      rebuild(); renderList();
+    };
+    div.querySelectorAll('input, select').forEach(inp => inp.oninput = () => {
+      const k = inp.dataset.k;
+      if (k === 'name') el.name = inp.value;
+      else if (k === 'tex') setAllFaces(el, inp.value);
+      else if (k === 'rot') {
+        el['rotation' + inp.dataset.a] = parseFloat(inp.value) || 0;
+        if (!el.rotationOrigin) el.rotationOrigin = [0, 1, 2].map(i => (el.from[i] + el.to[i]) / 2);
+      }
+      else { el[k][+inp.dataset.j] = parseFloat(inp.value) || 0; fitUv(el); }
+      selected = el;
+      rebuild();
+    });
+    list.appendChild(div);
+  });
+}
+
+$('bAdd').onclick = () => {
+  const el = { name: 'nova', from: [6, 9, 6], to: [10, 11, 10], faces: {} };
+  setAllFaces(el, 'iron');
+  fitUv(el);
+  MODELS[modelKey].parts[part].elements.push(el);
+  selected = el;
+  rebuild(); renderList();
+  $('list').scrollTop = 1e9;
+};
+
+function toast(msg) {
+  const t = $('toast');
+  t.textContent = msg;
+  t.style.opacity = 1;
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => t.style.opacity = 0, 1800);
+}
+
+async function copy(text, msg) {
+  try { await navigator.clipboard.writeText(text); toast(msg); }
+  catch { prompt('Copie o texto abaixo:', text); }
+}
+
+$('bCopy').onclick = () => copy(JSON.stringify(MODELS[modelKey].parts[part], null, 1), 'JSON da parte copiado');
+$('bCopyAll').onclick = () => copy(JSON.stringify({ [modelKey]: MODELS[modelKey] }), 'Modelo copiado: cole na conversa com o Claude');
+
+// Só monta o modelo depois que as texturas carregarem (senão as peças ficam invisíveis)
+manager.onLoad = () => {
+  selectModel(MODELS[location.hash.slice(1)] ? location.hash.slice(1) : Object.keys(MODELS)[0]);
+  renderIcons();
+  if (new URLSearchParams(location.search).get('icons')) { iconsOpen = true; $('icons').style.display = 'grid'; renderModels(); }
+  const qs = new URLSearchParams(location.search);
+  if (qs.get('mode')) { mode = qs.get('mode'); applyMode(); }
+  const cam = qs.get('cam');
+  if (cam) { const v = cam.split(',').map(Number); camera.position.set(v[0], v[1], v[2]); controls.target.set(v[3], v[4], v[5]); controls.update(); }
+};
+animate();
+</script>
+</body>
+</html>

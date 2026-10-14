@@ -1,0 +1,148 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "logbark": "game:block/wood/firewood/aged/bark",
+  "logend": "game:block/wood/firewood/aged/north"
+ },
+ "elements": [
+  {
+   "name": "tora_a",
+   "from": [
+    5.5,
+    10.1,
+    0
+   ],
+   "to": [
+    7.65,
+    15.1,
+    4
+   ],
+   "faces": {
+    "north": {
+     "texture": "#logend",
+     "uv": [
+      0,
+      0,
+      2.1500000000000004,
+      5.0
+     ]
+    },
+    "south": {
+     "texture": "#logend",
+     "uv": [
+      0,
+      0,
+      2.1500000000000004,
+      5.0
+     ]
+    },
+    "east": {
+     "texture": "#logbark",
+     "uv": [
+      0,
+      0,
+      4,
+      5.0
+     ]
+    },
+    "west": {
+     "texture": "#logbark",
+     "uv": [
+      0,
+      0,
+      4,
+      5.0
+     ]
+    },
+    "up": {
+     "texture": "#logbark",
+     "uv": [
+      0,
+      0,
+      2.1500000000000004,
+      4
+     ]
+    },
+    "down": {
+     "texture": "#logbark",
+     "uv": [
+      0,
+      0,
+      2.1500000000000004,
+      4
+     ]
+    }
+   }
+  },
+  {
+   "name": "tora_b",
+   "from": [
+    8.35,
+    10.1,
+    0
+   ],
+   "to": [
+    10.5,
+    15.1,
+    4
+   ],
+   "faces": {
+    "north": {
+     "texture": "#logend",
+     "uv": [
+      0,
+      0,
+      2.1500000000000004,
+      5.0
+     ]
+    },
+    "south": {
+     "texture": "#logend",
+     "uv": [
+      0,
+      0,
+      2.1500000000000004,
+      5.0
+     ]
+    },
+    "east": {
+     "texture": "#logbark",
+     "uv": [
+      0,
+      0,
+      4,
+      5.0
+     ]
+    },
+    "west": {
+     "texture": "#logbark",
+     "uv": [
+      0,
+      0,
+      4,
+      5.0
+     ]
+    },
+    "up": {
+     "texture": "#logbark",
+     "uv": [
+      0,
+      0,
+      2.1500000000000004,
+      4
+     ]
+    },
+    "down": {
+     "texture": "#logbark",
+     "uv": [
+      0,
+      0,
+      2.1500000000000004,
+      4
+     ]
+    }
+   }
+  }
+ ]
+}

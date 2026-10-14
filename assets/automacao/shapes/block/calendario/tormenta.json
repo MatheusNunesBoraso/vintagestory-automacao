@@ -1,0 +1,148 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "luz": "game:block/machine/statictranslocator/rustyglow",
+  "alarme": "game:block/cloth/basic/red"
+ },
+ "elements": [
+  {
+   "name": "tor_cheio",
+   "from": [
+    10.4,
+    6,
+    14.5
+   ],
+   "to": [
+    11.6,
+    8.5,
+    14.95
+   ],
+   "faces": {
+    "north": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.1999999999999993,
+      2.5
+     ]
+    },
+    "south": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.1999999999999993,
+      2.5
+     ]
+    },
+    "east": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      0.5,
+      2.5
+     ]
+    },
+    "west": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      0.5,
+      2.5
+     ]
+    },
+    "up": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.1999999999999993,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.1999999999999993,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "tor_alarme",
+   "from": [
+    10.65,
+    9.5,
+    14.65
+   ],
+   "to": [
+    11.35,
+    10.15,
+    15.05
+   ],
+   "faces": {
+    "north": {
+     "texture": "#alarme",
+     "uv": [
+      0,
+      0,
+      0.6999999999999993,
+      0.6500000000000004
+     ]
+    },
+    "south": {
+     "texture": "#alarme",
+     "uv": [
+      0,
+      0,
+      0.6999999999999993,
+      0.6500000000000004
+     ]
+    },
+    "east": {
+     "texture": "#alarme",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.6500000000000004
+     ]
+    },
+    "west": {
+     "texture": "#alarme",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.6500000000000004
+     ]
+    },
+    "up": {
+     "texture": "#alarme",
+     "uv": [
+      0,
+      0,
+      0.6999999999999993,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#alarme",
+     "uv": [
+      0,
+      0,
+      0.6999999999999993,
+      0.5
+     ]
+    }
+   }
+  }
+ ]
+}

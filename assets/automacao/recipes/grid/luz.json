@@ -1,0 +1,29 @@
+[
+ {
+  "ingredientPattern": "_L_,_I_,_K_",
+  "ingredients": {
+   "I": {
+    "type": "item",
+    "code": "game:ingot-copper",
+    "quantity": 1
+   },
+   "K": {
+    "type": "item",
+    "code": "game:stick",
+    "quantity": 1
+   },
+   "L": {
+    "type": "block",
+    "code": "game:glass-plain",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+   "type": "block",
+   "code": "automacao:luz-apagado-south",
+   "quantity": 1
+  }
+ }
+]

@@ -1,0 +1,286 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "luz": "game:block/machine/statictranslocator/rustyglow",
+  "ember": "game:block/coal/ember"
+ },
+ "elements": [
+  {
+   "name": "resist1",
+   "from": [
+    2.5,
+    3.5,
+    12.6
+   ],
+   "to": [
+    7.5,
+    3.9,
+    12.8
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "resist2",
+   "from": [
+    2.5,
+    4.3,
+    12.6
+   ],
+   "to": [
+    7.5,
+    4.7,
+    12.8
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "resist3",
+   "from": [
+    2.5,
+    5.1,
+    12.6
+   ],
+   "to": [
+    7.5,
+    5.5,
+    12.8
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lampada_bulbo",
+   "from": [
+    13.35,
+    7.3999999999999995,
+    1.35
+   ],
+   "to": [
+    14.65,
+    8.7,
+    2.65
+   ],
+   "faces": {
+    "north": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.2999999999999998
+     ]
+    },
+    "south": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.2999999999999998
+     ]
+    },
+    "east": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.2999999999999998,
+      1.2999999999999998
+     ]
+    },
+    "west": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.2999999999999998,
+      1.2999999999999998
+     ]
+    },
+    "up": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.2999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.2999999999999998
+     ]
+    }
+   }
+  }
+ ]
+}

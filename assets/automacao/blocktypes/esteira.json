@@ -1,0 +1,254 @@
+{
+ "code": "esteira",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "esteira",
+  "chave": "esteira",
+  "modos": [
+   "parado",
+   "ligado"
+  ],
+  "modoTrabalhando": "ligado",
+  "partes": [
+   {
+    "nome": "motor",
+    "pivo": [
+     13.75,
+     2.5,
+     9.5
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "z",
+      "speed": -4
+     }
+    ]
+   },
+   {
+    "nome": "rolete_a",
+    "pivo": [
+     2.25,
+     7,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "z",
+      "speed": -4
+     }
+    ]
+   },
+   {
+    "nome": "rolete_b",
+    "pivo": [
+     13.75,
+     7,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "z",
+      "speed": -4
+     }
+    ]
+   },
+   {
+    "nome": "caixa",
+    "pivo": [
+     0,
+     0,
+     0
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "slide": "x",
+      "dist": 8,
+      "speed": 0.25
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": true,
+  "bau": true
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/esteira/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/esteira/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/esteira/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/esteira/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/esteira/full"
+ },
+ "textures": {
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "lona": {
+   "base": "game:block/leather/poor"
+  },
+  "chestlid": {
+   "base": "game:block/wood/chest/aged/lid"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "chestside": {
+   "base": "game:block/wood/chest/aged/sides"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.015625,
+  "y1": 0,
+  "z1": 0.15,
+  "x2": 0.989375,
+  "y2": 0.7375,
+  "z2": 0.990625
+ },
+ "selectionbox": {
+  "x1": 0.015625,
+  "y1": 0,
+  "z1": 0.15,
+  "x2": 0.989375,
+  "y2": 0.7375,
+  "z2": 0.990625
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.36875,
+   "z": 0.5
+  },
+  "scale": 1.0
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

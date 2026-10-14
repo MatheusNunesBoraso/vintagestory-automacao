@@ -1,0 +1,78 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "escarcha": "game:block/liquid/ice/glacier1"
+ },
+ "elements": [
+  {
+   "name": "escarcha1",
+   "from": [
+    3.5,
+    12.25,
+    14.75
+   ],
+   "to": [
+    9,
+    13.75,
+    14.85
+   ],
+   "faces": {
+    "north": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      5.5,
+      1.5
+     ]
+    },
+    "south": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      5.5,
+      1.5
+     ]
+    },
+    "east": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.5
+     ]
+    },
+    "west": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.5
+     ]
+    },
+    "up": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      5.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      5.5,
+      0.5
+     ]
+    }
+   }
+  }
+ ]
+}

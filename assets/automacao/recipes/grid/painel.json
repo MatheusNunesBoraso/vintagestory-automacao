@@ -1,0 +1,34 @@
+[
+ {
+  "ingredientPattern": "PHP,IGI",
+  "ingredients": {
+   "G": {
+    "type": "item",
+    "code": "game:gear-rusty",
+    "quantity": 1
+   },
+   "H": {
+    "type": "item",
+    "code": "game:paper-parchment",
+    "quantity": 1
+   },
+   "I": {
+    "type": "item",
+    "code": "game:ingot-copper",
+    "quantity": 1
+   },
+   "P": {
+    "type": "item",
+    "code": "game:plank-*",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 2,
+  "output": {
+   "type": "block",
+   "code": "automacao:painel-south",
+   "quantity": 1
+  }
+ }
+]

@@ -1,0 +1,211 @@
+{
+ "code": "bancada",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "bancada",
+  "chave": "bancada",
+  "modos": [
+   "parado",
+   "ligado"
+  ],
+  "modoTrabalhando": "ligado",
+  "partes": [
+   {
+    "nome": "rebolo",
+    "pivo": [
+     9,
+     13.5,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "x",
+      "speed": -14
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": false,
+  "bau": true
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/bancada/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/bancada/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/bancada/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/bancada/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/bancada/full"
+ },
+ "textures": {
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "leather": {
+   "base": "game:block/leather/aged1"
+  },
+  "chestside": {
+   "base": "game:block/wood/chest/aged/sides"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "grindtop": {
+   "base": "game:block/stone/polishedrock-old/full/andesite2"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "chestlid": {
+   "base": "game:block/wood/chest/aged/lid"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.015625,
+  "y1": 0,
+  "z1": 0.09375,
+  "x2": 0.96875,
+  "y2": 1.078125,
+  "z2": 0.875
+ },
+ "selectionbox": {
+  "x1": 0.015625,
+  "y1": 0,
+  "z1": 0.09375,
+  "x2": 0.96875,
+  "y2": 1.078125,
+  "z2": 0.875
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.5390625,
+   "z": 0.5
+  },
+  "scale": 1.0
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

@@ -1,0 +1,24 @@
+[
+ {
+  "ingredientPattern": "KIK,KIK",
+  "ingredients": {
+   "I": {
+    "type": "item",
+    "code": "game:ingot-copper",
+    "quantity": 1
+   },
+   "K": {
+    "type": "item",
+    "code": "game:stick",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 2,
+  "output": {
+   "type": "block",
+   "code": "automacao:cerca-south",
+   "quantity": 1
+  }
+ }
+]

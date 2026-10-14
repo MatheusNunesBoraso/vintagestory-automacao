@@ -1,0 +1,78 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "ember": "game:block/coal/ember"
+ },
+ "elements": [
+  {
+   "name": "metal_fundido",
+   "from": [
+    7.75,
+    14.25,
+    5.25
+   ],
+   "to": [
+    12.25,
+    14.9,
+    9.75
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      4.5,
+      0.6500000000000004
+     ]
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      4.5,
+      0.6500000000000004
+     ]
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      4.5,
+      0.6500000000000004
+     ]
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      4.5,
+      0.6500000000000004
+     ]
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      4.5,
+      4.5
+     ]
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      4.5,
+      4.5
+     ]
+    }
+   }
+  }
+ ]
+}

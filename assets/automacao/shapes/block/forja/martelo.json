@@ -1,0 +1,358 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "carcaca": "game:block/metal/tarnished/rusty-iron1",
+  "rebite": "game:block/metal/tarnished/iron-riveted1",
+  "corroded": "game:block/metal/corroded/rusty3"
+ },
+ "elements": [
+  {
+   "name": "braco",
+   "from": [
+    7.5,
+    14.5,
+    2.4
+   ],
+   "to": [
+    8.5,
+    15.5,
+    8.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.0
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.0
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      6.1,
+      1.0
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      6.1,
+      1.0
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      6.1
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      6.1
+     ]
+    }
+   }
+  },
+  {
+   "name": "braco_reforco",
+   "from": [
+    7.25,
+    14.25,
+    2.6
+   ],
+   "to": [
+    8.75,
+    15.75,
+    3.6
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.5,
+      1.5
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.5,
+      1.5
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.5
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.5
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.5,
+      1.0
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.5,
+      1.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "martelo",
+   "from": [
+    6.5,
+    11.5,
+    6.5
+   ],
+   "to": [
+    9.5,
+    14.5,
+    9.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      3.0,
+      3.0
+     ]
+    },
+    "south": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      3.0,
+      3.0
+     ]
+    },
+    "east": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      3.0,
+      3.0
+     ]
+    },
+    "west": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      3.0,
+      3.0
+     ]
+    },
+    "up": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      3.0,
+      3.0
+     ]
+    },
+    "down": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      3.0,
+      3.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "martelo_cinta",
+   "from": [
+    6.25,
+    13,
+    6.25
+   ],
+   "to": [
+    9.75,
+    13.75,
+    9.75
+   ],
+   "faces": {
+    "north": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      3.5,
+      0.75
+     ]
+    },
+    "south": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      3.5,
+      0.75
+     ]
+    },
+    "east": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      3.5,
+      0.75
+     ]
+    },
+    "west": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      3.5,
+      0.75
+     ]
+    },
+    "up": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      3.5,
+      3.5
+     ]
+    },
+    "down": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      3.5,
+      3.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "martelo_face",
+   "from": [
+    7,
+    10.9,
+    7
+   ],
+   "to": [
+    9,
+    11.5,
+    9
+   ],
+   "faces": {
+    "north": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      2,
+      0.5999999999999996
+     ]
+    },
+    "south": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      2,
+      0.5999999999999996
+     ]
+    },
+    "east": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      2,
+      0.5999999999999996
+     ]
+    },
+    "west": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      2,
+      0.5999999999999996
+     ]
+    },
+    "up": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      2,
+      2
+     ]
+    },
+    "down": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      2,
+      2
+     ]
+    }
+   }
+  }
+ ]
+}

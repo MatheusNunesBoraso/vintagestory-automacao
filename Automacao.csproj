@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>Automacao</AssemblyName>
+    <RootNamespace>Automacao</RootNamespace>
+    <Nullable>disable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <VintageStoryPath>$(APPDATA)\Vintagestory</VintageStoryPath>
+    <ModsPath>$(APPDATA)\VintagestoryData\Mods</ModsPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="VintagestoryAPI"><HintPath>$(VintageStoryPath)\VintagestoryAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VSSurvivalMod"><HintPath>$(VintageStoryPath)\Mods\VSSurvivalMod.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VSEssentials"><HintPath>$(VintageStoryPath)\Mods\VSEssentials.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="protobuf-net"><HintPath>$(VintageStoryPath)\Lib\protobuf-net.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(VintageStoryPath)\Lib\Newtonsoft.Json.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="cairo-sharp"><HintPath>$(VintageStoryPath)\Lib\cairo-sharp.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <!-- Empacota o mod (dll + modinfo + assets) e instala na pasta Mods -->
+  <Target Name="PackageMod" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <PropertyGroup>
+      <ModStage>$(MSBuildProjectDirectory)\bin\stage</ModStage>
+      <ModZip>$(ModsPath)\automacao.zip</ModZip>
+    </PropertyGroup>
+    <RemoveDir Directories="$(ModStage)" />
+    <ItemGroup>
+      <ModAssets Include="$(MSBuildProjectDirectory)\assets\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModStage)" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\modinfo.json" DestinationFolder="$(ModStage)" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\modicon.png" DestinationFolder="$(ModStage)" Condition="Exists('$(MSBuildProjectDirectory)\modicon.png')" />
+    <Copy SourceFiles="@(ModAssets)" DestinationFiles="@(ModAssets->'$(ModStage)\assets\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Delete Files="$(ModZip)" />
+    <ZipDirectory SourceDirectory="$(ModStage)" DestinationFile="$(ModZip)" />
+    <Message Importance="high" Text="Mod instalado em $(ModZip)" />
+  </Target>
+</Project>

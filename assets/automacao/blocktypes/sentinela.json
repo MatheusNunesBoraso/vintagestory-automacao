@@ -1,0 +1,226 @@
+{
+ "code": "sentinela",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "sentinela",
+  "chave": "sentinela",
+  "modos": [
+   "parado",
+   "vigiando",
+   "alerta"
+  ],
+  "modoTrabalhando": "vigiando",
+  "partes": [
+   {
+    "nome": "head",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [
+     {
+      "swing": "y",
+      "amp": 0.9,
+      "freq": 0.13,
+      "when": [
+       "vigiando"
+      ]
+     },
+     {
+      "spin": "y",
+      "speed": 0.9,
+      "when": [
+       "alerta"
+      ]
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": true,
+  "bau": true
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/sentinela/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/sentinela/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/sentinela/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/sentinela/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/sentinela/full"
+ },
+ "textures": {
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "s_planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "fired": {
+   "base": "game:block/clay/hardened/brown1"
+  },
+  "s_iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "s_cracked": {
+   "base": "game:block/stone/crackedbrick/andesite1"
+  },
+  "s_mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "s_corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "s_cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "s_lensglow": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "s_darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "s_brass": {
+   "base": "game:block/metal/lantern/rust"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "s_brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "s_darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "s_moss": {
+   "base": "game:block/plant/moss"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0,
+  "y1": 0,
+  "z1": 0,
+  "x2": 1,
+  "y2": 1.53125,
+  "z2": 1
+ },
+ "selectionbox": {
+  "x1": 0,
+  "y1": 0,
+  "z1": 0,
+  "x2": 1,
+  "y2": 1.53125,
+  "z2": 1
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.765625,
+   "z": 0.5
+  },
+  "scale": 0.74
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

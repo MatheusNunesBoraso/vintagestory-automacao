@@ -1,0 +1,1304 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "luz": "game:block/machine/statictranslocator/rustyglow",
+  "brass": "game:block/metal/tarnished/brass",
+  "carcaca": "game:block/metal/tarnished/rusty-iron1",
+  "rebite": "game:block/metal/tarnished/iron-riveted1",
+  "corroded": "game:block/metal/corroded/rusty3"
+ },
+ "elements": [
+  {
+   "name": "holo_giro",
+   "from": [
+    5.5,
+    22,
+    5.5
+   ],
+   "to": [
+    10.5,
+    22.75,
+    10.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.75
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.75
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.75
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.75
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      5.0
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      5.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "holo_giro_r",
+   "from": [
+    5.5,
+    22.03,
+    5.5
+   ],
+   "to": [
+    10.5,
+    22.72,
+    10.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.6899999999999977
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.6899999999999977
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.6899999999999977
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.6899999999999977
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      5.0
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.0,
+      5.0
+     ]
+    }
+   },
+   "rotationOrigin": [
+    8,
+    22,
+    8
+   ],
+   "rotationY": 45
+  },
+  {
+   "name": "holo_garfo_o",
+   "from": [
+    5.75,
+    22.75,
+    7.25
+   ],
+   "to": [
+    6.5,
+    26,
+    8.75
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.75,
+      3.25
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.75,
+      3.25
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.5,
+      3.25
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.5,
+      3.25
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.5
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "holo_garfo_l",
+   "from": [
+    9.5,
+    22.75,
+    7.25
+   ],
+   "to": [
+    10.25,
+    26,
+    8.75
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.75,
+      3.25
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.75,
+      3.25
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.5,
+      3.25
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.5,
+      3.25
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.5
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "holo_corpo",
+   "from": [
+    6.5,
+    23.25,
+    5
+   ],
+   "to": [
+    9.5,
+    26.75,
+    10.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      3.0,
+      3.5
+     ]
+    },
+    "south": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      3.0,
+      3.5
+     ]
+    },
+    "east": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      5.5,
+      3.5
+     ]
+    },
+    "west": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      5.5,
+      3.5
+     ]
+    },
+    "up": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      3.0,
+      5.5
+     ]
+    },
+    "down": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      3.0,
+      5.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "holo_aro",
+   "from": [
+    6.25,
+    23,
+    10.5
+   ],
+   "to": [
+    9.75,
+    27,
+    10.9
+   ],
+   "faces": {
+    "north": {
+     "texture": "#brass",
+     "uv": [
+      0,
+      0,
+      3.5,
+      4
+     ]
+    },
+    "south": {
+     "texture": "#brass",
+     "uv": [
+      0,
+      0,
+      3.5,
+      4
+     ]
+    },
+    "east": {
+     "texture": "#brass",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4
+     ]
+    },
+    "west": {
+     "texture": "#brass",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4
+     ]
+    },
+    "up": {
+     "texture": "#brass",
+     "uv": [
+      0,
+      0,
+      3.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#brass",
+     "uv": [
+      0,
+      0,
+      3.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "holo_lente",
+   "from": [
+    6.6,
+    23.4,
+    10.9
+   ],
+   "to": [
+    9.4,
+    26.6,
+    11.05
+   ],
+   "faces": {
+    "north": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      2.8000000000000007,
+      3.200000000000003
+     ]
+    },
+    "south": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      2.8000000000000007,
+      3.200000000000003
+     ]
+    },
+    "east": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.200000000000003
+     ]
+    },
+    "west": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.200000000000003
+     ]
+    },
+    "up": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      2.8000000000000007,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      2.8000000000000007,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "holo_tampa",
+   "from": [
+    6.75,
+    26.75,
+    5.5
+   ],
+   "to": [
+    9.25,
+    27.25,
+    9.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      2.5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      2.5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      4.0,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      4.0,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      2.5,
+      4.0
+     ]
+    },
+    "down": {
+     "texture": "#rebite",
+     "uv": [
+      0,
+      0,
+      2.5,
+      4.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "holo_aleta1",
+   "from": [
+    6.9,
+    27.25,
+    6
+   ],
+   "to": [
+    9.1,
+    27.75,
+    6.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.1999999999999993,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.1999999999999993,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.1999999999999993,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.1999999999999993,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "holo_aleta2",
+   "from": [
+    6.9,
+    27.25,
+    8
+   ],
+   "to": [
+    9.1,
+    27.75,
+    8.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.1999999999999993,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.1999999999999993,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.1999999999999993,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.1999999999999993,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "giro_dente0",
+   "from": [
+    7.6,
+    21.6,
+    5.5
+   ],
+   "to": [
+    8.4,
+    22,
+    6.3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    }
+   }
+  },
+  {
+   "name": "giro_dente1",
+   "from": [
+    7.6,
+    21.6,
+    5.5
+   ],
+   "to": [
+    8.4,
+    22,
+    6.3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    }
+   },
+   "rotationOrigin": [
+    8,
+    22,
+    8
+   ],
+   "rotationY": 45
+  },
+  {
+   "name": "giro_dente2",
+   "from": [
+    7.6,
+    21.6,
+    5.5
+   ],
+   "to": [
+    8.4,
+    22,
+    6.3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    }
+   },
+   "rotationOrigin": [
+    8,
+    22,
+    8
+   ],
+   "rotationY": 90
+  },
+  {
+   "name": "giro_dente3",
+   "from": [
+    7.6,
+    21.6,
+    5.5
+   ],
+   "to": [
+    8.4,
+    22,
+    6.3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    }
+   },
+   "rotationOrigin": [
+    8,
+    22,
+    8
+   ],
+   "rotationY": 135
+  },
+  {
+   "name": "giro_dente4",
+   "from": [
+    7.6,
+    21.6,
+    5.5
+   ],
+   "to": [
+    8.4,
+    22,
+    6.3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    }
+   },
+   "rotationOrigin": [
+    8,
+    22,
+    8
+   ],
+   "rotationY": 180
+  },
+  {
+   "name": "giro_dente5",
+   "from": [
+    7.6,
+    21.6,
+    5.5
+   ],
+   "to": [
+    8.4,
+    22,
+    6.3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    }
+   },
+   "rotationOrigin": [
+    8,
+    22,
+    8
+   ],
+   "rotationY": 225
+  },
+  {
+   "name": "giro_dente6",
+   "from": [
+    7.6,
+    21.6,
+    5.5
+   ],
+   "to": [
+    8.4,
+    22,
+    6.3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    }
+   },
+   "rotationOrigin": [
+    8,
+    22,
+    8
+   ],
+   "rotationY": 270
+  },
+  {
+   "name": "giro_dente7",
+   "from": [
+    7.6,
+    21.6,
+    5.5
+   ],
+   "to": [
+    8.4,
+    22,
+    6.3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.7999999999999998
+     ]
+    }
+   },
+   "rotationOrigin": [
+    8,
+    22,
+    8
+   ],
+   "rotationY": 315
+  }
+ ]
+}

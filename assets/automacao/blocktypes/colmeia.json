@@ -1,0 +1,232 @@
+{
+ "code": "colmeia",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "colmeia",
+  "chave": "colmeia",
+  "modos": [
+   "parado",
+   "ligado"
+  ],
+  "modoTrabalhando": "ligado",
+  "partes": [
+   {
+    "nome": "rotor",
+    "pivo": [
+     11.5,
+     0,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "y",
+      "speed": 7
+     }
+    ]
+   },
+   {
+    "nome": "polia",
+    "pivo": [
+     11.5,
+     0,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "y",
+      "speed": 7
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": true,
+  "bau": true
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/colmeia/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/colmeia/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/colmeia/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/colmeia/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/colmeia/full"
+ },
+ "textures": {
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "fired": {
+   "base": "game:block/clay/hardened/brown1"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "wax": {
+   "base": "game:block/reed/beehive/beeswax"
+  },
+  "ember": {
+   "base": "game:block/coal/ember"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "skep": {
+   "base": "game:block/reed/beehive/hive-reed"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "honeycomb": {
+   "base": "game:block/reed/beehive/honeycomb"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.03125,
+  "y1": 0,
+  "z1": 0.03125,
+  "x2": 0.996875,
+  "y2": 1.078125,
+  "z2": 0.99375
+ },
+ "selectionbox": {
+  "x1": 0.03125,
+  "y1": 0,
+  "z1": 0.03125,
+  "x2": 0.996875,
+  "y2": 1.078125,
+  "z2": 0.99375
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.5390625,
+   "z": 0.5
+  },
+  "scale": 1.0
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

@@ -1,0 +1,27 @@
+{
+	"code": "bolt",
+	"class": "EntityProjectile",
+	"tags": [ "inanimate", "projectile" ],
+	"attributes": { "isProjectile": true },
+	"hitboxSize": { "x": 0.1, "y": 0.1 },
+	"behaviorConfigs": {
+		"passivephysics": { "groundDragFactor": 1, "airDragFactor": 0, "gravityFactor": 0 }
+	},
+	"client": {
+		"size": 0.75,
+		"renderer": "Shape",
+		"shape": { "base": "game:entity/nonliving/projectile/arrow/copper" },
+		"textures": { "material": { "base": "game:block/metal/ingot/iron" } },
+		"behaviors": [
+			{ "code": "passivephysics" },
+			{ "code": "interpolateposition" }
+		]
+	},
+	"server": {
+		"behaviors": [
+			{ "code": "passivephysics" },
+			{ "code": "despawn", "minSeconds": 4 }
+		]
+	},
+	"sounds": {}
+}

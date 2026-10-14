@@ -1,0 +1,425 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "bobina": "game:block/metal/sheet/copper1"
+ },
+ "elements": [
+  {
+   "name": "rotor",
+   "from": [
+    2.1,
+    5.5,
+    5.5
+   ],
+   "to": [
+    8.4,
+    11.5,
+    10.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      6.300000000000001,
+      6.0
+     ]
+    },
+    "south": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      6.300000000000001,
+      6.0
+     ]
+    },
+    "east": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      5.0,
+      6.0
+     ]
+    },
+    "west": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      5.0,
+      6.0
+     ]
+    },
+    "up": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      6.300000000000001,
+      5.0
+     ]
+    },
+    "down": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      6.300000000000001,
+      5.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "rotor2",
+   "from": [
+    2.25,
+    6,
+    5
+   ],
+   "to": [
+    8.25,
+    11,
+    11
+   ],
+   "faces": {
+    "north": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      6.0,
+      5
+     ]
+    },
+    "south": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      6.0,
+      5
+     ]
+    },
+    "east": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      6,
+      5
+     ]
+    },
+    "west": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      6,
+      5
+     ]
+    },
+    "up": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      6.0,
+      6
+     ]
+    },
+    "down": {
+     "texture": "#bobina",
+     "uv": [
+      0,
+      0,
+      6.0,
+      6
+     ]
+    }
+   }
+  },
+  {
+   "name": "rotor_fenda1",
+   "from": [
+    2.18,
+    8.25,
+    4.9
+   ],
+   "to": [
+    8.32,
+    8.75,
+    11.1
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      6.140000000000001,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      6.140000000000001,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      6.199999999999999,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      6.199999999999999,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      6.140000000000001,
+      6.199999999999999
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      6.140000000000001,
+      6.199999999999999
+     ]
+    }
+   }
+  },
+  {
+   "name": "rotor_fenda2",
+   "from": [
+    2.3,
+    5.4,
+    7.75
+   ],
+   "to": [
+    8.2,
+    11.6,
+    8.25
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.8999999999999995,
+      6.199999999999999
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.8999999999999995,
+      6.199999999999999
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      6.199999999999999
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      6.199999999999999
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.8999999999999995,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      5.8999999999999995,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "rotor_eixo",
+   "from": [
+    8.4,
+    8,
+    7.5
+   ],
+   "to": [
+    9.6,
+    9,
+    8.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.1999999999999993,
+      1
+     ]
+    },
+    "south": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.1999999999999993,
+      1
+     ]
+    },
+    "east": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1
+     ]
+    },
+    "west": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1
+     ]
+    },
+    "up": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.1999999999999993,
+      1.0
+     ]
+    },
+    "down": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.1999999999999993,
+      1.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "rotor_eixo_o",
+   "from": [
+    1.6,
+    8,
+    7.5
+   ],
+   "to": [
+    2.2,
+    9,
+    8.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.6000000000000001,
+      1
+     ]
+    },
+    "south": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.6000000000000001,
+      1
+     ]
+    },
+    "east": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1
+     ]
+    },
+    "west": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1
+     ]
+    },
+    "up": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.6000000000000001,
+      1.0
+     ]
+    },
+    "down": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.6000000000000001,
+      1.0
+     ]
+    }
+   }
+  }
+ ]
+}

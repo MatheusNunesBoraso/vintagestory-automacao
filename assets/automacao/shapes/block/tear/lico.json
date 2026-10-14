@@ -1,0 +1,839 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "linen": "game:block/linen",
+  "rope": "game:block/cloth/reedrope",
+  "darkwood": "game:block/wood/debarked/aged"
+ },
+ "elements": [
+  {
+   "name": "lico_quadro_cima",
+   "from": [
+    3,
+    14.5,
+    7
+   ],
+   "to": [
+    13,
+    15,
+    7.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_quadro_baixo",
+   "from": [
+    3,
+    9.25,
+    7
+   ],
+   "to": [
+    13,
+    9.75,
+    7.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_lado_o",
+   "from": [
+    3,
+    9.75,
+    7
+   ],
+   "to": [
+    3.5,
+    14.5,
+    7.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_lado_l",
+   "from": [
+    12.5,
+    9.75,
+    7
+   ],
+   "to": [
+    13,
+    14.5,
+    7.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_fio0",
+   "from": [
+    4.5,
+    9.75,
+    7.15
+   ],
+   "to": [
+    4.7,
+    14.5,
+    7.35
+   ],
+   "faces": {
+    "north": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "south": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "east": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "west": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "up": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_fio1",
+   "from": [
+    6.0,
+    9.75,
+    7.15
+   ],
+   "to": [
+    6.2,
+    14.5,
+    7.35
+   ],
+   "faces": {
+    "north": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "south": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "east": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "west": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "up": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_fio2",
+   "from": [
+    7.5,
+    9.75,
+    7.15
+   ],
+   "to": [
+    7.7,
+    14.5,
+    7.35
+   ],
+   "faces": {
+    "north": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "south": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "east": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "west": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "up": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_fio3",
+   "from": [
+    9.0,
+    9.75,
+    7.15
+   ],
+   "to": [
+    9.2,
+    14.5,
+    7.35
+   ],
+   "faces": {
+    "north": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "south": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "east": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "west": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "up": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_fio4",
+   "from": [
+    10.5,
+    9.75,
+    7.15
+   ],
+   "to": [
+    10.7,
+    14.5,
+    7.35
+   ],
+   "faces": {
+    "north": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "south": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "east": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "west": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "up": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_fio5",
+   "from": [
+    12.0,
+    9.75,
+    7.15
+   ],
+   "to": [
+    12.2,
+    14.5,
+    7.35
+   ],
+   "faces": {
+    "north": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "south": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "east": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "west": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.75
+     ]
+    },
+    "up": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#linen",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_corda_o",
+   "from": [
+    4.25,
+    15,
+    7.1
+   ],
+   "to": [
+    4.6,
+    19,
+    7.4
+   ],
+   "faces": {
+    "north": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4
+     ]
+    },
+    "south": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4
+     ]
+    },
+    "east": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4
+     ]
+    },
+    "west": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4
+     ]
+    },
+    "up": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "lico_corda_l",
+   "from": [
+    11.4,
+    15,
+    7.1
+   ],
+   "to": [
+    11.75,
+    19,
+    7.4
+   ],
+   "faces": {
+    "north": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4
+     ]
+    },
+    "south": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4
+     ]
+    },
+    "east": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4
+     ]
+    },
+    "west": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4
+     ]
+    },
+    "up": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  }
+ ]
+}

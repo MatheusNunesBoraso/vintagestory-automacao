@@ -1,0 +1,68 @@
+{
+ "code": "manual",
+ "class": "ItemManualAutomacao",
+ "maxstacksize": 1,
+ "creativeinventory": {
+  "general": [
+   "*"
+  ],
+  "items": [
+   "*"
+  ]
+ },
+ "shape": {
+  "base": "game:item/lore/book"
+ },
+ "textures": {
+  "book": {
+   "base": "game:item/lore/aged-orangebrown"
+  }
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -30,
+   "y": 40,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.1,
+   "z": 0.5
+  },
+  "scale": 2.4
+ },
+ "fpHandTransform": {
+  "translation": {
+   "x": 0,
+   "y": 0.1,
+   "z": 0.3
+  },
+  "rotation": {
+   "x": 0,
+   "y": 90,
+   "z": -20
+  },
+  "scale": 1.8
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.8,
+   "y": -0.1,
+   "z": -0.6
+  },
+  "rotation": {
+   "x": 0,
+   "y": 90,
+   "z": 0
+  },
+  "scale": 0.7
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 3
+ }
+}

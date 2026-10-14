@@ -1,0 +1,78 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "escarcha": "game:block/liquid/ice/glacier1"
+ },
+ "elements": [
+  {
+   "name": "serp_gelo",
+   "from": [
+    5,
+    6,
+    1.65
+   ],
+   "to": [
+    8,
+    6.75,
+    1.75
+   ],
+   "faces": {
+    "north": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      3,
+      0.75
+     ]
+    },
+    "south": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      3,
+      0.75
+     ]
+    },
+    "east": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.75
+     ]
+    },
+    "west": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.75
+     ]
+    },
+    "up": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      3,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#escarcha",
+     "uv": [
+      0,
+      0,
+      3,
+      0.5
+     ]
+    }
+   }
+  }
+ ]
+}

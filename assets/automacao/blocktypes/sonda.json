@@ -1,0 +1,214 @@
+{
+ "code": "sonda",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "sonda",
+  "chave": "sonda",
+  "modos": [
+   "parado",
+   "ligado"
+  ],
+  "modoTrabalhando": "ligado",
+  "partes": [
+   {
+    "nome": "broca",
+    "pivo": [
+     7,
+     0,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "y",
+      "speed": 3
+     }
+    ]
+   },
+   {
+    "nome": "motor",
+    "pivo": [
+     2.075,
+     17.45,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "x",
+      "speed": -4.32
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": true,
+  "bau": true
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/sonda/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/sonda/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/sonda/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/sonda/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/sonda/full"
+ },
+ "textures": {
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "gravel": {
+   "base": "game:block/stone/gravel/andesite"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "red": {
+   "base": "game:block/cloth/basic/red"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "paper": {
+   "base": "game:block/cloth/paper/blank-small"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.004687500000000011,
+  "y1": 0,
+  "z1": 0.03125,
+  "x2": 0.85,
+  "y2": 1.6875,
+  "z2": 0.90625
+ },
+ "selectionbox": {
+  "x1": 0.004687500000000011,
+  "y1": 0,
+  "z1": 0.03125,
+  "x2": 0.85,
+  "y2": 1.6875,
+  "z2": 0.90625
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.84375,
+   "z": 0.5
+  },
+  "scale": 0.68
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

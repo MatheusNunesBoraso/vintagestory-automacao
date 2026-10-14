@@ -1,0 +1,20 @@
+[
+	{
+		"file": "game:blocktypes/clay/lootvessel.json",
+		"op": "add",
+		"path": "/attributes/lootListByType/*-tool/-",
+		"value": { "type": "block", "chance": 0.06, "minQuantity": 1, "maxQuantity": 1, "codes": [ "automacao:sentinela-south" ] }
+	},
+	{
+		"file": "game:blocktypes/clay/lootvessel.json",
+		"op": "add",
+		"path": "/attributes/lootListByType/*-ore/-",
+		"value": { "type": "block", "chance": 0.035, "minQuantity": 1, "maxQuantity": 1, "codes": [ "automacao:sentinela-south" ] }
+	},
+	{
+		"file": "game:itemtypes/meta/stackrandomizer.json",
+		"op": "add",
+		"path": "/attributesByType/*-gear/stacks/-",
+		"value": { "type": "block", "code": "automacao:sentinela-south", "quantity": { "avg": 1, "var": 0 }, "chance": 10 }
+	}
+]

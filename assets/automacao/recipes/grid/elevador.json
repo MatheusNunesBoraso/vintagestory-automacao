@@ -1,0 +1,34 @@
+[
+ {
+  "ingredientPattern": "PRP,PGP,PIP",
+  "ingredients": {
+   "G": {
+    "type": "item",
+    "code": "game:gear-rusty",
+    "quantity": 1
+   },
+   "I": {
+    "type": "item",
+    "code": "game:ingot-copper",
+    "quantity": 1
+   },
+   "P": {
+    "type": "item",
+    "code": "game:plank-*",
+    "quantity": 1
+   },
+   "R": {
+    "type": "item",
+    "code": "game:rope",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+   "type": "block",
+   "code": "automacao:elevador-south",
+   "quantity": 1
+  }
+ }
+]

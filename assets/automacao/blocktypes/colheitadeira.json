@@ -1,0 +1,250 @@
+{
+ "code": "colheitadeira",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "colheitadeira",
+  "chave": "colheitadeira",
+  "modos": [
+   "parado",
+   "ligado"
+  ],
+  "modoTrabalhando": "ligado",
+  "partes": [
+   {
+    "nome": "motor",
+    "pivo": [
+     13.75,
+     5.85,
+     3.0
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "z",
+      "speed": 6
+     }
+    ]
+   },
+   {
+    "nome": "pinhao",
+    "pivo": [
+     13.7,
+     9.5,
+     8.5
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "y",
+      "speed": -1.78
+     }
+    ]
+   },
+   {
+    "nome": "braco",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "y",
+      "speed": 0.6
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": true,
+  "bau": true
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/colheitadeira/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/colheitadeira/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/colheitadeira/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/colheitadeira/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/colheitadeira/full"
+ },
+ "textures": {
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "fruta_cereja": {
+   "base": "game:item/food/fruit/cherry"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "rope": {
+   "base": "game:block/cloth/reedrope"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "engrenagens": {
+   "base": "game:block/machine/statictranslocator/statictranslocator_gearboxa"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "fruta_verm": {
+   "base": "game:item/food/fruit/raspberry"
+  },
+  "basketside": {
+   "base": "game:block/reed/basket/aged-northsouth"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0,
+  "y1": 0,
+  "z1": 0.03125,
+  "x2": 1,
+  "y2": 1.609375,
+  "z2": 0.96875
+ },
+ "selectionbox": {
+  "x1": 0,
+  "y1": 0,
+  "z1": 0.03125,
+  "x2": 1,
+  "y2": 1.609375,
+  "z2": 0.96875
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.8046875,
+   "z": 0.5
+  },
+  "scale": 0.58
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

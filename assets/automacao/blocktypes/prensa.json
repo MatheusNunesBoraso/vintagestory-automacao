@@ -1,0 +1,248 @@
+{
+ "code": "prensa",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "prensa",
+  "chave": "prensa",
+  "modos": [
+   "parado",
+   "ligado"
+  ],
+  "modoTrabalhando": "ligado",
+  "partes": [
+   {
+    "nome": "parafuso",
+    "pivo": [
+     8,
+     0,
+     7.5
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "bob": "y",
+      "amp": -1.5,
+      "freq": 0.12
+     }
+    ]
+   },
+   {
+    "nome": "coroa",
+    "pivo": [
+     8,
+     25.3,
+     7.5
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "y",
+      "speed": 0.8
+     }
+    ]
+   },
+   {
+    "nome": "motor",
+    "pivo": [
+     2.8,
+     27.85,
+     7.5
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "x",
+      "speed": -1.35
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": false,
+  "bau": true
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/prensa/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/prensa/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/prensa/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/prensa/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/prensa/full"
+ },
+ "textures": {
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "fruta_cereja": {
+   "base": "game:item/food/fruit/cherry"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "basketside": {
+   "base": "game:block/reed/basket/aged-northsouth"
+  },
+  "fruta_verm": {
+   "base": "game:item/food/fruit/raspberry"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "suco": {
+   "base": "game:block/liquid/wine"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "balde": {
+   "base": "game:block/wood/bucket/aged-sides"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0,
+  "y1": 0,
+  "z1": 0,
+  "x2": 1,
+  "y2": 1.84375,
+  "z2": 1
+ },
+ "selectionbox": {
+  "x1": 0,
+  "y1": 0,
+  "z1": 0,
+  "x2": 1,
+  "y2": 1.84375,
+  "z2": 1
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.921875,
+   "z": 0.5
+  },
+  "scale": 0.62
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

@@ -1,0 +1,286 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "luz": "game:block/machine/statictranslocator/rustyglow",
+  "ember": "game:block/coal/ember"
+ },
+ "elements": [
+  {
+   "name": "brasa1",
+   "from": [
+    3,
+    3,
+    3.5
+   ],
+   "to": [
+    13,
+    3.3,
+    4.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      1.0,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      1.0,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      1.0
+     ]
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      1.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "brasa2",
+   "from": [
+    3,
+    3,
+    6.5
+   ],
+   "to": [
+    13,
+    3.3,
+    7.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      1.0,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      1.0,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      1.0
+     ]
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      1.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "brasa3",
+   "from": [
+    3,
+    3,
+    9.5
+   ],
+   "to": [
+    13,
+    3.3,
+    10.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      1.0,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      1.0,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      1.0
+     ]
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      10,
+      1.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "lampada_bulbo",
+   "from": [
+    2.35,
+    14.3,
+    11.85
+   ],
+   "to": [
+    3.65,
+    15.6,
+    13.15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.2999999999999998,
+      1.299999999999999
+     ]
+    },
+    "south": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.2999999999999998,
+      1.299999999999999
+     ]
+    },
+    "east": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.299999999999999
+     ]
+    },
+    "west": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.299999999999999
+     ]
+    },
+    "up": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.2999999999999998,
+      1.3000000000000007
+     ]
+    },
+    "down": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.2999999999999998,
+      1.3000000000000007
+     ]
+    }
+   }
+  }
+ ]
+}

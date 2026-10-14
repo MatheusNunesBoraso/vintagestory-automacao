@@ -1,0 +1,29 @@
+[
+ {
+  "ingredientPattern": "MIM,MGM",
+  "ingredients": {
+   "G": {
+    "type": "item",
+    "code": "game:gear-rusty",
+    "quantity": 1
+   },
+   "I": {
+    "type": "item",
+    "code": "game:ingot-copper",
+    "quantity": 1
+   },
+   "M": {
+    "type": "item",
+    "code": "game:metalplate-iron",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 2,
+  "output": {
+   "type": "block",
+   "code": "automacao:aquecedor-apagado-south",
+   "quantity": 1
+  }
+ }
+]

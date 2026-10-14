@@ -1,0 +1,253 @@
+{
+ "code": "olaria",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "olaria",
+  "chave": "olaria",
+  "modos": [
+   "parado",
+   "ligado"
+  ],
+  "modoTrabalhando": "ligado",
+  "partes": [
+   {
+    "nome": "motor",
+    "pivo": [
+     3.65,
+     4.25,
+     5
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "x",
+      "speed": -4.9
+     }
+    ]
+   },
+   {
+    "nome": "torno",
+    "pivo": [
+     9.5,
+     0,
+     5
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "y",
+      "speed": 2.5
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": false,
+  "bau": true
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/olaria/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/olaria/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/olaria/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/olaria/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/olaria/full"
+ },
+ "textures": {
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "chestlid": {
+   "base": "game:block/wood/chest/aged/lid"
+  },
+  "fired": {
+   "base": "game:block/clay/hardened/brown1"
+  },
+  "kilnfront": {
+   "base": "game:block/clay/bloomery/aged/front"
+  },
+  "telha_vermelha": {
+   "base": "game:block/clay/shingles/red"
+  },
+  "leather": {
+   "base": "game:block/leather/aged1"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "chimney": {
+   "base": "game:block/clay/bloomery/aged/chimney"
+  },
+  "ember": {
+   "base": "game:block/coal/ember"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "chestside": {
+   "base": "game:block/wood/chest/aged/sides"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "kilnwall": {
+   "base": "game:block/clay/bloomery/aged/base"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "barro": {
+   "base": "game:block/clay/hardened/earthyorange"
+  },
+  "ceramica": {
+   "base": "game:block/clay/aged-ceramic2"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.015625,
+  "y1": 0,
+  "z1": 0.015625,
+  "x2": 0.984375,
+  "y2": 0.890625,
+  "z2": 0.984375
+ },
+ "selectionbox": {
+  "x1": 0.015625,
+  "y1": 0,
+  "z1": 0.015625,
+  "x2": 0.984375,
+  "y2": 0.890625,
+  "z2": 0.984375
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.4453125,
+   "z": 0.5
+  },
+  "scale": 1.0
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

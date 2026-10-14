@@ -1,0 +1,29 @@
+[
+ {
+  "ingredientPattern": "CIC,CIC,PPP",
+  "ingredients": {
+   "C": {
+    "type": "item",
+    "code": "game:clay-*",
+    "quantity": 1
+   },
+   "I": {
+    "type": "item",
+    "code": "game:ingot-copper",
+    "quantity": 1
+   },
+   "P": {
+    "type": "item",
+    "code": "game:plank-*",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+   "type": "block",
+   "code": "automacao:bateria-south",
+   "quantity": 1
+  }
+ }
+]

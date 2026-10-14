@@ -1,0 +1,223 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "corroded": "game:block/metal/corroded/rusty3",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+ },
+ "elements": [
+  {
+   "name": "motor_eixo",
+   "from": [
+    13.75,
+    5.0,
+    1.5
+   ],
+   "to": [
+    15.75,
+    6.0,
+    2.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      2.0,
+      1.0
+     ]
+    },
+    "south": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      2.0,
+      1.0
+     ]
+    },
+    "east": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.0
+     ]
+    },
+    "west": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.0
+     ]
+    },
+    "up": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      2.0,
+      1.0
+     ]
+    },
+    "down": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      2.0,
+      1.0
+     ]
+    }
+   }
+  },
+  {
+   "name": "motor_polia",
+   "from": [
+    14.5,
+    4.25,
+    0.75
+   ],
+   "to": [
+    15.25,
+    6.75,
+    3.25
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      2.5
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      2.5
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "motor_polia2",
+   "from": [
+    14.5,
+    4.25,
+    0.75
+   ],
+   "to": [
+    15.25,
+    6.75,
+    3.25
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      2.5
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      2.5
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    }
+   },
+   "rotationOrigin": [
+    11.5,
+    5.5,
+    2
+   ],
+   "rotationX": 45
+  }
+ ]
+}

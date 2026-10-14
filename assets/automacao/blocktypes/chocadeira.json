@@ -1,0 +1,218 @@
+{
+ "code": "chocadeira",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "chocadeira",
+  "chave": "chocadeira",
+  "modos": [
+   "parado",
+   "ligado",
+   "nasceu"
+  ],
+  "modoTrabalhando": "ligado",
+  "partes": [
+   {
+    "nome": "ovo_chocando",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": false,
+    "anim": [],
+    "show": [
+     "parado",
+     "ligado"
+    ]
+   },
+   {
+    "nome": "pintinho",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": false,
+    "anim": [],
+    "show": [
+     "nasceu"
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": false,
+  "bau": true
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/chocadeira/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/chocadeira/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/chocadeira/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/chocadeira/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/chocadeira/full"
+ },
+ "textures": {
+  "vidro_claro": {
+   "base": "game:block/glass/plain"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "ovo": {
+   "base": "game:block/wood/henbox/egg"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "red": {
+   "base": "game:block/cloth/basic/red"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "hay": {
+   "base": "game:block/hay/aged-side"
+  },
+  "pumpkin": {
+   "base": "game:block/clay/hardened/orange"
+  },
+  "yellow": {
+   "base": "game:block/cloth/basic/yellow"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.046875,
+  "y1": 0,
+  "z1": 0.1,
+  "x2": 1,
+  "y2": 0.8125,
+  "z2": 0.96875
+ },
+ "selectionbox": {
+  "x1": 0.046875,
+  "y1": 0,
+  "z1": 0.1,
+  "x2": 1,
+  "y2": 0.8125,
+  "z2": 0.96875
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.40625,
+   "z": 0.5
+  },
+  "scale": 1.0
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

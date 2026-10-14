@@ -1,0 +1,218 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "chestside": "game:block/wood/chest/aged/sides",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "chestlid": "game:block/wood/chest/aged/lid"
+ },
+ "elements": [
+  {
+   "name": "caixinha",
+   "from": [
+    2.75,
+    8.65,
+    5.75
+   ],
+   "to": [
+    5.75,
+    11.25,
+    10.25
+   ],
+   "faces": {
+    "north": {
+     "texture": "#chestside",
+     "uv": [
+      0,
+      0,
+      3.0,
+      2.5999999999999996
+     ]
+    },
+    "south": {
+     "texture": "#chestside",
+     "uv": [
+      0,
+      0,
+      3.0,
+      2.5999999999999996
+     ]
+    },
+    "east": {
+     "texture": "#chestside",
+     "uv": [
+      0,
+      0,
+      4.5,
+      2.5999999999999996
+     ]
+    },
+    "west": {
+     "texture": "#chestside",
+     "uv": [
+      0,
+      0,
+      4.5,
+      2.5999999999999996
+     ]
+    },
+    "up": {
+     "texture": "#chestside",
+     "uv": [
+      0,
+      0,
+      3.0,
+      4.5
+     ]
+    },
+    "down": {
+     "texture": "#chestside",
+     "uv": [
+      0,
+      0,
+      3.0,
+      4.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "caixinha_tampa",
+   "from": [
+    2.6,
+    11.25,
+    5.6
+   ],
+   "to": [
+    5.9,
+    11.75,
+    10.4
+   ],
+   "faces": {
+    "north": {
+     "texture": "#chestlid",
+     "uv": [
+      0,
+      0,
+      3.3000000000000003,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#chestlid",
+     "uv": [
+      0,
+      0,
+      3.3000000000000003,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#chestlid",
+     "uv": [
+      0,
+      0,
+      4.800000000000001,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#chestlid",
+     "uv": [
+      0,
+      0,
+      4.800000000000001,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#chestlid",
+     "uv": [
+      0,
+      0,
+      3.3000000000000003,
+      4.800000000000001
+     ]
+    },
+    "down": {
+     "texture": "#chestlid",
+     "uv": [
+      0,
+      0,
+      3.3000000000000003,
+      4.800000000000001
+     ]
+    }
+   }
+  },
+  {
+   "name": "caixinha_cinta",
+   "from": [
+    4,
+    8.6,
+    5.55
+   ],
+   "to": [
+    4.5,
+    11.8,
+    10.45
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.200000000000001
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.200000000000001
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      4.8999999999999995,
+      3.200000000000001
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      4.8999999999999995,
+      3.200000000000001
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.8999999999999995
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      4.8999999999999995
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1452 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "planks": "game:block/wood/planks/aged1",
+  "corroded": "game:block/metal/corroded/rusty3",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "darkwood": "game:block/wood/debarked/aged"
+ },
+ "elements": [
+  {
+   "name": "roda_aro0",
+   "from": [
+    4.25,
+    3.25,
+    12.808019484660536
+   ],
+   "to": [
+    4.75,
+    3.7,
+    14.691980515339464
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    }
+   },
+   "rotationOrigin": [
+    4.25,
+    5.5,
+    13.75
+   ],
+   "rotationX": 22.5
+  },
+  {
+   "name": "roda_aro1",
+   "from": [
+    4.25,
+    3.25,
+    12.808019484660536
+   ],
+   "to": [
+    4.75,
+    3.7,
+    14.691980515339464
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    }
+   },
+   "rotationOrigin": [
+    4.25,
+    5.5,
+    13.75
+   ],
+   "rotationX": 67.5
+  },
+  {
+   "name": "roda_aro2",
+   "from": [
+    4.25,
+    3.25,
+    12.808019484660536
+   ],
+   "to": [
+    4.75,
+    3.7,
+    14.691980515339464
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    }
+   },
+   "rotationOrigin": [
+    4.25,
+    5.5,
+    13.75
+   ],
+   "rotationX": 112.5
+  },
+  {
+   "name": "roda_aro3",
+   "from": [
+    4.25,
+    3.25,
+    12.808019484660536
+   ],
+   "to": [
+    4.75,
+    3.7,
+    14.691980515339464
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    }
+   },
+   "rotationOrigin": [
+    4.25,
+    5.5,
+    13.75
+   ],
+   "rotationX": 157.5
+  },
+  {
+   "name": "roda_aro4",
+   "from": [
+    4.25,
+    3.25,
+    12.808019484660536
+   ],
+   "to": [
+    4.75,
+    3.7,
+    14.691980515339464
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    }
+   },
+   "rotationOrigin": [
+    4.25,
+    5.5,
+    13.75
+   ],
+   "rotationX": 202.5
+  },
+  {
+   "name": "roda_aro5",
+   "from": [
+    4.25,
+    3.25,
+    12.808019484660536
+   ],
+   "to": [
+    4.75,
+    3.7,
+    14.691980515339464
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    }
+   },
+   "rotationOrigin": [
+    4.25,
+    5.5,
+    13.75
+   ],
+   "rotationX": 247.5
+  },
+  {
+   "name": "roda_aro6",
+   "from": [
+    4.25,
+    3.25,
+    12.808019484660536
+   ],
+   "to": [
+    4.75,
+    3.7,
+    14.691980515339464
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    }
+   },
+   "rotationOrigin": [
+    4.25,
+    5.5,
+    13.75
+   ],
+   "rotationX": 292.5
+  },
+  {
+   "name": "roda_aro7",
+   "from": [
+    4.25,
+    3.25,
+    12.808019484660536
+   ],
+   "to": [
+    4.75,
+    3.7,
+    14.691980515339464
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1.883961030678929,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.883961030678929
+     ]
+    }
+   },
+   "rotationOrigin": [
+    4.25,
+    5.5,
+    13.75
+   ],
+   "rotationX": 337.5
+  },
+  {
+   "name": "roda_raio0",
+   "from": [
+    4.4,
+    3.55,
+    13.6
+   ],
+   "to": [
+    4.6,
+    7.45,
+    13.9
+   ],
+   "faces": {
+    "north": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.9000000000000004
+     ]
+    },
+    "south": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.9000000000000004
+     ]
+    },
+    "east": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.9000000000000004
+     ]
+    },
+    "west": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.9000000000000004
+     ]
+    },
+    "up": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   },
+   "rotationOrigin": [
+    4.4,
+    5.5,
+    13.75
+   ],
+   "rotationX": 45.0
+  },
+  {
+   "name": "roda_raio1",
+   "from": [
+    4.430000000000001,
+    3.55,
+    13.6
+   ],
+   "to": [
+    4.569999999999999,
+    7.45,
+    13.9
+   ],
+   "faces": {
+    "north": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.9000000000000004
+     ]
+    },
+    "south": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.9000000000000004
+     ]
+    },
+    "east": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.9000000000000004
+     ]
+    },
+    "west": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      3.9000000000000004
+     ]
+    },
+    "up": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   },
+   "rotationOrigin": [
+    4.4,
+    5.5,
+    13.75
+   ],
+   "rotationX": 135.0
+  },
+  {
+   "name": "roda_cubo",
+   "from": [
+    4,
+    5.111095,
+    13.361095
+   ],
+   "to": [
+    5,
+    5.888905,
+    14.138905
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.7778100000000006
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.7778100000000006
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7778099999999988,
+      0.7778100000000006
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.7778099999999988,
+      0.7778100000000006
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.7778099999999988
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.7778099999999988
+     ]
+    }
+   }
+  },
+  {
+   "name": "roda_cubo_l",
+   "from": [
+    4,
+    5.888905,
+    13.52219
+   ],
+   "to": [
+    5,
+    6.05,
+    13.97781
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "roda_cubo_o",
+   "from": [
+    4,
+    4.95,
+    13.52219
+   ],
+   "to": [
+    5,
+    5.111095,
+    13.97781
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "roda_cubo_s",
+   "from": [
+    4,
+    5.27219,
+    14.138905
+   ],
+   "to": [
+    5,
+    5.72781,
+    14.3
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "roda_cubo_n",
+   "from": [
+    4,
+    5.27219,
+    13.2
+   ],
+   "to": [
+    5,
+    5.72781,
+    13.361095
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "roda_polia",
+   "from": [
+    6,
+    4.616125,
+    12.866125
+   ],
+   "to": [
+    6.75,
+    6.383875,
+    14.633875
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.7677499999999995
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.7677499999999995
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.7677499999999995,
+      1.7677499999999995
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.7677499999999995,
+      1.7677499999999995
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.7677499999999995
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.7677499999999995
+     ]
+    }
+   }
+  },
+  {
+   "name": "roda_polia_l",
+   "from": [
+    6,
+    6.383875,
+    13.23225
+   ],
+   "to": [
+    6.75,
+    6.75,
+    14.26775
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.035499999999999,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.035499999999999,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.035499999999999
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.035499999999999
+     ]
+    }
+   }
+  },
+  {
+   "name": "roda_polia_o",
+   "from": [
+    6,
+    4.25,
+    13.23225
+   ],
+   "to": [
+    6.75,
+    4.616125,
+    14.26775
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.035499999999999,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      1.035499999999999,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.035499999999999
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.035499999999999
+     ]
+    }
+   }
+  },
+  {
+   "name": "roda_polia_s",
+   "from": [
+    6,
+    4.98225,
+    14.633875
+   ],
+   "to": [
+    6.75,
+    6.01775,
+    15.0
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.0355000000000008
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.0355000000000008
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.0355000000000008
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.0355000000000008
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "roda_polia_n",
+   "from": [
+    6,
+    4.98225,
+    12.5
+   ],
+   "to": [
+    6.75,
+    6.01775,
+    12.866125
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.0355000000000008
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      1.0355000000000008
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.0355000000000008
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.5,
+      1.0355000000000008
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      0.5
+     ]
+    }
+   }
+  }
+ ]
+}

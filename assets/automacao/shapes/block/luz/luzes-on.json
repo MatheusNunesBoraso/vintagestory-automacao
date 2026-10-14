@@ -1,0 +1,160 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "luz": "game:block/machine/statictranslocator/rustyglow",
+  "luzquente": "game:block/glass/yellow"
+ },
+ "elements": [
+  {
+   "name": "lum_vidro",
+   "from": [
+    6.25,
+    17.75,
+    10.75
+   ],
+   "to": [
+    9.75,
+    22.25,
+    14.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#luzquente",
+     "uv": [
+      0,
+      0,
+      3.5,
+      4.5
+     ],
+     "glow": 220
+    },
+    "south": {
+     "texture": "#luzquente",
+     "uv": [
+      0,
+      0,
+      3.5,
+      4.5
+     ],
+     "glow": 220
+    },
+    "east": {
+     "texture": "#luzquente",
+     "uv": [
+      0,
+      0,
+      3.75,
+      4.5
+     ],
+     "glow": 220
+    },
+    "west": {
+     "texture": "#luzquente",
+     "uv": [
+      0,
+      0,
+      3.75,
+      4.5
+     ],
+     "glow": 220
+    },
+    "up": {
+     "texture": "#luzquente",
+     "uv": [
+      0,
+      0,
+      3.5,
+      3.75
+     ],
+     "glow": 220
+    },
+    "down": {
+     "texture": "#luzquente",
+     "uv": [
+      0,
+      0,
+      3.5,
+      3.75
+     ],
+     "glow": 220
+    }
+   }
+  },
+  {
+   "name": "lampada_bulbo",
+   "from": [
+    11.6,
+    2.8,
+    3.1
+   ],
+   "to": [
+    12.9,
+    4.1,
+    4.4
+   ],
+   "faces": {
+    "north": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.2999999999999998
+     ],
+     "glow": 220
+    },
+    "south": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.2999999999999998
+     ],
+     "glow": 220
+    },
+    "east": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000003,
+      1.2999999999999998
+     ],
+     "glow": 220
+    },
+    "west": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000003,
+      1.2999999999999998
+     ],
+     "glow": 220
+    },
+    "up": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.3000000000000003
+     ],
+     "glow": 220
+    },
+    "down": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.3000000000000003
+     ],
+     "glow": 220
+    }
+   }
+  }
+ ]
+}

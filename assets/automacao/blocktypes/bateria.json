@@ -1,0 +1,282 @@
+{
+ "code": "bateria",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "bateria",
+  "chave": "bateria",
+  "modos": [
+   "vazia",
+   "meia",
+   "cheia"
+  ],
+  "modoTrabalhando": "cheia",
+  "partes": [
+   {
+    "nome": "s_vela1",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [],
+    "show": [
+     "meia",
+     "cheia"
+    ]
+   },
+   {
+    "nome": "s_vela2",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [],
+    "show": [
+     "meia",
+     "cheia"
+    ]
+   },
+   {
+    "nome": "s_vela3",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [],
+    "show": [
+     "cheia"
+    ]
+   },
+   {
+    "nome": "s_vela4",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [],
+    "show": [
+     "cheia"
+    ]
+   },
+   {
+    "nome": "s_brilho0",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [],
+    "show": [
+     "cheia"
+    ]
+   },
+   {
+    "nome": "s_brilho1",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [],
+    "show": [
+     "cheia"
+    ]
+   },
+   {
+    "nome": "s_brilho2",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [],
+    "show": [
+     "cheia"
+    ]
+   },
+   {
+    "nome": "s_brilho3",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [],
+    "show": [
+     "cheia"
+    ]
+   }
+  ],
+  "usaArea": false,
+  "bau": false,
+  "glowModos": [
+   "meia",
+   "cheia"
+  ]
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/bateria/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/bateria/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/bateria/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/bateria/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/bateria/full"
+ },
+ "textures": {
+  "fired": {
+   "base": "game:block/clay/hardened/brown1"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "paper": {
+   "base": "game:block/cloth/paper/blank-small"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "hay": {
+   "base": "game:block/hay/aged-side"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.046875,
+  "y1": 0,
+  "z1": 0.015625,
+  "x2": 0.953125,
+  "y2": 0.828125,
+  "z2": 0.98125
+ },
+ "selectionbox": {
+  "x1": 0.046875,
+  "y1": 0,
+  "z1": 0.015625,
+  "x2": 0.953125,
+  "y2": 0.828125,
+  "z2": 0.98125
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.4140625,
+   "z": 0.5
+  },
+  "scale": 1.0
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

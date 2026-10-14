@@ -1,0 +1,78 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "gelo": "game:block/liquid/ice/lake1"
+ },
+ "elements": [
+  {
+   "name": "gelinho",
+   "from": [
+    6,
+    15.75,
+    3.25
+   ],
+   "to": [
+    9,
+    15.85,
+    5.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#gelo",
+     "uv": [
+      0,
+      0,
+      3,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#gelo",
+     "uv": [
+      0,
+      0,
+      3,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#gelo",
+     "uv": [
+      0,
+      0,
+      2.25,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#gelo",
+     "uv": [
+      0,
+      0,
+      2.25,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#gelo",
+     "uv": [
+      0,
+      0,
+      3,
+      2.25
+     ]
+    },
+    "down": {
+     "texture": "#gelo",
+     "uv": [
+      0,
+      0,
+      3,
+      2.25
+     ]
+    }
+   }
+  }
+ ]
+}

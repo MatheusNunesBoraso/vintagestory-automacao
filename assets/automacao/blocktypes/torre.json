@@ -1,0 +1,223 @@
+{
+ "code": "torre",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "torre",
+  "chave": "torre",
+  "modos": [
+   "sol",
+   "chuva",
+   "raio"
+  ],
+  "modoTrabalhando": "raio",
+  "partes": [
+   {
+    "nome": "s_garrafa_carga",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [],
+    "show": [
+     "raio"
+    ]
+   },
+   {
+    "nome": "turbina",
+    "pivo": [
+     8,
+     9.75,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "y",
+      "speed": 5
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": false,
+  "bau": false,
+  "glowModos": [
+   "chuva",
+   "raio"
+  ]
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/torre/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/torre/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/torre/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/torre/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/torre/full"
+ },
+ "textures": {
+  "vidro_claro": {
+   "base": "game:block/glass/plain"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.09375,
+  "y1": 0,
+  "z1": 0.09375,
+  "x2": 0.90625,
+  "y2": 2.0,
+  "z2": 0.90625
+ },
+ "selectionbox": {
+  "x1": 0.09375,
+  "y1": 0,
+  "z1": 0.09375,
+  "x2": 0.90625,
+  "y2": 2.0,
+  "z2": 0.90625
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 1.0,
+   "z": 0.5
+  },
+  "scale": 0.57
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

@@ -1,0 +1,39 @@
+[
+ {
+  "ingredientPattern": "ITI,LGL,SSS",
+  "ingredients": {
+   "G": {
+    "type": "item",
+    "code": "game:gear-rusty",
+    "quantity": 1
+   },
+   "I": {
+    "type": "item",
+    "code": "game:ingot-copper",
+    "quantity": 1
+   },
+   "L": {
+    "type": "block",
+    "code": "game:glass-plain",
+    "quantity": 1
+   },
+   "S": {
+    "type": "block",
+    "code": "game:cobblestone-*",
+    "quantity": 1
+   },
+   "T": {
+    "type": "item",
+    "code": "game:gear-temporal",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+   "type": "block",
+   "code": "automacao:estabilizador-south",
+   "quantity": 1
+  }
+ }
+]

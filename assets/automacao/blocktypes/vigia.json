@@ -1,0 +1,244 @@
+{
+ "code": "vigia",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "vigia",
+  "chave": "vigia",
+  "modos": [
+   "parado",
+   "ligado",
+   "alerta"
+  ],
+  "modoTrabalhando": "alerta",
+  "partes": [
+   {
+    "nome": "holofote",
+    "pivo": [
+     8,
+     22,
+     8
+    ],
+    "luz": true,
+    "anim": [
+     {
+      "spin": "y",
+      "speed": 0.9
+     }
+    ]
+   },
+   {
+    "nome": "sino",
+    "pivo": [
+     12.5,
+     20,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "swing": "x",
+      "amp": 0.5,
+      "freq": 0.9,
+      "when": [
+       "alerta"
+      ]
+     }
+    ]
+   },
+   {
+    "nome": "polia",
+    "pivo": [
+     2.75,
+     20.35,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "x",
+      "speed": -1.8
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": true,
+  "bau": false,
+  "glowModos": [
+   "ligado",
+   "alerta"
+  ]
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/vigia/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/vigia/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/vigia/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/vigia/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/vigia/full"
+ },
+ "textures": {
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "bronze": {
+   "base": "game:block/metal/tarnished/copper"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.046875,
+  "y1": 0,
+  "z1": 0.078125,
+  "x2": 0.921875,
+  "y2": 1.734375,
+  "z2": 0.921875
+ },
+ "selectionbox": {
+  "x1": 0.046875,
+  "y1": 0,
+  "z1": 0.078125,
+  "x2": 0.921875,
+  "y2": 1.734375,
+  "z2": 0.921875
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.8671875,
+   "z": 0.5
+  },
+  "scale": 0.66
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

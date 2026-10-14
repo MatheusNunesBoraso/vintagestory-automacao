@@ -1,0 +1,25 @@
+[
+ {
+  "ingredientPattern": "HHE",
+  "width": 3,
+  "height": 1,
+  "shapeless": true,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "code": "game:paper-parchment",
+    "quantity": 1
+   },
+   "E": {
+    "type": "item",
+    "code": "game:leather-normal-plain",
+    "quantity": 1
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "automacao:manual",
+   "quantity": 1
+  }
+ }
+]

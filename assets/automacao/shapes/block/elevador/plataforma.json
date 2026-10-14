@@ -1,0 +1,288 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "planks": "game:block/wood/planks/aged1",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "carcaca": "game:block/metal/tarnished/rusty-iron1"
+ },
+ "elements": [
+  {
+   "name": "plat",
+   "from": [
+    2,
+    1.5,
+    2
+   ],
+   "to": [
+    14,
+    2.5,
+    14
+   ],
+   "faces": {
+    "north": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      12,
+      1.0
+     ]
+    },
+    "south": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      12,
+      1.0
+     ]
+    },
+    "east": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      12,
+      1.0
+     ]
+    },
+    "west": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      12,
+      1.0
+     ]
+    },
+    "up": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      12,
+      12
+     ]
+    },
+    "down": {
+     "texture": "#planks",
+     "uv": [
+      0,
+      0,
+      12,
+      12
+     ]
+    }
+   }
+  },
+  {
+   "name": "plat_aro",
+   "from": [
+    1.75,
+    1.75,
+    1.75
+   ],
+   "to": [
+    14.25,
+    2.25,
+    14.25
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      12.5,
+      0.5
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      12.5,
+      0.5
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      12.5,
+      0.5
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      12.5,
+      0.5
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      12.5,
+      12.5
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      12.5,
+      12.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "plat_travessa",
+   "from": [
+    2,
+    2.5,
+    2
+   ],
+   "to": [
+    14,
+    4,
+    3.25
+   ],
+   "faces": {
+    "north": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      12,
+      1.5
+     ]
+    },
+    "south": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      12,
+      1.5
+     ]
+    },
+    "east": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      1.25,
+      1.5
+     ]
+    },
+    "west": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      1.25,
+      1.5
+     ]
+    },
+    "up": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      12,
+      1.25
+     ]
+    },
+    "down": {
+     "texture": "#carcaca",
+     "uv": [
+      0,
+      0,
+      12,
+      1.25
+     ]
+    }
+   }
+  },
+  {
+   "name": "plat_gancho",
+   "from": [
+    5.25,
+    4,
+    2.35
+   ],
+   "to": [
+    6.25,
+    5.25,
+    3.15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.25
+     ]
+    },
+    "south": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.25
+     ]
+    },
+    "east": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      1.25
+     ]
+    },
+    "west": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      1.25
+     ]
+    },
+    "up": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      0.7999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      0.7999999999999998
+     ]
+    }
+   }
+  }
+ ]
+}

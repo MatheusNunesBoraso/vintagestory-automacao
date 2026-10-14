@@ -1,0 +1,39 @@
+[
+ {
+  "ingredientPattern": "LLL,IGI,PKP",
+  "ingredients": {
+   "G": {
+    "type": "item",
+    "code": "game:gear-rusty",
+    "quantity": 1
+   },
+   "I": {
+    "type": "item",
+    "code": "game:ingot-copper",
+    "quantity": 1
+   },
+   "K": {
+    "type": "item",
+    "code": "game:stick",
+    "quantity": 1
+   },
+   "L": {
+    "type": "block",
+    "code": "game:glass-plain",
+    "quantity": 1
+   },
+   "P": {
+    "type": "item",
+    "code": "game:plank-*",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+   "type": "block",
+   "code": "automacao:solar-south",
+   "quantity": 1
+  }
+ }
+]

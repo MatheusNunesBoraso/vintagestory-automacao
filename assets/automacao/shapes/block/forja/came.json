@@ -1,0 +1,293 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "corroded": "game:block/metal/corroded/rusty3",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2"
+ },
+ "elements": [
+  {
+   "name": "came_eixo",
+   "from": [
+    9.4,
+    14.6,
+    1.6
+   ],
+   "to": [
+    15.6,
+    15.4,
+    2.4
+   ],
+   "faces": {
+    "north": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      6.199999999999999,
+      0.8000000000000007
+     ]
+    },
+    "south": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      6.199999999999999,
+      0.8000000000000007
+     ]
+    },
+    "east": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.8000000000000007
+     ]
+    },
+    "west": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.7999999999999998,
+      0.8000000000000007
+     ]
+    },
+    "up": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      6.199999999999999,
+      0.7999999999999998
+     ]
+    },
+    "down": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      6.199999999999999,
+      0.7999999999999998
+     ]
+    }
+   }
+  },
+  {
+   "name": "came_polia",
+   "from": [
+    14.5,
+    13.75,
+    0.75
+   ],
+   "to": [
+    15.25,
+    16.25,
+    3.25
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      2.5
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      2.5
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.75,
+      2.5
+     ]
+    }
+   }
+  },
+  {
+   "name": "came_polia2",
+   "from": [
+    14.52,
+    13.75,
+    0.75
+   ],
+   "to": [
+    15.23,
+    16.25,
+    3.25
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.7100000000000009,
+      2.5
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.7100000000000009,
+      2.5
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      2.5
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      2.5
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.7100000000000009,
+      2.5
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.7100000000000009,
+      2.5
+     ]
+    }
+   },
+   "rotationOrigin": [
+    14.875,
+    15,
+    2
+   ],
+   "rotationX": 45
+  },
+  {
+   "name": "came_ressalto",
+   "from": [
+    9.6,
+    15.4,
+    1.5
+   ],
+   "to": [
+    10.6,
+    16.75,
+    2.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.3499999999999996
+     ]
+    },
+    "south": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.3499999999999996
+     ]
+    },
+    "east": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.3499999999999996
+     ]
+    },
+    "west": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.3499999999999996
+     ]
+    },
+    "up": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.0
+     ]
+    },
+    "down": {
+     "texture": "#darkiron",
+     "uv": [
+      0,
+      0,
+      1.0,
+      1.0
+     ]
+    }
+   }
+  }
+ ]
+}

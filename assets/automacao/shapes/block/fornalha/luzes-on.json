@@ -1,0 +1,310 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "luz": "game:block/machine/statictranslocator/rustyglow",
+  "ember": "game:block/coal/ember"
+ },
+ "elements": [
+  {
+   "name": "resist1",
+   "from": [
+    7.5,
+    6.9,
+    13.55
+   ],
+   "to": [
+    12.5,
+    7.4,
+    13.85
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ],
+     "glow": 220
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ],
+     "glow": 220
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    }
+   }
+  },
+  {
+   "name": "resist2",
+   "from": [
+    7.5,
+    8,
+    13.55
+   ],
+   "to": [
+    12.5,
+    8.5,
+    13.85
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ],
+     "glow": 220
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ],
+     "glow": 220
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    }
+   }
+  },
+  {
+   "name": "resist3",
+   "from": [
+    7.5,
+    9.1,
+    13.55
+   ],
+   "to": [
+    12.5,
+    9.6,
+    13.85
+   ],
+   "faces": {
+    "north": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    },
+    "south": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    },
+    "east": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ],
+     "glow": 220
+    },
+    "west": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ],
+     "glow": 220
+    },
+    "up": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    },
+    "down": {
+     "texture": "#ember",
+     "uv": [
+      0,
+      0,
+      5.0,
+      0.5
+     ],
+     "glow": 220
+    }
+   }
+  },
+  {
+   "name": "lampada_bulbo",
+   "from": [
+    5.85,
+    14.8,
+    11.85
+   ],
+   "to": [
+    7.15,
+    16.1,
+    13.15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.3000000000000007
+     ],
+     "glow": 220
+    },
+    "south": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.3000000000000007
+     ],
+     "glow": 220
+    },
+    "east": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.3000000000000007
+     ],
+     "glow": 220
+    },
+    "west": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.3000000000000007
+     ],
+     "glow": 220
+    },
+    "up": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.3000000000000007
+     ],
+     "glow": 220
+    },
+    "down": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.3000000000000007,
+      1.3000000000000007
+     ],
+     "glow": 220
+    }
+   }
+  }
+ ]
+}

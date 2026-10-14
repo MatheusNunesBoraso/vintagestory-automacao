@@ -1,0 +1,84 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "luz": "game:block/machine/statictranslocator/rustyglow"
+ },
+ "elements": [
+  {
+   "name": "vela1",
+   "from": [
+    4.05,
+    2.8,
+    15.55
+   ],
+   "to": [
+    5.45,
+    5.7,
+    15.7
+   ],
+   "faces": {
+    "north": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.4000000000000004,
+      2.9000000000000004
+     ],
+     "glow": 220
+    },
+    "south": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.4000000000000004,
+      2.9000000000000004
+     ],
+     "glow": 220
+    },
+    "east": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      0.5,
+      2.9000000000000004
+     ],
+     "glow": 220
+    },
+    "west": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      0.5,
+      2.9000000000000004
+     ],
+     "glow": 220
+    },
+    "up": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.4000000000000004,
+      0.5
+     ],
+     "glow": 220
+    },
+    "down": {
+     "texture": "#luz",
+     "uv": [
+      0,
+      0,
+      1.4000000000000004,
+      0.5
+     ],
+     "glow": 220
+    }
+   }
+  }
+ ]
+}

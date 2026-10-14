@@ -1,0 +1,200 @@
+{
+ "code": "solar",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "solar",
+  "chave": "solar",
+  "modos": [
+   "parado",
+   "nublado",
+   "ligado"
+  ],
+  "modoTrabalhando": "ligado",
+  "partes": [
+   {
+    "nome": "painel",
+    "pivo": [
+     8,
+     9.5,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "swing": "y",
+      "amp": 0.6,
+      "freq": 0.04,
+      "when": [
+       "ligado",
+       "nublado"
+      ]
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": false,
+  "bau": false,
+  "glowModos": [
+   "nublado",
+   "ligado"
+  ]
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/solar/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/solar/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/solar/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/solar/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/solar/full"
+ },
+ "textures": {
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "vidro_escuro": {
+   "base": "game:block/glass/smoky"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Metal",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.03125,
+  "y1": 0,
+  "z1": 0.09375,
+  "x2": 0.96875,
+  "y2": 0.75,
+  "z2": 0.90625
+ },
+ "selectionbox": {
+  "x1": 0.03125,
+  "y1": 0,
+  "z1": 0.09375,
+  "x2": 0.96875,
+  "y2": 0.75,
+  "z2": 0.90625
+ },
+ "sounds": {
+  "place": "game:block/anvil",
+  "break": "game:block/anvil",
+  "hit": "game:block/anvil",
+  "walk": "game:walk/stone"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.375,
+   "z": 0.5
+  },
+  "scale": 1.0
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

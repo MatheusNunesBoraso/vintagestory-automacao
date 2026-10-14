@@ -1,0 +1,148 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "corroded": "game:block/metal/corroded/rusty3",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+ },
+ "elements": [
+  {
+   "name": "pistao_haste",
+   "from": [
+    11.6,
+    12.75,
+    7.65
+   ],
+   "to": [
+    12.4,
+    21,
+    8.35
+   ],
+   "faces": {
+    "north": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      8.25
+     ]
+    },
+    "south": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      8.25
+     ]
+    },
+    "east": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.6999999999999993,
+      8.25
+     ]
+    },
+    "west": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.6999999999999993,
+      8.25
+     ]
+    },
+    "up": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.6999999999999993
+     ]
+    },
+    "down": {
+     "texture": "#iron",
+     "uv": [
+      0,
+      0,
+      0.8000000000000007,
+      0.6999999999999993
+     ]
+    }
+   }
+  },
+  {
+   "name": "pistao_cruzeta",
+   "from": [
+    10.75,
+    15,
+    7.55
+   ],
+   "to": [
+    13.25,
+    16,
+    8.45
+   ],
+   "faces": {
+    "north": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      1
+     ]
+    },
+    "south": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      1
+     ]
+    },
+    "east": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.8999999999999995,
+      1
+     ]
+    },
+    "west": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      0.8999999999999995,
+      1
+     ]
+    },
+    "up": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      0.8999999999999995
+     ]
+    },
+    "down": {
+     "texture": "#corroded",
+     "uv": [
+      0,
+      0,
+      2.5,
+      0.8999999999999995
+     ]
+    }
+   }
+  }
+ ]
+}
