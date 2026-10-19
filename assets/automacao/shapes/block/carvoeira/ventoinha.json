@@ -2,9 +2,9 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "brass": "game:block/metal/tarnished/brass",
   "corroded": "game:block/metal/corroded/rusty3",
-  "brass": "game:block/metal/tarnished/brass"
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron"
  },
  "elements": [
   {

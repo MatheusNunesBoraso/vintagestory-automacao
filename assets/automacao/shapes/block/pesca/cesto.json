@@ -2,11 +2,11 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "net": "game:item/resource/netold",
-  "fishfresh": "game:item/food/meat/fish-cured",
   "basketside": "game:block/reed/basket/aged-northsouth",
-  "rope": "game:block/cloth/reedrope",
-  "darkwood": "game:block/wood/debarked/aged"
+  "darkwood": "game:block/wood/debarked/aged",
+  "fishfresh": "game:item/food/meat/fish-cured",
+  "net": "game:item/resource/netold",
+  "rope": "game:block/cloth/reedrope"
  },
  "elements": [
   {

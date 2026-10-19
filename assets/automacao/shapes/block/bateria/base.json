@@ -2,17 +2,17 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "paper": "game:block/cloth/paper/blank-small",
-  "moss": "game:block/plant/moss",
-  "coal": "game:block/coal/charcoal",
   "bobina": "game:block/metal/sheet/copper1",
-  "fired": "game:block/clay/hardened/brown1",
   "brass": "game:block/metal/tarnished/brass",
-  "darkwood": "game:block/wood/debarked/aged",
+  "coal": "game:block/coal/charcoal",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "darkwood": "game:block/wood/debarked/aged",
+  "fired": "game:block/clay/hardened/brown1",
   "hay": "game:block/hay/aged-side",
   "isolador": "game:block/clay/hardened/cream",
+  "moss": "game:block/plant/moss",
+  "paper": "game:block/cloth/paper/blank-small",
   "planks": "game:block/wood/planks/aged1"
  },
  "elements": [

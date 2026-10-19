@@ -98,50 +98,29 @@
   "base": "automacao:block/sentinela/full"
  },
  "textures": {
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "s_mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "s_brass": {
-   "base": "game:block/metal/lantern/rust"
-  },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
-  },
-  "s_lensglow": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "s_corroded": {
-   "base": "game:block/metal/corroded/rusty3"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "s_cracked": {
-   "base": "game:block/stone/crackedbrick/andesite1"
-  },
-  "fired": {
-   "base": "game:block/clay/hardened/brown1"
   },
   "darkiron": {
    "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
-  "s_darkwood": {
-   "base": "game:block/wood/debarked/aged"
+  "fired": {
+   "base": "game:block/clay/hardened/brown1"
   },
-  "s_planks": {
-   "base": "game:block/wood/planks/aged1"
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
   },
-  "s_moss": {
-   "base": "game:block/plant/moss"
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
   },
-  "s_darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
+  "s_brass": {
+   "base": "game:block/metal/lantern/rust"
   },
   "s_brick": {
    "base": "game:block/stone/agedbrick/andesite1"
@@ -149,11 +128,32 @@
   "s_cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
   },
+  "s_corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "s_cracked": {
+   "base": "game:block/stone/crackedbrick/andesite1"
+  },
+  "s_darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "s_darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
   "s_iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
+  "s_lensglow": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "s_moss": {
+   "base": "game:block/plant/moss"
+  },
+  "s_mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "s_planks": {
+   "base": "game:block/wood/planks/aged1"
   }
  },
  "drawtype": "json",

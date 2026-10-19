@@ -3,8 +3,8 @@
  "textureHeight": 16,
  "textures": {
   "ovo": "game:block/wood/henbox/egg",
-  "yellow": "game:block/cloth/basic/yellow",
-  "pumpkin": "game:block/clay/hardened/orange"
+  "pumpkin": "game:block/clay/hardened/orange",
+  "yellow": "game:block/cloth/basic/yellow"
  },
  "elements": [
   {

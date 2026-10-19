@@ -109,20 +109,8 @@
   "base": "automacao:block/torno_vara/full"
  },
  "textures": {
-  "logend": {
-   "base": "game:block/wood/firewood/aged/north"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "silex": {
-   "base": "game:block/stone/flint"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "rope": {
-   "base": "game:block/cloth/reedrope"
+  "bark": {
+   "base": "game:block/wood/bark/oak"
   },
   "darkwood": {
    "base": "game:block/wood/debarked/aged"
@@ -130,11 +118,23 @@
   "logbark": {
    "base": "game:block/wood/firewood/aged/bark"
   },
+  "logend": {
+   "base": "game:block/wood/firewood/aged/north"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
   "planks": {
    "base": "game:block/wood/planks/aged1"
   },
-  "bark": {
-   "base": "game:block/wood/bark/oak"
+  "rope": {
+   "base": "game:block/cloth/reedrope"
+  },
+  "silex": {
+   "base": "game:block/stone/flint"
   }
  },
  "drawtype": "json",

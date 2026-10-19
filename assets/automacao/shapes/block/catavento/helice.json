@@ -2,11 +2,11 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "rags": "game:block/cloth/rags/rag2",
   "burlap": "game:block/cloth/burlap/sides-stiches",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
   "darkwood": "game:block/wood/debarked/aged",
-  "planks": "game:block/wood/planks/aged1"
+  "planks": "game:block/wood/planks/aged1",
+  "rags": "game:block/cloth/rags/rag2"
  },
  "elements": [
   {

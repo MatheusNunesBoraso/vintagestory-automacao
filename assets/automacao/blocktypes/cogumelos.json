@@ -86,71 +86,71 @@
   "base": "automacao:block/cogumelos/full"
  },
  "textures": {
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
-  },
-  "terra": {
-   "base": "game:block/soil/fertcompost"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "capfield": {
-   "base": "game:block/plant/mushroom/fieldmushroomcap"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "stipebolete": {
-   "base": "game:block/plant/mushroom/boletestipe"
-  },
-  "paper": {
-   "base": "game:block/cloth/paper/blank-small"
-  },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "vidro_estufa": {
-   "base": "game:block/glass/leaded"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "capbolete": {
-   "base": "game:block/plant/mushroom/boletecap"
-  },
-  "stipefield": {
-   "base": "game:block/plant/mushroom/fieldmushroomstipe"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
-  },
   "barril": {
    "base": "game:block/wood/barrel/sides"
-  },
-  "water": {
-   "base": "game:block/liquid/water"
-  },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
   },
   "bobina": {
    "base": "game:block/metal/sheet/copper1"
   },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "capbolete": {
+   "base": "game:block/plant/mushroom/boletecap"
+  },
+  "capfield": {
+   "base": "game:block/plant/mushroom/fieldmushroomcap"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "paper": {
+   "base": "game:block/cloth/paper/blank-small"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "stipebolete": {
+   "base": "game:block/plant/mushroom/boletestipe"
+  },
+  "stipefield": {
+   "base": "game:block/plant/mushroom/fieldmushroomstipe"
+  },
+  "terra": {
+   "base": "game:block/soil/fertcompost"
+  },
+  "vidro_estufa": {
+   "base": "game:block/glass/leaded"
+  },
+  "water": {
+   "base": "game:block/liquid/water"
   }
  },
  "drawtype": "json",

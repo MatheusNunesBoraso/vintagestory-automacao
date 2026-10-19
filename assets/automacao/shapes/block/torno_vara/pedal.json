@@ -2,9 +2,9 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "rope": "game:block/cloth/reedrope",
+  "darkwood": "game:block/wood/debarked/aged",
   "planks": "game:block/wood/planks/aged1",
-  "darkwood": "game:block/wood/debarked/aged"
+  "rope": "game:block/cloth/reedrope"
  },
  "elements": [
   {

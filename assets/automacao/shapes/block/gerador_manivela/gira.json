@@ -3,9 +3,9 @@
  "textureHeight": 16,
  "textures": {
   "bronze": "game:block/metal/tarnished/copper",
+  "darkwood": "game:block/wood/debarked/aged",
   "leather": "game:block/leather/aged1",
-  "stonewheel": "game:block/stone/polishedrock/andesite",
-  "darkwood": "game:block/wood/debarked/aged"
+  "stonewheel": "game:block/stone/polishedrock/andesite"
  },
  "elements": [
   {

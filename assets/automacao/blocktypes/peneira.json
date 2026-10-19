@@ -102,8 +102,23 @@
   "base": "automacao:block/peneira/full"
  },
  "textures": {
-  "net": {
-   "base": "game:item/resource/netold"
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "bronze": {
+   "base": "game:block/metal/tarnished/copper"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
   },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
@@ -111,59 +126,44 @@
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "gravel": {
-   "base": "game:block/stone/gravel/andesite"
-  },
-  "rope": {
-   "base": "game:block/cloth/reedrope"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "darkwood": {
    "base": "game:block/wood/debarked/aged"
   },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "bronze": {
-   "base": "game:block/metal/tarnished/copper"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
+  "gravel": {
+   "base": "game:block/stone/gravel/andesite"
   },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "net": {
+   "base": "game:item/resource/netold"
+  },
   "panwood": {
    "base": "game:block/wood-generic"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "rope": {
+   "base": "game:block/cloth/reedrope"
   }
  },
  "drawtype": "json",

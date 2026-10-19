@@ -2,8 +2,8 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "corroded": "game:block/metal/corroded/rusty3"
+  "corroded": "game:block/metal/corroded/rusty3",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2"
  },
  "elements": [
   {

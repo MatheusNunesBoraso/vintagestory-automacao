@@ -84,38 +84,38 @@
   "base": "automacao:block/cerca/full"
  },
  "textures": {
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "red": {
-   "base": "game:block/cloth/basic/red"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "f_aviso": {
-   "base": "game:block/cloth/paper/blank-small"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "darkwood": {
    "base": "game:block/wood/debarked/aged"
   },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  "f_aviso": {
+   "base": "game:block/cloth/paper/blank-small"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "red": {
+   "base": "game:block/cloth/basic/red"
   }
  },
  "drawtype": "json",

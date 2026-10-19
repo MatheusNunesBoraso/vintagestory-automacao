@@ -2,9 +2,9 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
+  "carcaca": "game:block/metal/tarnished/rusty-iron1",
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
   "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
-  "carcaca": "game:block/metal/tarnished/rusty-iron1",
   "planks": "game:block/wood/planks/aged1"
  },
  "elements": [

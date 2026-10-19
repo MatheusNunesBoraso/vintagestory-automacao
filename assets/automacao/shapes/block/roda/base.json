@@ -2,21 +2,21 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "rebite": "game:block/metal/tarnished/iron-riveted1",
-  "corroded": "game:block/metal/corroded/rusty3",
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "moss": "game:block/plant/moss",
-  "carcaca": "game:block/metal/tarnished/rusty-iron1",
-  "cobble": "game:block/stone/cobblestone/andesite2",
-  "mossy": "game:block/wood/debarked/mossy",
-  "brick": "game:block/stone/agedbrick/andesite1",
   "bobina": "game:block/metal/sheet/copper1",
   "brass": "game:block/metal/tarnished/brass",
-  "darkwood": "game:block/wood/debarked/aged",
+  "brick": "game:block/stone/agedbrick/andesite1",
+  "carcaca": "game:block/metal/tarnished/rusty-iron1",
+  "cobble": "game:block/stone/cobblestone/andesite2",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
+  "corroded": "game:block/metal/corroded/rusty3",
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "darkwood": "game:block/wood/debarked/aged",
+  "engrenagens": "game:block/machine/statictranslocator/statictranslocator_gearboxa",
   "isolador": "game:block/clay/hardened/cream",
-  "telhado_ferro": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "engrenagens": "game:block/machine/statictranslocator/statictranslocator_gearboxa"
+  "moss": "game:block/plant/moss",
+  "mossy": "game:block/wood/debarked/mossy",
+  "rebite": "game:block/metal/tarnished/iron-riveted1",
+  "telhado_ferro": "game:block/metal/tarnished/sheet/rusty-iron2"
  },
  "elements": [
   {

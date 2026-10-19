@@ -7,7 +7,7 @@
 **Energia sem fio, máquinas velhas e enferrujadas fazendo o trabalho chato — e um Manual que ensina tudo.**
 
 ![Vintage Story 1.22](https://img.shields.io/badge/Vintage%20Story-1.22-6fe8ff?style=for-the-badge)
-![Versão](https://img.shields.io/badge/vers%C3%A3o-1.3.0-e0a64a?style=for-the-badge)
+![Versão](https://img.shields.io/badge/vers%C3%A3o-1.3.1-e0a64a?style=for-the-badge)
 ![Peças](https://img.shields.io/badge/pe%C3%A7as-47-9cff8f?style=for-the-badge)
 ![Idioma](https://img.shields.io/badge/idioma-pt--br-ff9ce0?style=for-the-badge)
 
@@ -56,6 +56,7 @@ flowchart LR
 
 ## 🆕 Novidades
 
+- **1.3.1** — Pedestal do Raio: alcance de 64 pra **256 blocos** (antes, perto da beirada da região, ele nunca pegava raio) e mostra se agora tem trovoada ou se está frio demais pra raio.
 - **1.3.0** — **Pedestal do Raio**: encaixe uma Engrenagem Enferrujada e, na tempestade, o raio de verdade do jogo cai nele e ela vira **Engrenagem Temporal**. Luz, Poste, Torre de Tempestade, Painel Solar, Estabilizador e Calendário voltaram a pedir **vidro** (estavam pedindo lenha por engano).
 - **1.2.0** — Começo à mão sem tábua (tábua precisa de serra de metal): agora é lenha, graveto, capim seco, sílex e pedra solta. **Modo automático**: Shift + clique com a mão vazia e a peça trabalha sozinha enquanto você está por perto.
 - **1.1.0** — **Começo à mão**: Peneira de Balanço, Torno de Vara (faz a **Engrenagem de Madeira**, que serve nas fontes de energia) e Gerador de Manivela. Estufa de Cogumelos cultiva até 2 espécies por bloco, sem precisar de tronco.
@@ -75,9 +76,9 @@ Sem energia: segure o clique direito pra usar (ou **Shift + clique com a mão va
 ### ⛈️ Pedestal do Raio
 
 Encaixe uma **Engrenagem Enferrujada** no berço (clique direito com ela na mão) e deixe o pedestal **a céu aberto**.
-Quando tem tempestade, ele puxa pra ele os raios de verdade que caem até **64 blocos** dali: o raio desce pela vara de ponta de sílex,
+Quando tem **trovoada** (chuva comum não solta raio, e o jogo só solta raio com **12°C ou mais**), ele puxa pra ele os raios de verdade que caem até **256 blocos** dali: o raio desce pela vara de ponta de sílex,
 passa pela lasca que encosta na engrenagem e ela vira **Engrenagem Temporal**. Uma por raio. Clique com a mão vazia pra pegar.
-Cuidado: o raio machuca quem estiver perto!
+Olhe pro pedestal pra saber se agora tem trovoada ou se está frio demais. Cuidado: o raio machuca quem estiver perto!
 
 ## ⚡ Fontes de energia
 

@@ -20,7 +20,7 @@ namespace Automacao
         public override string Tipo => "pedestal";
 
         /// <summary>Distância (pra cada lado, no plano) de onde o pedestal puxa o raio.</summary>
-        public const int Alcance = 64;
+        public const int Alcance = 256;
 
         static readonly AssetLocation Ferrugem = new AssetLocation("game", "gear-rusty");
         static readonly AssetLocation Temporal = new AssetLocation("game", "gear-temporal");
@@ -103,7 +103,29 @@ namespace Automacao
         {
             if (TemTemporal(m)) return Mao.L("info-pedestal-pronta");
             if (!TemFerrugem(m)) return Mao.L("info-pedestal-vazio");
-            return CeuAberto(m) ? Mao.L("info-pedestal-esperando", Alcance) : Mao.L("info-pedestal-coberto");
+            if (!CeuAberto(m)) return Mao.L("info-pedestal-coberto");
+            return Mao.L("info-pedestal-esperando", Alcance) + "\n" + Clima(m);
+        }
+
+        /// <summary>
+        /// O jogo só solta raio no evento de trovoada (heavythunder / lightthunder) e só com 12°C ou mais:
+        /// chuva comum não tem raio. Diz pro jogador em qual caso está.
+        /// </summary>
+        static string Clima(BEMaquina m)
+        {
+            try
+            {
+                var clima = m.Api.ModLoader.GetModSystem<WeatherSystemBase>();
+                int tam = m.Api.World.BlockAccessor.RegionSize;
+                long idx = clima.MapRegionIndex2D(m.Pos.X / tam, m.Pos.Z / tam);
+                if (!clima.weatherSimByMapRegion.TryGetValue(idx, out var sim) || sim?.CurWeatherEvent == null) return "";
+                var ev = sim.CurWeatherEvent.State;
+                if (ev.LightningRate <= 0) return Mao.L("info-pedestal-semtrovoada");
+                float temp = m.Api.World.BlockAccessor.GetClimateAt(m.Pos, EnumGetClimateMode.NowValues)?.Temperature ?? 99;
+                if (temp < ev.LightningMinTemp) return Mao.L("info-pedestal-frio", (int)temp, (int)ev.LightningMinTemp);
+                return Mao.L("info-pedestal-trovoada");
+            }
+            catch { return ""; }
         }
     }
 

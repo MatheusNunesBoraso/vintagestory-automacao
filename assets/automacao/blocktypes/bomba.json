@@ -133,20 +133,14 @@
   "base": "automacao:block/bomba/full"
  },
  "textures": {
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
   },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "water": {
-   "base": "game:block/liquid/water"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
   },
   "carcaca": {
    "base": "game:block/metal/tarnished/rusty-iron1"
@@ -154,23 +148,20 @@
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
   },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
   },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "darkwood": {
    "base": "game:block/wood/debarked/aged"
   },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  "engrenagens": {
+   "base": "game:block/machine/statictranslocator/statictranslocator_gearboxa"
   },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
@@ -178,8 +169,17 @@
   "isolador": {
    "base": "game:block/clay/hardened/cream"
   },
-  "engrenagens": {
-   "base": "game:block/machine/statictranslocator/statictranslocator_gearboxa"
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "water": {
+   "base": "game:block/liquid/water"
   }
  },
  "drawtype": "json",

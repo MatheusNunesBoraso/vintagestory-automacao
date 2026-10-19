@@ -117,54 +117,6 @@
   "base": "automacao:block/prensa/full"
  },
  "textures": {
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
-  },
-  "fruta_cereja": {
-   "base": "game:item/food/fruit/cherry"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "suco": {
-   "base": "game:block/liquid/wine"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "fruta_verm": {
-   "base": "game:item/food/fruit/raspberry"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
   "balde": {
    "base": "game:block/wood/bucket/aged-sides"
   },
@@ -174,8 +126,56 @@
   "bobina": {
    "base": "game:block/metal/sheet/copper1"
   },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "fruta_cereja": {
+   "base": "game:item/food/fruit/cherry"
+  },
+  "fruta_verm": {
+   "base": "game:item/food/fruit/raspberry"
+  },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "suco": {
+   "base": "game:block/liquid/wine"
   }
  },
  "drawtype": "json",

@@ -101,71 +101,71 @@
   "base": "automacao:block/moedor/full"
  },
  "textures": {
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "gravel": {
-   "base": "game:block/stone/gravel/andesite"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "darkwood": {
    "base": "game:block/wood/debarked/aged"
   },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
   "flour": {
    "base": "game:block/food/grain/flax-pile"
   },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "quern": {
-   "base": "game:block/stone/polishedrock-old/full/andesite1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
-  },
-  "grooves": {
-   "base": "game:block/stone/polishedrock/andesite"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "coal": {
-   "base": "game:block/coal/charcoal"
+  "gravel": {
+   "base": "game:block/stone/gravel/andesite"
   },
   "grindtop": {
    "base": "game:block/stone/polishedrock-old/full/andesite2"
   },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
+  "grooves": {
+   "base": "game:block/stone/polishedrock/andesite"
   },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "quern": {
+   "base": "game:block/stone/polishedrock-old/full/andesite1"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
   }
  },
  "drawtype": "json",

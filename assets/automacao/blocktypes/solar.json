@@ -96,38 +96,38 @@
   "base": "automacao:block/solar/full"
  },
  "textures": {
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "coal": {
-   "base": "game:block/coal/charcoal"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
   "darkiron": {
    "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
-  "vidro_escuro": {
-   "base": "game:block/glass/smoky"
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
   },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "vidro_escuro": {
+   "base": "game:block/glass/smoky"
   }
  },
  "drawtype": "json",

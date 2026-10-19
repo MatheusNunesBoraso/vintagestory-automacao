@@ -2,11 +2,11 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "cobble": "game:block/stone/cobblestone/andesite2",
   "brass": "game:block/metal/tarnished/brass",
-  "darkwood": "game:block/wood/debarked/aged",
+  "cobble": "game:block/stone/cobblestone/andesite2",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "darkwood": "game:block/wood/debarked/aged",
   "isolador": "game:block/clay/hardened/cream"
  },
  "elements": [

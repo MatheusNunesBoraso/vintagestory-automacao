@@ -77,20 +77,14 @@
   "base": "automacao:block/peneira_balanco/full"
  },
  "textures": {
-  "logend": {
-   "base": "game:block/wood/firewood/aged/north"
-  },
-  "pepita": {
-   "base": "game:item/resource/nugget/nativecopper"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
   "areia": {
    "base": "game:block/stone/sand/andesite"
   },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
+  "basketside": {
+   "base": "game:block/reed/basket/aged-northsouth"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
   },
   "gravel": {
    "base": "game:block/stone/gravel/andesite"
@@ -98,20 +92,26 @@
   "leather": {
    "base": "game:block/leather/aged1"
   },
-  "basketside": {
-   "base": "game:block/reed/basket/aged-northsouth"
-  },
-  "rope": {
-   "base": "game:block/cloth/reedrope"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
   "logbark": {
    "base": "game:block/wood/firewood/aged/bark"
   },
+  "logend": {
+   "base": "game:block/wood/firewood/aged/north"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "pepita": {
+   "base": "game:item/resource/nugget/nativecopper"
+  },
   "planks": {
    "base": "game:block/wood/planks/aged1"
+  },
+  "rope": {
+   "base": "game:block/cloth/reedrope"
   },
   "silex": {
    "base": "game:block/stone/flint"

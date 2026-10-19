@@ -2,9 +2,9 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
+  "chestlid": "game:block/wood/chest/aged/lid",
   "chestside": "game:block/wood/chest/aged/sides",
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "chestlid": "game:block/wood/chest/aged/lid"
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2"
  },
  "elements": [
   {

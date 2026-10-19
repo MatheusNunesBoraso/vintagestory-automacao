@@ -101,44 +101,44 @@
   "base": "automacao:block/estabilizador/full"
  },
  "textures": {
-  "engrenagens_b": {
-   "base": "game:block/machine/statictranslocator/statictranslocator_gearboxb"
-  },
-  "canos": {
-   "base": "game:block/machine/statictranslocator/statictranslocator_pipes"
-  },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
   },
   "brick": {
    "base": "game:block/stone/agedbrick/andesite1"
   },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
+  "canos": {
+   "base": "game:block/machine/statictranslocator/statictranslocator_pipes"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "darkiron": {
    "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
+  "engrenagens": {
+   "base": "game:block/machine/statictranslocator/statictranslocator_gearboxa"
+  },
+  "engrenagens_b": {
+   "base": "game:block/machine/statictranslocator/statictranslocator_gearboxb"
+  },
   "estrutura": {
    "base": "game:block/machine/statictranslocator/statictranslocator_structure"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
   },
-  "engrenagens": {
-   "base": "game:block/machine/statictranslocator/statictranslocator_gearboxa"
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
   },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "moss": {
+   "base": "game:block/plant/moss"
   }
  },
  "drawtype": "json",

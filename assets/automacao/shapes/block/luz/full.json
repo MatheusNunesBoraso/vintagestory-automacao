@@ -2,19 +2,19 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "rebite": "game:block/metal/tarnished/iron-riveted1",
-  "corroded": "game:block/metal/corroded/rusty3",
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "moss": "game:block/plant/moss",
+  "brass": "game:block/metal/tarnished/brass",
   "carcaca": "game:block/metal/tarnished/rusty-iron1",
   "cobble": "game:block/stone/cobblestone/andesite2",
-  "luz": "game:block/machine/statictranslocator/rustyglow",
-  "lanterna": "game:block/metal/lantern/rust",
-  "brass": "game:block/metal/tarnished/brass",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
+  "corroded": "game:block/metal/corroded/rusty3",
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
   "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "isolador": "game:block/clay/hardened/cream",
+  "lanterna": "game:block/metal/lantern/rust",
+  "luz": "game:block/machine/statictranslocator/rustyglow",
   "luzquente": "game:block/glass/yellow",
-  "isolador": "game:block/clay/hardened/cream"
+  "moss": "game:block/plant/moss",
+  "rebite": "game:block/metal/tarnished/iron-riveted1"
  },
  "elements": [
   {

@@ -111,20 +111,47 @@
   "base": "automacao:block/fornalha/full"
  },
  "textures": {
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "chimney": {
+   "base": "game:block/clay/bloomery/aged/chimney"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "ember": {
+   "base": "game:block/coal/ember"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
   },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
+  "kilnwall": {
+   "base": "game:block/clay/bloomery/aged/base"
   },
   "lingote": {
    "base": "game:block/metal/ingot/copper"
@@ -132,38 +159,11 @@
   "luz": {
    "base": "game:block/machine/statictranslocator/rustyglow"
   },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "kilnwall": {
-   "base": "game:block/clay/bloomery/aged/base"
-  },
   "moss": {
    "base": "game:block/plant/moss"
   },
-  "coal": {
-   "base": "game:block/coal/charcoal"
-  },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
-  },
-  "ember": {
-   "base": "game:block/coal/ember"
-  },
-  "chimney": {
-   "base": "game:block/clay/bloomery/aged/chimney"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
   },
   "refratario": {
    "base": "game:block/clay/fireclay"

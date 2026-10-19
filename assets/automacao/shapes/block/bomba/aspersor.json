@@ -2,9 +2,9 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
+  "brass": "game:block/metal/tarnished/brass",
   "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "water": "game:block/liquid/water",
-  "brass": "game:block/metal/tarnished/brass"
+  "water": "game:block/liquid/water"
  },
  "elements": [
   {

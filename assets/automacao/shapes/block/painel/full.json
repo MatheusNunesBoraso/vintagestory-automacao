@@ -2,19 +2,19 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
+  "brass": "game:block/metal/tarnished/brass",
+  "coal": "game:block/coal/charcoal",
   "cobre": "game:block/metal/tarnished/tarnished-copper",
   "corroded": "game:block/metal/corroded/rusty3",
-  "paper": "game:block/cloth/paper/blank-small",
-  "red": "game:block/cloth/basic/red",
-  "mossy": "game:block/wood/debarked/mossy",
-  "coal": "game:block/coal/charcoal",
-  "luz": "game:block/machine/statictranslocator/rustyglow",
-  "brass": "game:block/metal/tarnished/brass",
-  "darkwood": "game:block/wood/debarked/aged",
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "darkwood": "game:block/wood/debarked/aged",
   "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
   "isolador": "game:block/clay/hardened/cream",
-  "planks": "game:block/wood/planks/aged1"
+  "luz": "game:block/machine/statictranslocator/rustyglow",
+  "mossy": "game:block/wood/debarked/mossy",
+  "paper": "game:block/cloth/paper/blank-small",
+  "planks": "game:block/wood/planks/aged1",
+  "red": "game:block/cloth/basic/red"
  },
  "elements": [
   {

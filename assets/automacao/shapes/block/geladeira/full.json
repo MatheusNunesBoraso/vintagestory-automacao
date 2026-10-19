@@ -2,22 +2,22 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "rebite": "game:block/metal/tarnished/iron-riveted1",
-  "corroded": "game:block/metal/corroded/rusty3",
-  "gelo": "game:block/liquid/ice/lake1",
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "moss": "game:block/plant/moss",
-  "carcaca": "game:block/metal/tarnished/rusty-iron1",
-  "luz": "game:block/machine/statictranslocator/rustyglow",
-  "leather": "game:block/leather/aged1",
   "bobina": "game:block/metal/sheet/copper1",
   "brass": "game:block/metal/tarnished/brass",
-  "darkwood": "game:block/wood/debarked/aged",
+  "carcaca": "game:block/metal/tarnished/rusty-iron1",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
+  "corroded": "game:block/metal/corroded/rusty3",
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "darkwood": "game:block/wood/debarked/aged",
+  "escarcha": "game:block/liquid/ice/glacier1",
+  "gelo": "game:block/liquid/ice/lake1",
   "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
   "isolador": "game:block/clay/hardened/cream",
-  "escarcha": "game:block/liquid/ice/glacier1",
-  "planks": "game:block/wood/planks/aged1"
+  "leather": "game:block/leather/aged1",
+  "luz": "game:block/machine/statictranslocator/rustyglow",
+  "moss": "game:block/plant/moss",
+  "planks": "game:block/wood/planks/aged1",
+  "rebite": "game:block/metal/tarnished/iron-riveted1"
  },
  "elements": [
   {

@@ -2,12 +2,12 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "corroded": "game:block/metal/corroded/rusty3",
-  "grooves": "game:block/stone/polishedrock/andesite",
   "coal": "game:block/coal/charcoal",
+  "corroded": "game:block/metal/corroded/rusty3",
   "grindtop": "game:block/stone/polishedrock-old/full/andesite2",
-  "quern": "game:block/stone/polishedrock-old/full/andesite1",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "grooves": "game:block/stone/polishedrock/andesite",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "quern": "game:block/stone/polishedrock-old/full/andesite1"
  },
  "elements": [
   {

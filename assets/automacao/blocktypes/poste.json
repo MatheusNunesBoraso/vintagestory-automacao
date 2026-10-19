@@ -89,8 +89,14 @@
   "base": "automacao:block/poste/full"
  },
  "textures": {
-  "vidro_claro": {
-   "base": "game:block/glass/plain"
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
   },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
@@ -98,29 +104,23 @@
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "darkwood": {
    "base": "game:block/wood/debarked/aged"
   },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "vidro_claro": {
+   "base": "game:block/glass/plain"
   }
  },
  "drawtype": "json",

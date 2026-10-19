@@ -93,29 +93,29 @@
   "base": "automacao:block/pedestal_raio/full"
  },
  "textures": {
-  "logend": {
-   "base": "game:block/wood/firewood/aged/north"
+  "bark": {
+   "base": "game:block/wood/bark/oak"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
   },
   "ferrugem": {
    "base": "game:block/metal/tarnished/rusty-iron"
+  },
+  "logbark": {
+   "base": "game:block/wood/firewood/aged/bark"
+  },
+  "logend": {
+   "base": "game:block/wood/firewood/aged/north"
   },
   "moss": {
    "base": "game:block/plant/moss"
   },
   "mossy": {
    "base": "game:block/wood/debarked/mossy"
-  },
-  "coal": {
-   "base": "game:block/coal/charcoal"
-  },
-  "bark": {
-   "base": "game:block/wood/bark/oak"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "logbark": {
-   "base": "game:block/wood/firewood/aged/bark"
   },
   "silex": {
    "base": "game:block/stone/flint"

@@ -132,8 +132,20 @@
   "base": "automacao:block/esteira/full"
  },
  "textures": {
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "chestlid": {
+   "base": "game:block/wood/chest/aged/lid"
+  },
+  "chestside": {
+   "base": "game:block/wood/chest/aged/sides"
   },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
@@ -141,47 +153,35 @@
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "chestside": {
-   "base": "game:block/wood/chest/aged/sides"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "lona": {
-   "base": "game:block/leather/poor"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "darkwood": {
    "base": "game:block/wood/debarked/aged"
   },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "chestlid": {
-   "base": "game:block/wood/chest/aged/lid"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
   },
+  "lona": {
+   "base": "game:block/leather/poor"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
   "planks": {
    "base": "game:block/wood/planks/aged1"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
   }
  },
  "drawtype": "json",

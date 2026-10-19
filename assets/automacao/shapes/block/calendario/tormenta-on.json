@@ -2,8 +2,8 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "luz": "game:block/machine/statictranslocator/rustyglow",
-  "alarme": "game:block/cloth/basic/red"
+  "alarme": "game:block/cloth/basic/red",
+  "luz": "game:block/machine/statictranslocator/rustyglow"
  },
  "elements": [
   {

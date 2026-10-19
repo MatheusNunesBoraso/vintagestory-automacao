@@ -99,38 +99,20 @@
   "base": "automacao:block/chocadeira/full"
  },
  "textures": {
-  "vidro_claro": {
-   "base": "game:block/glass/plain"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "red": {
-   "base": "game:block/cloth/basic/red"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "ovo": {
-   "base": "game:block/wood/henbox/egg"
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
   },
   "carcaca": {
    "base": "game:block/metal/tarnished/rusty-iron1"
   },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "darkiron": {
    "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
   },
   "hay": {
    "base": "game:block/hay/aged-side"
@@ -138,14 +120,32 @@
   "isolador": {
    "base": "game:block/clay/hardened/cream"
   },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "ovo": {
+   "base": "game:block/wood/henbox/egg"
+  },
   "planks": {
    "base": "game:block/wood/planks/aged1"
   },
-  "yellow": {
-   "base": "game:block/cloth/basic/yellow"
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "red": {
+   "base": "game:block/cloth/basic/red"
+  },
+  "vidro_claro": {
+   "base": "game:block/glass/plain"
   },
   "pumpkin": {
    "base": "game:block/clay/hardened/orange"
+  },
+  "yellow": {
+   "base": "game:block/cloth/basic/yellow"
   }
  },
  "drawtype": "json",

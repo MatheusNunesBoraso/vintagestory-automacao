@@ -100,59 +100,59 @@
   "base": "automacao:block/calendario/full"
  },
  "textures": {
-  "vidro_claro": {
-   "base": "game:block/glass/plain"
-  },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
-  },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "orangeskin": {
-   "base": "game:block/cloth/basic/orange"
-  },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
+  "alarme": {
+   "base": "game:block/cloth/basic/red"
   },
   "blue": {
    "base": "game:block/cloth/basic/blue"
   },
-  "alarme": {
-   "base": "game:block/cloth/basic/red"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "greenhair": {
-   "base": "game:block/cloth/basic/green"
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
   },
   "coal": {
    "base": "game:block/coal/charcoal"
   },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "gray": {
-   "base": "game:block/cloth/basic/gray"
-  },
-  "yellow": {
-   "base": "game:block/cloth/basic/yellow"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "paper": {
-   "base": "game:block/cloth/paper/blank-small"
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
   },
   "darkiron": {
    "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
-  "white": {
-   "base": "game:block/cloth/basic/white"
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "gray": {
+   "base": "game:block/cloth/basic/gray"
+  },
+  "greenhair": {
+   "base": "game:block/cloth/basic/green"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "orangeskin": {
+   "base": "game:block/cloth/basic/orange"
+  },
+  "paper": {
+   "base": "game:block/cloth/paper/blank-small"
   },
   "planks": {
    "base": "game:block/wood/planks/aged1"
+  },
+  "vidro_claro": {
+   "base": "game:block/glass/plain"
+  },
+  "white": {
+   "base": "game:block/cloth/basic/white"
+  },
+  "yellow": {
+   "base": "game:block/cloth/basic/yellow"
   }
  },
  "drawtype": "json",

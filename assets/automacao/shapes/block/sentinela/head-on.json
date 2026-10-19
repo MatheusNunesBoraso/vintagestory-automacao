@@ -2,15 +2,15 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "s_planks": "game:block/wood/planks/aged1",
-  "s_moss": "game:block/plant/moss",
+  "s_brass": "game:block/metal/lantern/rust",
   "s_corroded": "game:block/metal/corroded/rusty3",
-  "s_iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
   "s_cracked": "game:block/stone/crackedbrick/andesite1",
   "s_darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "s_brass": "game:block/metal/lantern/rust",
   "s_darkwood": "game:block/wood/debarked/aged",
-  "s_lensglow": "game:block/machine/statictranslocator/rustyglow"
+  "s_iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "s_lensglow": "game:block/machine/statictranslocator/rustyglow",
+  "s_moss": "game:block/plant/moss",
+  "s_planks": "game:block/wood/planks/aged1"
  },
  "elements": [
   {

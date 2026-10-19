@@ -2,9 +2,9 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
+  "darkwood": "game:block/wood/debarked/aged",
   "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
-  "linen": "game:block/linen",
-  "darkwood": "game:block/wood/debarked/aged"
+  "linen": "game:block/linen"
  },
  "elements": [
   {

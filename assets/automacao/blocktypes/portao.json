@@ -125,17 +125,14 @@
   "base": "automacao:block/portao/full"
  },
  "textures": {
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
   },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
   },
   "carcaca": {
    "base": "game:block/metal/tarnished/rusty-iron1"
@@ -143,26 +140,17 @@
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
   },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
   },
   "darkiron": {
    "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
   },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
@@ -170,8 +158,20 @@
   "isolador": {
    "base": "game:block/clay/hardened/cream"
   },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
   "planks": {
    "base": "game:block/wood/planks/aged1"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
   }
  },
  "drawtype": "json",

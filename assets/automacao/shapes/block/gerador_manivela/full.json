@@ -2,21 +2,21 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "ima": "game:block/stone/rock/basalt1",
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "stonewheel": "game:block/stone/polishedrock/andesite",
+  "brass": "game:block/metal/tarnished/brass",
   "bronze": "game:block/metal/tarnished/copper",
+  "coal": "game:block/coal/charcoal",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "darkwood": "game:block/wood/debarked/aged",
+  "ima": "game:block/stone/rock/basalt1",
+  "isolador": "game:block/clay/hardened/cream",
+  "leather": "game:block/leather/aged1",
+  "luz": "game:block/machine/statictranslocator/rustyglow",
   "moss": "game:block/plant/moss",
   "mossy": "game:block/wood/debarked/mossy",
-  "coal": "game:block/coal/charcoal",
-  "luz": "game:block/machine/statictranslocator/rustyglow",
-  "leather": "game:block/leather/aged1",
+  "planks": "game:block/wood/planks/aged1",
   "rope": "game:block/cloth/reedrope",
-  "brass": "game:block/metal/tarnished/brass",
-  "darkwood": "game:block/wood/debarked/aged",
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "isolador": "game:block/clay/hardened/cream",
-  "planks": "game:block/wood/planks/aged1"
+  "stonewheel": "game:block/stone/polishedrock/andesite"
  },
  "elements": [
   {

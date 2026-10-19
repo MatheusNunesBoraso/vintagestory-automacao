@@ -3,8 +3,8 @@
  "textureHeight": 16,
  "textures": {
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "leather": "game:block/leather/aged1",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "leather": "game:block/leather/aged1"
  },
  "elements": [
   {

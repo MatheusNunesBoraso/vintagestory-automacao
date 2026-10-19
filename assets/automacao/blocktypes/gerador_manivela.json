@@ -89,17 +89,35 @@
   "base": "automacao:block/gerador_manivela/full"
  },
  "textures": {
-  "ima": {
-   "base": "game:block/stone/rock/basalt1"
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "bronze": {
+   "base": "game:block/metal/tarnished/copper"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
   },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "stonewheel": {
-   "base": "game:block/stone/polishedrock/andesite"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
-  "bronze": {
-   "base": "game:block/metal/tarnished/copper"
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "ima": {
+   "base": "game:block/stone/rock/basalt1"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "leather": {
+   "base": "game:block/leather/aged1"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
   },
   "moss": {
    "base": "game:block/plant/moss"
@@ -107,32 +125,14 @@
   "mossy": {
    "base": "game:block/wood/debarked/mossy"
   },
-  "coal": {
-   "base": "game:block/coal/charcoal"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "leather": {
-   "base": "game:block/leather/aged1"
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
   },
   "rope": {
    "base": "game:block/cloth/reedrope"
   },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
+  "stonewheel": {
+   "base": "game:block/stone/polishedrock/andesite"
   }
  },
  "drawtype": "json",

@@ -2,10 +2,10 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
   "corroded": "game:block/metal/corroded/rusty3",
-  "planks": "game:block/wood/planks/aged1",
-  "darkwood": "game:block/wood/debarked/aged"
+  "darkwood": "game:block/wood/debarked/aged",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "planks": "game:block/wood/planks/aged1"
  },
  "elements": [
   {

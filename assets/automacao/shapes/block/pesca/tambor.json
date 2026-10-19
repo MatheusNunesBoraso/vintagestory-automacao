@@ -3,10 +3,10 @@
  "textureHeight": 16,
  "textures": {
   "corroded": "game:block/metal/corroded/rusty3",
-  "rope": "game:block/cloth/reedrope",
-  "darkwood": "game:block/wood/debarked/aged",
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "darkwood": "game:block/wood/debarked/aged",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "rope": "game:block/cloth/reedrope"
  },
  "elements": [
   {

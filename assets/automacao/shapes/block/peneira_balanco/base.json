@@ -2,14 +2,14 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "logend": "game:block/wood/firewood/aged/north",
-  "moss": "game:block/plant/moss",
   "areia": "game:block/stone/sand/andesite",
-  "mossy": "game:block/wood/debarked/mossy",
-  "rope": "game:block/cloth/reedrope",
   "darkwood": "game:block/wood/debarked/aged",
   "logbark": "game:block/wood/firewood/aged/bark",
+  "logend": "game:block/wood/firewood/aged/north",
+  "moss": "game:block/plant/moss",
+  "mossy": "game:block/wood/debarked/mossy",
   "planks": "game:block/wood/planks/aged1",
+  "rope": "game:block/cloth/reedrope",
   "silex": "game:block/stone/flint"
  },
  "elements": [

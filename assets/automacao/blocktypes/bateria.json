@@ -172,41 +172,41 @@
   "base": "automacao:block/bateria/full"
  },
  "textures": {
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "paper": {
-   "base": "game:block/cloth/paper/blank-small"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "coal": {
-   "base": "game:block/coal/charcoal"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
   "bobina": {
    "base": "game:block/metal/sheet/copper1"
-  },
-  "fired": {
-   "base": "game:block/clay/hardened/brown1"
   },
   "brass": {
    "base": "game:block/metal/tarnished/brass"
   },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "darkiron": {
    "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "fired": {
+   "base": "game:block/clay/hardened/brown1"
   },
   "hay": {
    "base": "game:block/hay/aged-side"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "paper": {
+   "base": "game:block/cloth/paper/blank-small"
   },
   "planks": {
    "base": "game:block/wood/planks/aged1"

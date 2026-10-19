@@ -2,13 +2,13 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
+  "bark": "game:block/wood/bark/oak",
+  "coal": "game:block/coal/charcoal",
+  "darkwood": "game:block/wood/debarked/aged",
+  "logbark": "game:block/wood/firewood/aged/bark",
   "logend": "game:block/wood/firewood/aged/north",
   "moss": "game:block/plant/moss",
   "mossy": "game:block/wood/debarked/mossy",
-  "coal": "game:block/coal/charcoal",
-  "bark": "game:block/wood/bark/oak",
-  "darkwood": "game:block/wood/debarked/aged",
-  "logbark": "game:block/wood/firewood/aged/bark",
   "silex": "game:block/stone/flint"
  },
  "elements": [

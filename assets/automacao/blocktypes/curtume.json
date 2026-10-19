@@ -146,77 +146,77 @@
   "base": "automacao:block/curtume/full"
  },
  "textures": {
+  "barril": {
+   "base": "game:block/wood/barrel/sides"
+  },
+  "barril_fundo": {
+   "base": "game:block/wood/barrel/bottom"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "cal": {
+   "base": "game:block/liquid/limewater"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "chestlid": {
+   "base": "game:block/wood/chest/aged/lid"
+  },
+  "chestside": {
+   "base": "game:block/wood/chest/aged/sides"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "barril_fundo": {
-   "base": "game:block/wood/barrel/bottom"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "cal": {
-   "base": "game:block/liquid/limewater"
-  },
-  "leather": {
-   "base": "game:block/leather/aged1"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "darkwood": {
    "base": "game:block/wood/debarked/aged"
   },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
   },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
+  "leather": {
+   "base": "game:block/leather/aged1"
   },
   "luz": {
    "base": "game:block/machine/statictranslocator/rustyglow"
   },
-  "pele_pronta": {
-   "base": "game:item/resource/hide/prepared"
+  "moss": {
+   "base": "game:block/plant/moss"
   },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "tanino": {
-   "base": "game:block/liquid/strongtannin"
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
   },
   "pele_crua": {
    "base": "game:item/resource/hide/raw"
   },
-  "chestside": {
-   "base": "game:block/wood/chest/aged/sides"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "chestlid": {
-   "base": "game:block/wood/chest/aged/lid"
+  "pele_pronta": {
+   "base": "game:item/resource/hide/prepared"
   },
   "planks": {
    "base": "game:block/wood/planks/aged1"
   },
-  "barril": {
-   "base": "game:block/wood/barrel/sides"
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
   },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "tanino": {
+   "base": "game:block/liquid/strongtannin"
   }
  },
  "drawtype": "json",

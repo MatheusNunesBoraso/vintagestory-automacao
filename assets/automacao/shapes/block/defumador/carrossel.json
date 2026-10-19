@@ -2,11 +2,11 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "fishraw": "game:item/food/meat/fish-cured",
   "corroded": "game:block/metal/corroded/rusty3",
-  "raw": "game:item/food/meat/raw",
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "fishraw": "game:item/food/meat/fish-cured",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "raw": "game:item/food/meat/raw"
  },
  "elements": [
   {

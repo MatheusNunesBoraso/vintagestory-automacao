@@ -112,7 +112,7 @@ def modelos(k):
             },
             "auto": {
                 "cat": "pedestal",
-                "desc": "Pedestal de madeira com uma vara de ponta de sílex que puxa raio. Clique direito com uma Engrenagem Enferrujada pra encaixar ela no berço (clique de novo com a mão vazia pra tirar). Deixe a céu aberto: quando tem tempestade, o pedestal puxa pra ele os raios que caem por perto. O raio desce pela vara, passa pela lasca de sílex que encosta nela e a engrenagem enferrujada vira uma Engrenagem Temporal. Uma engrenagem por raio. Não precisa de energia. Cuidado: o raio machuca quem estiver perto! Receita: lenha e sílex.",
+                "desc": "Pedestal de madeira com uma vara de ponta de sílex que puxa raio. Clique direito com uma Engrenagem Enferrujada pra encaixar ela no berço (clique de novo com a mão vazia pra tirar). Deixe a céu aberto: quando tem TROVOADA (chuva comum não solta raio; e o jogo só solta raio com 12°C ou mais), o pedestal puxa pra ele os raios da tempestade que caem até 256 blocos dali (olhe pro pedestal pra saber se agora tem trovoada). O raio desce pela vara, passa pela lasca de sílex que encosta nela e a engrenagem enferrujada vira uma Engrenagem Temporal. Uma engrenagem por raio. Não precisa de energia. Cuidado: o raio machuca quem estiver perto! Receita: lenha e sílex.",
                 "modes": [["vazio", "Vazio"], ["enferrujada", "Com engrenagem enferrujada"],
                           ["tempestade", "Tempestade (raio!)"], ["temporal", "Virou temporal"]],
                 "default": "tempestade",

@@ -2,10 +2,10 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
   "corroded": "game:block/metal/corroded/rusty3",
-  "planks": "game:block/wood/planks/aged1",
-  "darkwood": "game:block/wood/debarked/aged"
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "darkwood": "game:block/wood/debarked/aged",
+  "planks": "game:block/wood/planks/aged1"
  },
  "elements": [
   {

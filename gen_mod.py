@@ -122,7 +122,7 @@ def shape_json(els, glow_tex=(), glow=False):
                     f["glow"] = 220
             walk(e.get("children") or [])
     walk(els)
-    texs = {c: g.TEXTURES[c] for c in textures_usadas(els) if c in g.TEXTURES}
+    texs = {c: g.TEXTURES[c] for c in sorted(textures_usadas(els)) if c in g.TEXTURES}
     return {"textureWidth": 16, "textureHeight": 16, "textures": texs, "elements": els}
 
 
@@ -207,9 +207,9 @@ def gerar_bloco(k, m, lang):
     if est:
         variantes.insert(0, {"code": "estado", "states": est["estados"]})
     rot = {"south": 0, "east": 90, "north": 180, "west": 270}
-    tex_bloco = {c: {"base": g.TEXTURES[c]} for c in textures_usadas(todos) if c in g.TEXTURES}
+    tex_bloco = {c: {"base": g.TEXTURES[c]} for c in sorted(textures_usadas(todos)) if c in g.TEXTURES}
     for p in partes:
-        for c in textures_usadas(p["els"]):
+        for c in sorted(textures_usadas(p["els"])):
             if c in g.TEXTURES:
                 tex_bloco[c] = {"base": g.TEXTURES[c]}
     inv = "*-" + (est["estados"][0] + "-" if est else "") + "south"

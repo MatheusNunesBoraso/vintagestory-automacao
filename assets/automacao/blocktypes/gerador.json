@@ -86,26 +86,14 @@
   "base": "automacao:block/gerador/full"
  },
  "textures": {
-  "logend": {
-   "base": "game:block/wood/firewood/aged/north"
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
   },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
-  },
-  "paper": {
-   "base": "game:block/cloth/paper/blank-small"
-  },
-  "red": {
-   "base": "game:block/cloth/basic/red"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
   },
   "carcaca": {
    "base": "game:block/metal/tarnished/rusty-iron1"
@@ -113,32 +101,44 @@
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
   },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "ember": {
-   "base": "game:block/coal/ember"
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
   },
   "darkiron": {
    "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
+  "ember": {
+   "base": "game:block/coal/ember"
+  },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
   },
   "logbark": {
    "base": "game:block/wood/firewood/aged/bark"
   },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
+  "logend": {
+   "base": "game:block/wood/firewood/aged/north"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "paper": {
+   "base": "game:block/cloth/paper/blank-small"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "red": {
+   "base": "game:block/cloth/basic/red"
   }
  },
  "drawtype": "json",

@@ -101,35 +101,32 @@
   "base": "automacao:block/defumador/full"
  },
  "textures": {
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "smoked": {
-   "base": "game:item/food/meat/smoked"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "darkwood": {
    "base": "game:block/wood/debarked/aged"
   },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  "ember": {
+   "base": "game:block/coal/ember"
   },
   "fishraw": {
    "base": "game:item/food/meat/fish-cured"
@@ -137,29 +134,32 @@
   "fishsmoked": {
    "base": "game:item/food/meat/fish-smoked"
   },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
   },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
   },
   "moss": {
    "base": "game:block/plant/moss"
   },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
   "raw": {
    "base": "game:item/food/meat/raw"
   },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
   },
-  "ember": {
-   "base": "game:block/coal/ember"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "smoked": {
+   "base": "game:item/food/meat/smoked"
   }
  },
  "drawtype": "json",

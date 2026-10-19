@@ -86,65 +86,65 @@
   "base": "automacao:block/cocho/full"
  },
  "textures": {
+  "basketside": {
+   "base": "game:block/reed/basket/aged-northsouth"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "darkwood": {
    "base": "game:block/wood/debarked/aged"
   },
-  "ovo": {
-   "base": "game:block/wood/henbox/egg"
-  },
   "hay": {
    "base": "game:block/hay/aged-side"
-  },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
   },
   "haytop": {
    "base": "game:block/hay/aged-top"
   },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
   },
   "moss": {
    "base": "game:block/plant/moss"
   },
-  "basketside": {
-   "base": "game:block/reed/basket/aged-northsouth"
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
   },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
+  "ovo": {
+   "base": "game:block/wood/henbox/egg"
   },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
   },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
   }
  },
  "drawtype": "json",

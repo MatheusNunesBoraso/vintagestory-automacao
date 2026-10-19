@@ -2,12 +2,12 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
+  "coal": "game:block/coal/charcoal",
   "cobre": "game:block/metal/tarnished/tarnished-copper",
   "corroded": "game:block/metal/corroded/rusty3",
-  "coal": "game:block/coal/charcoal",
   "darkwood": "game:block/wood/debarked/aged",
-  "vidro_escuro": "game:block/glass/smoky",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "vidro_escuro": "game:block/glass/smoky"
  },
  "elements": [
   {

@@ -2,18 +2,18 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "rebite": "game:block/metal/tarnished/iron-riveted1",
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "moss": "game:block/plant/moss",
-  "carcaca": "game:block/metal/tarnished/rusty-iron1",
-  "mossy": "game:block/wood/debarked/mossy",
-  "lona": "game:block/leather/poor",
   "bobina": "game:block/metal/sheet/copper1",
   "brass": "game:block/metal/tarnished/brass",
-  "darkwood": "game:block/wood/debarked/aged",
+  "carcaca": "game:block/metal/tarnished/rusty-iron1",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
   "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "darkwood": "game:block/wood/debarked/aged",
   "isolador": "game:block/clay/hardened/cream",
-  "planks": "game:block/wood/planks/aged1"
+  "lona": "game:block/leather/poor",
+  "moss": "game:block/plant/moss",
+  "mossy": "game:block/wood/debarked/mossy",
+  "planks": "game:block/wood/planks/aged1",
+  "rebite": "game:block/metal/tarnished/iron-riveted1"
  },
  "elements": [
   {
