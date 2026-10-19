@@ -7,8 +7,8 @@
 **Energia sem fio, máquinas velhas e enferrujadas fazendo o trabalho chato — e um Manual que ensina tudo.**
 
 ![Vintage Story 1.22](https://img.shields.io/badge/Vintage%20Story-1.22-6fe8ff?style=for-the-badge)
-![Versão](https://img.shields.io/badge/vers%C3%A3o-1.0.0-e0a64a?style=for-the-badge)
-![Peças](https://img.shields.io/badge/pe%C3%A7as-43-9cff8f?style=for-the-badge)
+![Versão](https://img.shields.io/badge/vers%C3%A3o-1.3.0-e0a64a?style=for-the-badge)
+![Peças](https://img.shields.io/badge/pe%C3%A7as-47-9cff8f?style=for-the-badge)
 ![Idioma](https://img.shields.io/badge/idioma-pt--br-ff9ce0?style=for-the-badge)
 
 <img src="docs/img/rede.png" alt="Uma base inteira ligada pela Automação" width="100%">
@@ -29,6 +29,8 @@ engrenagens que engatam de verdade, uma lampadinha azul que acende quando tem en
 - **Baterias** guardam a sobra pra noite e pro inverno.
 - **Postes de Energia** levam a energia **sem fio, por alcance** (8 blocos pra cada lado). Clicou no poste, vê o alcance e o caminho da energia.
 - **36 máquinas** fazem o trabalho chato: moer, peneirar, pescar, serrar, fazer carvão, defumar, colher, tirar mel, cuidar de cogumelo, levar as coisas pros baús, encher cocho, consertar ferramenta, acender tocha, fazer cerâmica, fundir, forjar, prensar fruta, destilar, cozinhar, curtir couro, tecer, chocar ovo, cavar pedreira, achar minério, gelar comida, esquentar a casa, iluminar, irrigar, abrir portão, eletrificar cerca, elevador, calendário com previsão da **tempestade temporal**, estabilizador temporal e a **Sentinela**.
+- **Começo à mão**: 3 peças movidas no braço (segurar o clique), sem energia, pra chegar no cobre e na primeira rede sem pular etapa.
+- **Pedestal do Raio**: o raio da tempestade transforma Engrenagem Enferrujada em **Engrenagem Temporal**.
 - **O Manual**: você ganha na primeira vez que entra no mundo (novo ou já criado) e também dá pra fazer. Tem o guia de cada peça com a receita e um **guia completo dos primeiros 100 dias**: inverno, comida, metalurgia, animais, perigos, tempestade temporal e dicas de veterano.
 
 ## Como a energia funciona
@@ -51,6 +53,31 @@ flowchart LR
 3. A cada segundo a rede soma o que as fontes geram e o que as máquinas pedem. Sobrou? Vai pras baterias. Faltou? As baterias cobrem. Acabou tudo? As máquinas param e a lampadinha apaga.
 4. No mundo a energia é **invisível**. Na janela do poste tem **Mostrar alcance** e **Ver conexões** (desenha o caminho por alguns segundos).
 5. Toda peça **gira com a chave inglesa** do jogo e mostra o estado ao olhar pra ela.
+
+## 🆕 Novidades
+
+- **1.3.0** — **Pedestal do Raio**: encaixe uma Engrenagem Enferrujada e, na tempestade, o raio de verdade do jogo cai nele e ela vira **Engrenagem Temporal**. Luz, Poste, Torre de Tempestade, Painel Solar, Estabilizador e Calendário voltaram a pedir **vidro** (estavam pedindo lenha por engano).
+- **1.2.0** — Começo à mão sem tábua (tábua precisa de serra de metal): agora é lenha, graveto, capim seco, sílex e pedra solta. **Modo automático**: Shift + clique com a mão vazia e a peça trabalha sozinha enquanto você está por perto.
+- **1.1.0** — **Começo à mão**: Peneira de Balanço, Torno de Vara (faz a **Engrenagem de Madeira**, que serve nas fontes de energia) e Gerador de Manivela. Estufa de Cogumelos cultiva até 2 espécies por bloco, sem precisar de tronco.
+- **1.0.1** — Janela das máquinas refeita: nada de texto por cima dos botões, chavinhas nas opções e o botão **Como funciona?** que abre o Manual no capítulo da peça.
+
+## 🪵 Começo à mão
+
+Sem energia: segure o clique direito pra usar (ou **Shift + clique com a mão vazia** pro modo automático).
+
+| | Peça | O que faz | Energia/s |
+|---|---|---|---|
+| <img src="docs/img/gerador_manivela.png" width="150" alt="Gerador de Manivela"> | **Gerador de Manivela** | Caixote de tábua com um carretel enrolado de fio de cobre girando entre duas pedras-ímã. SEGURE o clique direito pra girar a manivela: enquanto gira, sai um pouquinho de energia (uns 2 por segundo) pra rede. | gera 2 enquanto gira |
+| <img src="docs/img/peneira_balanco.png" width="150" alt="Peneira de Balanço"> | **Peneira de Balanço** | Peneira de moldura de tábua com fundo de cesto trançado, pendurada por 4 cordas num cavalete de madeira. | à mão (segure o clique) |
+| <img src="docs/img/torno_vara.png" width="150" alt="Torno de Vara"> | **Torno de Vara** | Torno de pedal à moda antiga: a corda dá voltas na peça, vai até a vara-mola em cima e até o pedal embaixo. SEGURE o clique direito pra pedalar: a peça gira pra lá e pra cá e o formão de sílex vai entalhando. | à mão (segure o clique) |
+| <img src="docs/img/pedestal_raio.png" width="150" alt="Pedestal do Raio"> | **Pedestal do Raio** | Pedestal de madeira com uma vara de ponta de sílex que puxa raio. Clique direito com uma Engrenagem Enferrujada pra encaixar ela no berço (clique de novo com a mão vazia pra tirar). | não usa (o raio faz tudo) |
+
+### ⛈️ Pedestal do Raio
+
+Encaixe uma **Engrenagem Enferrujada** no berço (clique direito com ela na mão) e deixe o pedestal **a céu aberto**.
+Quando tem tempestade, ele puxa pra ele os raios de verdade que caem até **64 blocos** dali: o raio desce pela vara de ponta de sílex,
+passa pela lasca que encosta na engrenagem e ela vira **Engrenagem Temporal**. Uma por raio. Clique com a mão vazia pra pegar.
+Cuidado: o raio machuca quem estiver perto!
 
 ## ⚡ Fontes de energia
 
@@ -90,7 +117,7 @@ flowchart LR
 | <img src="docs/img/elevador.png" width="150" alt="Elevador"> | **Elevador** | Substitui o mod Dumbwaiter (o dele vai ser removido, então tire os baús das estações antigas antes, porque elas somem). | 8 por viagem |
 | <img src="docs/img/estabilizador.png" width="150" alt="Estabilizador Temporal"> | **Estabilizador Temporal** | A máquina grande: núcleo temporal azul preso entre dois cálices de ferro, com anéis girando em volta e engrenagens nas colunas. | 8 |
 | <img src="docs/img/esteira.png" width="150" alt="Esteira Transportadora"> | **Esteira Transportadora** | Versão elétrica do Tropeiro. Esteira de lona velha sobre rolos, entre trilhos de ferro: leva sozinha o que as máquinas produzem (bauzinho de cada uma) pros baús do armazém — respeitando o que cada máquina precisa de insumo. | 1 |
-| <img src="docs/img/cogumelos.png" width="150" alt="Estufa de Cogumelos"> | **Estufa de Cogumelos** | Versão elétrica do Cogumeleiro: o motor toca a bomba, que puxa água do barril, sobe pelo cano e o aspersor gira soltando névoa nos troncos de cogumelo da área — nascem mais rápido e mesmo fora da sombra. | 1 |
+| <img src="docs/img/cogumelos.png" width="150" alt="Estufa de Cogumelos"> | **Estufa de Cogumelos** | Cultiva cogumelos sozinha, sem tronco: coloque cogumelos no bauzinho e escolha até 2 espécies por estufa (quer mais espécies? faça mais estufas). | 1 |
 | <img src="docs/img/fogao.png" width="150" alt="Fogão Elétrico"> | **Fogão Elétrico** | Fogão de ferro fundido de 2 bocas: a panela de barro (cozinha a receita da panela do jogo sozinho, no ponto, e a tampa treme quando ferve) e a chaleira de cobre (ferve água). Embaixo, o forninho com janelinha assa pão e torta. | 3 |
 | <img src="docs/img/forja.png" width="150" alt="Forja Automática"> | **Forja Automática** | Forja e bigorna automáticas: o braseiro elétrico esquenta o lingote ou a placa e o martinete (martelo movido a motor) bate sozinho na bigorna, fazendo a receita simples que você escolher no clique direito — placa, pregos, cabeças de ferramenta, rebites. | 8 |
 | <img src="docs/img/fornalha.png" width="150" alt="Fornalha Elétrica"> | **Fornalha Elétrica** | Fornalha de barro com resistências elétricas: faz o que a fogueira/forno faz, sem lenha nem carvão. | 8 |
@@ -122,8 +149,84 @@ Perdeu? Faz outro na bancada com **2 papéis + 1 couro**. Clique direito com ele
 
 ## Receitas
 
-Receitas baratas, no espírito do jogo: tábuas, pedra, sílex, gravetos, corda e a **engrenagem enferrujada** em toda máquina;
-cobre nas peças elétricas (fontes, bateria, poste). Todas estão no Manual, no capítulo de cada peça.
+Receitas baratas, no espírito do jogo: o **Começo à mão** sai só com lenha, graveto, capim seco, sílex e pedra solta;
+as máquinas usam tábuas, pedra, sílex, gravetos, corda e a **engrenagem enferrujada**; cobre e **vidro** nas peças elétricas.
+Também estão no Manual, no capítulo de cada peça. As letras abaixo mostram a grade da bancada (`[ ]` = vazio).
+
+<details><summary><b>🪵 Começo à mão</b></summary>
+
+| Peça | Receita (bancada 3x3) | Ingredientes |
+|---|---|---|
+| Gerador de Manivela | <code>[L][U][L]</code><br><code>[O][K][O]</code><br><code>[L][U][L]</code> | **K** graveto · **L** lenha · **O** pedra solta (do chão) · **U** pepita de cobre |
+| Peneira de Balanço | <code>[K][&nbsp;][K]</code><br><code>[L][D][L]</code><br><code>[K][&nbsp;][K]</code> | **D** capim seco · **K** graveto · **L** lenha |
+| Torno de Vara | <code>[K][K][K]</code><br><code>[L][F][L]</code><br><code>[L][&nbsp;][L]</code> | **F** sílex · **K** graveto · **L** lenha |
+| Pedestal do Raio | <code>[&nbsp;][F][&nbsp;]</code><br><code>[F][L][F]</code><br><code>[L][L][L]</code> | **F** sílex · **L** lenha |
+
+</details>
+
+<details><summary><b>⚡ Fontes de energia</b></summary>
+
+| Peça | Receita (bancada 3x3) | Ingredientes |
+|---|---|---|
+| Cata-vento Gerador | <code>[R][P][R]</code><br><code>[P][G][P]</code><br><code>[K][I][K]</code> | **G** engrenagem enferrujada · **I** lingote de cobre · **K** graveto · **P** tábua · **R** corda <sub>(ou Engrenagem de Madeira no lugar da enferrujada)</sub> |
+| Gerador a Lenha | <code>[S][I][S]</code><br><code>[S][G][S]</code><br><code>[S][F][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **S** pedra (cascalho/cobblestone) <sub>(ou Engrenagem de Madeira no lugar da enferrujada)</sub> |
+| Painel Solar | <code>[V][V][V]</code><br><code>[I][G][I]</code><br><code>[P][K][P]</code> | **G** engrenagem enferrujada · **I** lingote de cobre · **K** graveto · **P** tábua · **V** vidro <sub>(ou Engrenagem de Madeira no lugar da enferrujada)</sub> |
+| Roda Geradora | <code>[P][G][P]</code><br><code>[P][I][P]</code><br><code>[S][S][S]</code> | **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) <sub>(ou Engrenagem de Madeira no lugar da enferrujada)</sub> |
+| Torre de Tempestade | <code>[&nbsp;][I][&nbsp;]</code><br><code>[P][G][P]</code><br><code>[S][V][S]</code> | **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) · **V** vidro <sub>(ou Engrenagem de Madeira no lugar da enferrujada)</sub> |
+
+</details>
+
+<details><summary><b>🔋 Baterias e postes</b></summary>
+
+| Peça | Receita (bancada 3x3) | Ingredientes |
+|---|---|---|
+| Bateria | <code>[C][I][C]</code><br><code>[C][I][C]</code><br><code>[P][P][P]</code> | **C** barro · **I** lingote de cobre · **P** tábua |
+| Poste de Energia | <code>[&nbsp;][V][&nbsp;]</code><br><code>[&nbsp;][I][&nbsp;]</code><br><code>[&nbsp;][P][&nbsp;]</code> | **I** lingote de cobre · **P** tábua · **V** vidro |
+
+</details>
+
+<details><summary><b>⚙️ Máquinas</b></summary>
+
+| Peça | Receita (bancada 3x3) | Ingredientes |
+|---|---|---|
+| Acendedor de Lampiões | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Alambique | <code>[I][I][I]</code><br><code>[P][G][P]</code><br><code>[B][B][B]</code> | **B** tijolo queimado · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua |
+| Aquecedor | <code>[M][I][M]</code><br><code>[M][G][M]</code> | **G** engrenagem enferrujada · **I** lingote de cobre · **M** chapa de ferro |
+| Bancada Elétrica | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Bomba d'Água e Irrigador | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Calendário Elétrico | <code>[P][H][P]</code><br><code>[V][G][V]</code><br><code>[P][I][P]</code> | **G** engrenagem enferrujada · **H** papel · **I** lingote de cobre · **P** tábua · **V** vidro |
+| Carvoeira Elétrica | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Cerca Elétrica | <code>[K][I][K]</code><br><code>[K][I][K]</code> | **I** lingote de cobre · **K** graveto |
+| Chocadeira | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Cocho Automático | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Colheitadeira | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Colmeia Elétrica | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Curtume Automático | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Defumador Elétrico | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Elevador | <code>[P][R][P]</code><br><code>[P][G][P]</code><br><code>[P][I][P]</code> | **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **R** corda |
+| Estabilizador Temporal | <code>[I][T][I]</code><br><code>[V][G][V]</code><br><code>[S][S][S]</code> | **G** engrenagem enferrujada · **I** lingote de cobre · **S** pedra (cascalho/cobblestone) · **T** engrenagem temporal · **V** vidro |
+| Esteira Transportadora | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Estufa de Cogumelos | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Fogão Elétrico | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Forja Automática | <code>[M][I][M]</code><br><code>[S][G][S]</code><br><code>[S][S][S]</code> | **G** engrenagem enferrujada · **I** lingote de cobre · **M** chapa de ferro · **S** pedra (cascalho/cobblestone) |
+| Fornalha Elétrica | <code>[B][I][B]</code><br><code>[B][G][B]</code><br><code>[S][S][S]</code> | **B** tijolo queimado · **G** engrenagem enferrujada · **I** lingote de cobre · **S** pedra (cascalho/cobblestone) |
+| Geladeira | <code>[P][M][P]</code><br><code>[I][G][I]</code><br><code>[P][M][P]</code> | **G** engrenagem enferrujada · **I** lingote de cobre · **M** chapa de ferro · **P** tábua |
+| Iluminação Elétrica | <code>[&nbsp;][V][&nbsp;]</code><br><code>[&nbsp;][I][&nbsp;]</code><br><code>[&nbsp;][K][&nbsp;]</code> | **I** lingote de cobre · **K** graveto · **V** vidro |
+| Moedor Elétrico | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Olaria Elétrica | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Painel da Rede | <code>[P][H][P]</code><br><code>[I][G][I]</code> | **G** engrenagem enferrujada · **H** papel · **I** lingote de cobre · **P** tábua |
+| Pedreira Automática | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Peneira Elétrica | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Pesca Elétrica | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Portão Elétrico | <code>[P][I][P]</code><br><code>[P][G][P]</code> | **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua |
+| Prensa de Frutas | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Sentinela Elétrica | <code>[R][P][R]</code><br><code>[F][G][F]</code><br><code>[K][I][K]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **K** graveto · **P** tábua · **R** corda |
+| Serraria Elétrica | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Sonda de Minério | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Tear Elétrico | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+| Vigia Elétrico | <code>[P][G][P]</code><br><code>[P][F][P]</code><br><code>[S][I][S]</code> | **F** sílex · **G** engrenagem enferrujada · **I** lingote de cobre · **P** tábua · **S** pedra (cascalho/cobblestone) |
+
+</details>
 
 ## Instalação
 

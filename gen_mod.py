@@ -33,7 +33,10 @@ ESTADOS = {
 # Máquinas que trabalham numa área (mostra "Área" na janela)
 USA_AREA = {"colheitadeira", "pesca", "colmeia", "cogumelos", "esteira", "cocho", "acendedor", "bomba", "vigia",
             "cerca", "pedreira", "sonda", "sentinela", "aquecedor", "estabilizador", "peneira"}
-SEM_BAU = {"poste", "bateria", "luz", "cerca", "portao", "calendario", "painel", "estabilizador", "aquecedor",
+# Peças "Começo à mão" (segurar o clique; sem bauzinho). O Fole ficou de fora: o jogo já tem um fole.
+MANUAIS = {"peneira_balanco", "torno_vara", "gerador_manivela"}
+FORA = {"fole"}
+SEM_BAU = {*MANUAIS, "pedestal_raio", "poste", "bateria", "luz", "cerca", "portao", "calendario", "painel", "estabilizador", "aquecedor",
            "torre", "catavento", "solar", "roda", "vigia"}
 
 # Receitas baratas (3x3). Letras:
@@ -45,7 +48,7 @@ ING = {
     "K": {"type": "item", "code": "game:stick"},
     "I": {"type": "item", "code": "game:ingot-copper"},
     "R": {"type": "item", "code": "game:rope"},
-    "L": {"type": "block", "code": "game:glass-plain"},
+    "V": {"type": "block", "code": "game:glass-plain"},
     "C": {"type": "item", "code": "game:clay-*"},
     "H": {"type": "item", "code": "game:paper-parchment"},
     "E": {"type": "item", "code": "game:leather-normal-plain"},
@@ -53,22 +56,32 @@ ING = {
     "N": {"type": "item", "code": "game:metalnailsandstrips-iron"},
     "B": {"type": "item", "code": "game:burnedbrick-*"},
     "T": {"type": "item", "code": "game:gear-temporal"},
+    "D": {"type": "item", "code": "game:drygrass"},
+    "U": {"type": "item", "code": "game:nugget-nativecopper"},
+    "W": {"type": "item", "code": "automacao:engrenagemmadeira"},
+    "L": {"type": "item", "code": "game:firewood"},
+    "O": {"type": "item", "code": "game:stone-*"},
 }
 RECEITAS = {
+    # Começo à mão: nada de tábua (tábua precisa de serra de metal) — lenha sai com machado de pedra
+    "peneira_balanco": ["K K", "LDL", "K K"],
+    "pedestal_raio": [" F ", "FLF", "LLL"],
+    "torno_vara": ["KKK", "LFL", "L L"],
+    "gerador_manivela": ["LUL", "OKO", "LUL"],
     "roda": ["PGP", "PIP", "SSS"],
-    "torre": [" I ", "PGP", "SLS"],
+    "torre": [" I ", "PGP", "SVS"],
     "catavento": ["RPR", "PGP", "KIK"],
-    "solar": ["LLL", "IGI", "PKP"],
+    "solar": ["VVV", "IGI", "PKP"],
     "gerador": ["SIS", "SGS", "SFS"],
     "bateria": ["CIC", "CIC", "PPP"],
-    "poste": [" L ", " I ", " P "],
-    "estabilizador": ["ITI", "LGL", "SSS"],
+    "poste": [" V ", " I ", " P "],
+    "estabilizador": ["ITI", "VGV", "SSS"],
     "sentinela": ["RPR", "FGF", "KIK"],
     "elevador": ["PRP", "PGP", "PIP"],
-    "luz": [" L ", " I ", " K "],
+    "luz": [" V ", " I ", " K "],
     "cerca": ["KIK", "KIK"],
     "portao": ["PIP", "PGP"],
-    "calendario": ["PHP", "LGL", "PIP"],
+    "calendario": ["PHP", "VGV", "PIP"],
     "painel": ["PHP", "IGI"],
     "fornalha": ["BIB", "BGB", "SSS"],
     "forja": ["MIM", "SGS", "SSS"],
@@ -84,7 +97,8 @@ def chave(k):
 
 
 def mods():
-    return {chave(k): m for k, m in MODS.items() if k != "auto_rede"}
+    return {chave(k): m for k, m in MODS.items() if k != "auto_rede" and chave(k) not in FORA
+            and m.get("auto", {}).get("cat") != "arca"}
 
 
 # ---------------------------------------------------------------------
@@ -232,6 +246,9 @@ def gerar_bloco(k, m, lang):
     }
     if est and est.get("luzHsv"):
         bt["lightHsvByType"] = {f"*-{est['estados'][1]}-*": est["luzHsv"], "*": [0, 0, 0]}
+    if k in MANUAIS or k == "pedestal_raio":
+        bt["blockmaterial"] = "Wood"
+        bt["sounds"] = {"place": "game:block/planks", "break": "game:block/planks", "hit": "game:block/planks", "walk": "game:walk/wood"}
     if k == "portao":
         bt["collisionboxByType"] = {"*-aberto-*": {"x1": 0, "y1": 0, "z1": 0, "x2": 0.0001, "y2": 0.0001, "z2": 0.0001}, "*": coll}
         bt.pop("collisionbox")
@@ -246,7 +263,13 @@ def gerar_bloco(k, m, lang):
         "width": max(len(x) for x in padrao), "height": len(padrao),
         "output": {"type": "block", "code": f"automacao:{k}-" + (est["estados"][0] + "-" if est else "") + "south", "quantity": 1},
     }
-    gravar(os.path.join(ASSETS, "recipes", "grid", k + ".json"), [rec])
+    recs = [rec]
+    # Fontes de energia: também saem com a Engrenagem de Madeira (do Torno de Vara) no lugar da enferrujada
+    if a.get("cat") == "energia" and "G" in letras:
+        alt = copy.deepcopy(rec)
+        alt["ingredients"]["G"] = {**ING["W"], "quantity": 1}
+        recs.append(alt)
+    gravar(os.path.join(ASSETS, "recipes", "grid", k + ".json"), recs)
 
     # ---------------- lang ----------------
     titulo = m["title"]
@@ -260,11 +283,13 @@ def gerar_bloco(k, m, lang):
 
 NOMES_ING = {
     "P": "tábua", "G": "engrenagem enferrujada", "F": "sílex", "S": "pedra (cascalho/cobblestone)", "K": "graveto",
-    "I": "lingote de cobre", "R": "corda", "L": "vidro", "C": "barro", "H": "papel", "E": "couro", "M": "chapa de ferro",
+    "I": "lingote de cobre", "R": "corda", "V": "vidro", "C": "barro", "H": "papel", "E": "couro", "M": "chapa de ferro",
     "N": "pregos e tiras de ferro", "B": "tijolo queimado", "T": "engrenagem temporal",
+    "D": "capim seco", "W": "Engrenagem de Madeira", "U": "pepita de cobre",
+    "L": "lenha", "O": "pedra solta (do chão)",
 }
 
-CATS = {"energia": "Energia", "bateria": "Baterias e postes", "maquina": "Máquinas"}
+CATS = {"primitivo": "Começo à mão", "pedestal": "Começo à mão", "energia": "Energia", "bateria": "Baterias e postes", "maquina": "Máquinas"}
 
 
 def capitulo_peca(info):
@@ -287,8 +312,10 @@ def main():
         "girar-chave-info": "Gire com a chave inglesa",
         "bauzinho": "Bauzinho",
         "btn-ligar": "Ligar", "btn-desligar": "Desligar", "btn-pegartudo": "Pegar tudo",
-        "btn-alcance": "Mostrar alcance", "btn-conexoes": "Ver conexões", "btn-ver": "Ver",
-        "area": "Área: {0}x{0}", "dono": "Dono: {0}",
+        "btn-alcance": "Mostrar alcance", "btn-alcance-esconder": "Esconder alcance", "btn-conexoes": "Ver conexões",
+        "btn-ver": "Ver área", "btn-ver-esconder": "Esconder",
+        "btn-manual": "Como funciona? (abre o manual)", "mod-de": "Mod de @mtnunes",
+        "area": "Área: {0}x{0} blocos", "dono": "Dono: {0}",
         "st-gerando": "Gerando {0} de energia por segundo",
         "st-fonte-parada": "Parada (sem água / vento / sol / chuva / combustível)",
         "st-fonte-semposte": "Sem Poste de Energia por perto! (geraria {0}/s)",
@@ -311,7 +338,7 @@ def main():
     if os.path.exists(p):
         with open(p, encoding="utf-8") as f:
             guia = json.load(f)
-    ordem = {"energia": 0, "bateria": 1, "maquina": 2}
+    ordem = {"primitivo": -1, "pedestal": -1, "energia": 0, "bateria": 1, "maquina": 2}
     caps = [x for x in guia if x.get("Grupo") == "Comece aqui"]
     caps += [capitulo_peca(i) for i in sorted(pecas, key=lambda i: (ordem.get(i["cat"], 3), i["titulo"]))]
     caps += [x for x in guia if x.get("Grupo") != "Comece aqui"]
@@ -334,6 +361,20 @@ def main():
         "ingredients": {"H": {**ING["H"], "quantity": 1}, "E": {**ING["E"], "quantity": 1}},
         "output": {"type": "item", "code": "automacao:manual", "quantity": 1},
     }])
+
+    # Engrenagem de Madeira (sai do Torno de Vara; serve no lugar da enferrujada nas fontes de energia)
+    gravar(os.path.join(ASSETS, "itemtypes", "engrenagemmadeira.json"), {
+        "code": "engrenagemmadeira", "maxstacksize": 64,
+        "creativeinventory": {"general": ["*"], "items": ["*"]},
+        "shape": {"base": "game:item/gear-rusty"},
+        "textures": {"rusty-iron": {"base": "game:block/wood/debarked/aged"}},
+        "materialDensity": 600,
+        "combustibleProps": {"burnTemperature": 600, "burnDuration": 12},
+        "guiTransform": {"rotation": {"x": 145, "y": -12, "z": 0}, "origin": {"x": 0.32, "y": 0.0625, "z": 0.5}, "scale": 2.5},
+        "tpHandTransform": {"translation": {"x": -0.45, "y": -0.35, "z": -0.55}, "rotation": {"x": 0, "y": -89, "z": -83},
+                            "origin": {"x": 0.5, "y": 0.0625, "z": 0.5}, "scale": 0.97},
+        "groundTransform": {"origin": {"x": 0.39, "y": 0, "z": 0.47}, "scale": 3.76},
+    })
 
     # Falas e textos dos trabalhos (cada Trabalho .cs pode precisar de mais; ficam em lang-extra.json)
     import glob

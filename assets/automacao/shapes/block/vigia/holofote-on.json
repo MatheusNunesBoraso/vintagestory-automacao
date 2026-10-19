@@ -2,12 +2,12 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "rebite": "game:block/metal/tarnished/iron-riveted1",
+  "corroded": "game:block/metal/corroded/rusty3",
+  "carcaca": "game:block/metal/tarnished/rusty-iron1",
   "luz": "game:block/machine/statictranslocator/rustyglow",
   "brass": "game:block/metal/tarnished/brass",
-  "carcaca": "game:block/metal/tarnished/rusty-iron1",
-  "rebite": "game:block/metal/tarnished/iron-riveted1",
-  "corroded": "game:block/metal/corroded/rusty3"
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2"
  },
  "elements": [
   {

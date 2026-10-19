@@ -3,18 +3,18 @@
  "textureHeight": 16,
  "textures": {
   "vidro_claro": "game:block/glass/plain",
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "darkwood": "game:block/wood/debarked/aged",
+  "rebite": "game:block/metal/tarnished/iron-riveted1",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
+  "red": "game:block/cloth/basic/red",
   "moss": "game:block/plant/moss",
   "ovo": "game:block/wood/henbox/egg",
-  "brass": "game:block/metal/tarnished/brass",
   "carcaca": "game:block/metal/tarnished/rusty-iron1",
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "rebite": "game:block/metal/tarnished/iron-riveted1",
-  "planks": "game:block/wood/planks/aged1",
-  "red": "game:block/cloth/basic/red",
+  "brass": "game:block/metal/tarnished/brass",
+  "darkwood": "game:block/wood/debarked/aged",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "hay": "game:block/hay/aged-side",
   "isolador": "game:block/clay/hardened/cream",
-  "hay": "game:block/hay/aged-side"
+  "planks": "game:block/wood/planks/aged1"
  },
  "elements": [
   {

@@ -117,47 +117,50 @@
   "base": "automacao:block/forja/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "chestlid": {
-   "base": "game:block/wood/chest/aged/lid"
-  },
-  "leather": {
-   "base": "game:block/leather/aged1"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "ember": {
-   "base": "game:block/coal/ember"
-  },
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
   },
+  "leather": {
+   "base": "game:block/leather/aged1"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
   "chestside": {
    "base": "game:block/wood/chest/aged/sides"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "chestlid": {
+   "base": "game:block/wood/chest/aged/lid"
+  },
+  "f_lingote": {
+   "base": "game:block/metal/ingot/iron"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
   },
   "brick": {
    "base": "game:block/stone/agedbrick/andesite1"
@@ -165,14 +168,11 @@
   "bobina": {
    "base": "game:block/metal/sheet/copper1"
   },
-  "f_lingote": {
-   "base": "game:block/metal/ingot/iron"
+  "ember": {
+   "base": "game:block/coal/ember"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   }
  },
  "drawtype": "json",

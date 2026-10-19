@@ -101,65 +101,65 @@
   "base": "automacao:block/colmeia/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "fired": {
-   "base": "game:block/clay/hardened/brown1"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "wax": {
-   "base": "game:block/reed/beehive/beeswax"
-  },
-  "ember": {
-   "base": "game:block/coal/ember"
-  },
-  "coal": {
-   "base": "game:block/coal/charcoal"
-  },
   "mossy": {
    "base": "game:block/wood/debarked/mossy"
   },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
   },
-  "skep": {
-   "base": "game:block/reed/beehive/hive-reed"
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "fired": {
+   "base": "game:block/clay/hardened/brown1"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
   },
   "honeycomb": {
    "base": "game:block/reed/beehive/honeycomb"
   },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "wax": {
+   "base": "game:block/reed/beehive/beeswax"
+  },
+  "skep": {
+   "base": "game:block/reed/beehive/hive-reed"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "ember": {
+   "base": "game:block/coal/ember"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   }
  },
  "drawtype": "json",

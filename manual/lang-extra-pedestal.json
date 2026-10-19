@@ -1,0 +1,8 @@
+{
+	"info-pedestal-vazio": "Vazio: clique direito com uma Engrenagem Enferrujada na mão pra encaixar",
+	"info-pedestal-esperando": "Esperando um raio (precisa de tempestade). Puxa os raios que caem até {0} blocos daqui",
+	"info-pedestal-coberto": "Coberto! O raio não chega aqui: deixe a céu aberto, sem nada em cima",
+	"info-pedestal-pronta": "Pronta! Clique direito com a mão vazia pra pegar a Engrenagem Temporal",
+	"erro-pedestal_raio": "Encaixe uma Engrenagem Enferrujada (clique direito com ela na mão)",
+	"fala-pedestal-virou": "o raio caiu e a engrenagem virou Engrenagem Temporal!"
+}

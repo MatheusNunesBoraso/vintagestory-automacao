@@ -385,7 +385,8 @@ namespace Automacao
         static string Barra(float f)
         {
             int n = GameMath.Clamp((int)Math.Round(f * 10), 0, 10);
-            return new string('█', n) + new string('░', 10 - n);
+            // Barrinha de tracinhos coloridos (a fonte do jogo não tem os blocos █ ░)
+            return "<font color=\"#9fe08a\">" + new string('|', n * 2) + "</font><font color=\"#5a5650\">" + new string('|', 20 - n * 2) + "</font>";
         }
 
         static string Tempo(float segundos)

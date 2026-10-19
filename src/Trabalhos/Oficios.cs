@@ -510,187 +510,82 @@ namespace Automacao
     }
 
     // =====================================================================
-    // COGUMELOS — cuida dos Troncos de Cogumelos da área (esvazia a bandeja e ressemeia),
-    // coloca troncos do bauzinho na sombra e cata cogumelo do mato.
+    // ESTUFA DE COGUMELOS — cultiva sozinha até 2 espécies por bloco (escolhidas entre os cogumelos
+    // do bauzinho) e, se quiser, cata cogumelo do mato na área. Quer mais espécies? Mais estufas.
     // =====================================================================
-    public class TrabalhoCogumelos : Trabalho
+    public class TrabalhoCogumelos : Trabalho, IAcoes
     {
         public override string Code => "cogumelos";
         public override float Consumo => 1;
         public override float Intervalo => 3;
-        public override string[] Opcoes => new[] { "troncos", "plantar", "mato", "semveneno" };
-        const int MargemSol = 5;
-        const int RaioPlantar = 5;
-
-        static bool EhTronco(Block b) => b?.Code != null && b.Code.Domain == "troncocogumelos" && b.Code.Path.StartsWith("tronco-");
-
-        static BlockEntityContainer Tronco(IBlockAccessor ba, BlockPos p) =>
-            EhTronco(ba.GetBlock(p)) ? ba.GetBlockEntity(p) as BlockEntityContainer : null;
-
-        static string Semente(BlockEntity be)
-        {
-            var t = new TreeAttribute();
-            be.ToTreeAttributes(t);
-            return t.GetString("seed");
-        }
+        public override string[] Opcoes => new[] { "mato", "semveneno" };
+        public const int Especies = 2;
+        /// <summary>Horas de jogo (com energia) pra cada espécie dar uma leva de 1–2 cogumelos.</summary>
+        const double HorasPorLeva = 24;
 
         static bool Venenoso(IWorldAccessor world, ItemStack st) =>
             (st.Collectible.GetNutritionProperties(world, st, null)?.Health ?? 0) < 0;
 
         static bool Cogumelo(ItemStack st) => st?.Block is BlockMushroom;
-        public override bool Insumo(ItemStack s) => EhTronco(s?.Block) || Cogumelo(s);
+        public override bool Insumo(ItemStack s) => Cogumelo(s);
+
+        static string Especie(BEMaquina m, int i) => m.Dados.GetString("esp" + i);
+        static Block BlocoDa(BEMaquina m, int i)
+        {
+            string code = Especie(m, i);
+            if (string.IsNullOrEmpty(code)) return null;
+            var b = m.Api.World.GetBlock(new AssetLocation(code));
+            return b == null || b.Id == 0 ? null : b;
+        }
 
         bool DoMato(BEMaquina m, BlockPos p, Block b)
         {
             if (!(b is BlockMushroom) || b.Code.Domain != "game" || b.Variant["state"] == "harvested") return false;
-            var world = m.Api.World;
-            if (m.Opcao("semveneno") && Venenoso(world, new ItemStack(b))) return false;
+            if (m.Opcao("semveneno") && Venenoso(m.Api.World, new ItemStack(b))) return false;
             return true;
         }
 
-        bool TroncoComServico(BEMaquina m, BlockPos p, Block b, bool temSemente)
-        {
-            if (!EhTronco(b) || !(m.Api.World.BlockAccessor.GetBlockEntity(p) is BlockEntityContainer be)) return false;
-            if (!be.Inventory.Empty) return true;
-            return temSemente && Semente(be) == null;
-        }
-
-        /// <summary>Lugar na sombra, perto da máquina, com chão firme, pra colocar um tronco novo.</summary>
-        BlockPos LugarPraTronco(BEMaquina m)
-        {
-            var world = m.Api.World;
-            var ba = world.BlockAccessor;
-            int maxSol = Math.Max(0, world.SunBrightness - MargemSol);
-            var lista = new List<BlockPos>();
-            int r = Math.Min(m.Raio, RaioPlantar);
-            var tmp = new BlockPos(m.Pos.dimension);
-            for (int dx = -r; dx <= r; dx++)
-                for (int dz = -r; dz <= r; dz++)
-                    for (int dy = -2; dy <= 2; dy++)
-                    {
-                        tmp.Set(m.Pos.X + dx, m.Pos.Y + dy, m.Pos.Z + dz);
-                        if (Math.Abs(dx) <= 1 && Math.Abs(dz) <= 1 && dy == 0) continue;   // grudado na máquina, não
-                        var b = ba.GetBlock(tmp);
-                        if (b.Id != 0 && b.Replaceable < 6000) continue;
-                        if (BEMaquina.Agua(ba, tmp)) continue;
-                        if (!ba.GetBlock(tmp.DownCopy()).SideSolid[BlockFacing.UP.Index]) continue;
-                        if (ba.GetLightLevel(tmp.UpCopy(), EnumLightLevelType.OnlySunLight) > maxSol) continue;
-                        bool vizinho = false;
-                        foreach (var f in BlockFacing.HORIZONTALS)
-                            if (EhTronco(ba.GetBlock(tmp.AddCopy(f)))) { vizinho = true; break; }
-                        if (!vizinho) lista.Add(tmp.Copy());
-                    }
-            return m.MaisPerto(lista, Area.Centro(m), null);
-        }
-
-        List<BlockPos> Troncos(BEMaquina m) => Area.Achar(m, "troncos", (p, b) => EhTronco(b), 5000);
         List<BlockPos> Mato(BEMaquina m) => Area.Achar(m, "mato", (p, b) => DoMato(m, p, b), 5000)
             .Where(p => DoMato(m, p, m.Api.World.BlockAccessor.GetBlock(p))).ToList();
 
         public override bool TemTrabalho(BEMaquina m)
         {
-            bool semente = m.TemNoBau(Cogumelo);
-            var ba = m.Api.World.BlockAccessor;
-            if (m.Opcao("troncos") && Troncos(m).Any(p => TroncoComServico(m, p, ba.GetBlock(p), semente))) return true;
-            if (m.Opcao("mato") && Mato(m).Count > 0) return true;
-            if (m.Opcao("plantar") && m.TemNoBau(st => EhTronco(st.Block)))
-            {
-                // Lugar pra tronco é caro de achar: só olha de vez em quando
-                long agora = m.Api.World.ElapsedMilliseconds;
-                if (agora - m.Dados.GetLong("procurouLugar") > 10000)
-                {
-                    m.Dados.SetLong("procurouLugar", agora);
-                    m.Dados.SetBool("temLugar", LugarPraTronco(m) != null);
-                }
-                if (m.Dados.GetBool("temLugar")) return true;
-            }
-            return false;
+            for (int i = 0; i < Especies; i++) if (BlocoDa(m, i) != null) return true;
+            return m.Opcao("mato") && Mato(m).Count > 0;
         }
 
         public override void Trabalhar(BEMaquina m)
         {
             var world = m.Api.World;
-            var ba = world.BlockAccessor;
             var cesta = new List<ItemStack>();
-            var c = Area.Centro(m);
 
-            if (m.Opcao("troncos"))
+            // Cultivo: o tempo só conta com energia (trabalhar só roda energizada); pulos grandes = estava parada
+            double agora = world.Calendar.TotalHours;
+            double ult = m.Dados.GetDouble("ultHora", agora);
+            double passou = GameMath.Clamp(agora - ult, 0, 1);
+            m.Dados.SetDouble("ultHora", agora);
+            for (int i = 0; i < Especies; i++)
             {
-                bool semente = m.TemNoBau(Cogumelo);
-                var p = m.MaisPerto(Troncos(m).Where(q => TroncoComServico(m, q, ba.GetBlock(q), semente)), c, null);
-                if (p != null)
+                var b = BlocoDa(m, i);
+                if (b == null) continue;
+                double prog = m.Dados.GetDouble("prog" + i) + passou / HorasPorLeva;
+                if (prog >= 1)
                 {
-                    CuidarDoTronco(m, p, cesta);
-                    m.Guardar(cesta);
-                    return;
+                    prog -= 1;
+                    cesta.Add(new ItemStack(b, 1 + world.Rand.Next(2)));
+                    m.Feitos++;
+                    Area.Som(world, "game:sounds/block/plant", m.Pos);
                 }
+                m.Dados.SetDouble("prog" + i, prog);
             }
-            if (m.Opcao("plantar") && m.TemNoBau(st => EhTronco(st.Block)))
-            {
-                var p = LugarPraTronco(m);
-                if (p != null && Plantar(m, p, cesta))
-                {
-                    Area.Esquecer(m, "troncos");
-                    m.Guardar(cesta);
-                    return;
-                }
-            }
+
             if (m.Opcao("mato"))
             {
-                var p = m.MaisPerto(Mato(m), c, null);
-                if (p != null) Colher(m, p, ba.GetBlock(p), cesta);
+                var p = m.MaisPerto(Mato(m), Area.Centro(m), null);
+                if (p != null) Colher(m, p, world.BlockAccessor.GetBlock(p), cesta);
                 Area.Esquecer(m, "mato");
             }
             m.Guardar(cesta);
-        }
-
-        bool CuidarDoTronco(BEMaquina m, BlockPos p, List<ItemStack> cesta)
-        {
-            var world = m.Api.World;
-            var be = Tronco(world.BlockAccessor, p);
-            if (be == null) return false;
-            bool fez = false;
-            foreach (var slot in be.Inventory)
-            {
-                if (slot.Empty) continue;
-                cesta.Add(slot.TakeOutWhole());
-                slot.MarkDirty();
-                fez = true;
-            }
-            if (fez) be.MarkDirty(true);
-            if (Semente(be) == null) fez |= Semear(m, be, cesta);
-            if (fez) Area.Som(world, "game:sounds/block/plant", p);
-            return fez;
-        }
-
-        /// <summary>Semeia o tronco com um cogumelo (do que acabou de colher ou do bauzinho), comestível primeiro.</summary>
-        bool Semear(BEMaquina m, BlockEntity be, List<ItemStack> cesta)
-        {
-            var world = m.Api.World;
-            ItemStack semente;
-            var daCesta = cesta.Where(Cogumelo).OrderBy(st => Venenoso(world, st) ? 1 : 0).FirstOrDefault();
-            if (daCesta != null)
-            {
-                semente = daCesta.Clone();
-                semente.StackSize = 1;
-                if (--daCesta.StackSize <= 0) cesta.Remove(daCesta);
-            }
-            else
-            {
-                var tirou = m.TirarDoBau(st => Cogumelo(st) && !Venenoso(world, st), 1);
-                if (tirou.Count == 0) tirou = m.TirarDoBau(Cogumelo, 1);
-                semente = tirou.FirstOrDefault();
-            }
-            if (semente == null) return false;
-
-            var t = new TreeAttribute();
-            be.ToTreeAttributes(t);
-            t.SetString("seed", semente.Block.Code.ToString());
-            t.SetDouble("progress", 0);
-            t.SetDouble("cycle", 2.0 + world.Rand.NextDouble() * 2.0);
-            be.FromTreeAttributes(t, world);
-            be.MarkDirty(true);
-            return true;
         }
 
         bool Colher(BEMaquina m, BlockPos p, Block b, List<ItemStack> cesta)
@@ -709,30 +604,50 @@ namespace Automacao
             return true;
         }
 
-        bool Plantar(BEMaquina m, BlockPos p, List<ItemStack> cesta)
+        // ---------------- escolher as espécies ----------------
+
+        public IEnumerable<(string code, string texto)> Botoes(BEMaquina m)
         {
-            var world = m.Api.World;
-            var ba = world.BlockAccessor;
-            var aqui = ba.GetBlock(p);
-            if ((aqui.Id != 0 && aqui.Replaceable < 6000) || !ba.GetBlock(p.DownCopy()).SideSolid[BlockFacing.UP.Index]) return false;
-            var tirou = m.TirarDoBau(st => EhTronco(st.Block), 1);
-            if (tirou.Count == 0) return false;
-            // Deitado com a bandeja virada pra máquina
-            var lado = BlockFacing.HorizontalFromAngle((float)Math.Atan2(m.Pos.X - p.X, m.Pos.Z - p.Z));
-            var bloco = world.GetBlock(new AssetLocation("troncocogumelos", $"tronco-{lado.Code}-vazia")) ?? tirou[0].Block;
-            ba.SetBlock(bloco.Id, p);
-            ba.TriggerNeighbourBlockUpdate(p);
-            var be = Tronco(ba, p);
-            if (be != null) Semear(m, be, cesta);
-            Area.Som(world, "game:sounds/block/planks", p);
-            m.Dados.SetLong("procurouLugar", 0);
-            return true;
+            for (int i = 0; i < Especies; i++)
+            {
+                var b = BlocoDa(m, i);
+                string nome = b == null ? Area.L("estufa-vazia") : new ItemStack(b).GetName();
+                yield return ("esp" + i, Area.L("estufa-especie", i + 1, nome));
+            }
+        }
+
+        /// <summary>Cada clique passa pro próximo cogumelo diferente que está no bauzinho (e por fim "nenhuma").</summary>
+        public void Acao(BEMaquina m, IPlayer p, string acao)
+        {
+            if (!acao.StartsWith("esp") || !int.TryParse(acao.Substring(3), out int i) || i < 0 || i >= Especies) return;
+            string outra = Especie(m, 1 - i);
+            var opcoes = m.Inventory.Where(s => !s.Empty && Cogumelo(s.Itemstack))
+                .Select(s => s.Itemstack.Block)
+                .GroupBy(b => b.Code.ToString()).Select(g => g.First())
+                .Where(b => b.Code.ToString() != outra)
+                .OrderBy(b => new ItemStack(b).GetName())
+                .Select(b => b.Code.ToString()).ToList();
+            opcoes.Add(null);
+            string atual = Especie(m, i);
+            int idx = opcoes.IndexOf(atual);
+            string nova = opcoes[(idx + 1) % opcoes.Count];
+            if (nova == null) m.Dados.RemoveAttribute("esp" + i); else m.Dados.SetString("esp" + i, nova);
+            m.Dados.SetDouble("prog" + i, 0);
         }
 
         public override string Info(BEMaquina m)
         {
-            if (m.Api.Side != EnumAppSide.Server) return Area.L("info-feitos", m.Feitos);
-            return Area.L("info-cogumelos", Troncos(m).Count, Mato(m).Count);
+            var linhas = new List<string>();
+            for (int i = 0; i < Especies; i++)
+            {
+                var b = BlocoDa(m, i);
+                if (b == null) continue;
+                int pct = (int)(GameMath.Clamp(m.Dados.GetDouble("prog" + i), 0, 1) * 100);
+                linhas.Add(Area.L("info-estufa-linha", new ItemStack(b).GetName(), pct));
+            }
+            if (linhas.Count == 0) linhas.Add(Area.L("info-estufa-vazia"));
+            linhas.Add(Area.L("info-feitos", m.Feitos));
+            return string.Join("<br>", linhas);
         }
     }
 

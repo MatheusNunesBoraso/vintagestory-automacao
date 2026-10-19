@@ -2,8 +2,8 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "logbark": "game:block/wood/firewood/aged/bark",
-  "logend": "game:block/wood/firewood/aged/north"
+  "logend": "game:block/wood/firewood/aged/north",
+  "logbark": "game:block/wood/firewood/aged/bark"
  },
  "elements": [
   {

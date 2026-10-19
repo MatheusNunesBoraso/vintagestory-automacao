@@ -86,14 +86,29 @@
   "base": "automacao:block/gerador/full"
  },
  "textures": {
-  "logbark": {
-   "base": "game:block/wood/firewood/aged/bark"
+  "logend": {
+   "base": "game:block/wood/firewood/aged/north"
   },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
   },
   "paper": {
    "base": "game:block/cloth/paper/blank-small"
+  },
+  "red": {
+   "base": "game:block/cloth/basic/red"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
   },
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
@@ -101,41 +116,26 @@
   "luz": {
    "base": "game:block/machine/statictranslocator/rustyglow"
   },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
   "brick": {
    "base": "game:block/stone/agedbrick/andesite1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
   },
   "bobina": {
    "base": "game:block/metal/sheet/copper1"
   },
-  "red": {
-   "base": "game:block/cloth/basic/red"
-  },
-  "logend": {
-   "base": "game:block/wood/firewood/aged/north"
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
   },
   "ember": {
    "base": "game:block/coal/ember"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "logbark": {
+   "base": "game:block/wood/firewood/aged/bark"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"

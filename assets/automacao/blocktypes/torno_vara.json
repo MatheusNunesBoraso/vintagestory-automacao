@@ -1,0 +1,207 @@
+{
+ "code": "torno_vara",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "torno_vara",
+  "chave": "torno_vara",
+  "modos": [
+   "parado",
+   "usando"
+  ],
+  "modoTrabalhando": "usando",
+  "partes": [
+   {
+    "nome": "peca",
+    "pivo": [
+     8,
+     13,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "swing": "x",
+      "freq": 1,
+      "amp": 2.4
+     }
+    ]
+   },
+   {
+    "nome": "vara",
+    "pivo": [
+     9.75,
+     24.5,
+     15.5
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "swing": "x",
+      "freq": 1,
+      "amp": -0.035
+     }
+    ]
+   },
+   {
+    "nome": "pedal",
+    "pivo": [
+     9.75,
+     1.4,
+     1.75
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "swing": "x",
+      "freq": 1,
+      "amp": 0.06
+     }
+    ]
+   }
+  ],
+  "usaArea": false,
+  "bau": false
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/torno_vara/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/torno_vara/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/torno_vara/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/torno_vara/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/torno_vara/full"
+ },
+ "textures": {
+  "logend": {
+   "base": "game:block/wood/firewood/aged/north"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "silex": {
+   "base": "game:block/stone/flint"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "rope": {
+   "base": "game:block/cloth/reedrope"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "logbark": {
+   "base": "game:block/wood/firewood/aged/bark"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "bark": {
+   "base": "game:block/wood/bark/oak"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Wood",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.03125,
+  "y1": 0,
+  "z1": 0.03125,
+  "x2": 0.96875,
+  "y2": 1.575,
+  "z2": 1
+ },
+ "selectionbox": {
+  "x1": 0.03125,
+  "y1": 0,
+  "z1": 0.03125,
+  "x2": 0.96875,
+  "y2": 1.575,
+  "z2": 1
+ },
+ "sounds": {
+  "place": "game:block/planks",
+  "break": "game:block/planks",
+  "hit": "game:block/planks",
+  "walk": "game:walk/wood"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.7875,
+   "z": 0.5
+  },
+  "scale": 0.73
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

@@ -2,11 +2,11 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "darkwood": "game:block/wood/debarked/aged",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
   "planks": "game:block/wood/planks/aged1",
-  "barro": "game:block/clay/hardened/earthyorange",
-  "ceramica": "game:block/clay/aged-ceramic2"
+  "darkwood": "game:block/wood/debarked/aged",
+  "ceramica": "game:block/clay/aged-ceramic2",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "barro": "game:block/clay/hardened/earthyorange"
  },
  "elements": [
   {

@@ -2,22 +2,22 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "darkwood": "game:block/wood/debarked/aged",
-  "leather": "game:block/leather/aged1",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
+  "corroded": "game:block/metal/corroded/rusty3",
+  "rebite": "game:block/metal/tarnished/iron-riveted1",
   "chestside": "game:block/wood/chest/aged/sides",
   "moss": "game:block/plant/moss",
-  "brass": "game:block/metal/tarnished/brass",
   "carcaca": "game:block/metal/tarnished/rusty-iron1",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "rebite": "game:block/metal/tarnished/iron-riveted1",
-  "planks": "game:block/wood/planks/aged1",
-  "corroded": "game:block/metal/corroded/rusty3",
   "mossy": "game:block/wood/debarked/mossy",
+  "leather": "game:block/leather/aged1",
+  "bobina": "game:block/metal/sheet/copper1",
+  "brass": "game:block/metal/tarnished/brass",
+  "darkwood": "game:block/wood/debarked/aged",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
   "chestlid": "game:block/wood/chest/aged/lid",
   "isolador": "game:block/clay/hardened/cream",
-  "bobina": "game:block/metal/sheet/copper1"
+  "planks": "game:block/wood/planks/aged1"
  },
  "elements": [
   {

@@ -1,20 +1,20 @@
 [
  {
-  "ingredientPattern": "_L_,_I_,_P_",
+  "ingredientPattern": "_V_,_I_,_P_",
   "ingredients": {
    "I": {
     "type": "item",
     "code": "game:ingot-copper",
     "quantity": 1
    },
-   "L": {
-    "type": "block",
-    "code": "game:glass-plain",
-    "quantity": 1
-   },
    "P": {
     "type": "item",
     "code": "game:plank-*",
+    "quantity": 1
+   },
+   "V": {
+    "type": "block",
+    "code": "game:glass-plain",
     "quantity": 1
    }
   },

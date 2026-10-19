@@ -1,0 +1,218 @@
+{
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "logend": "game:block/wood/firewood/aged/north",
+  "rope": "game:block/cloth/reedrope",
+  "darkwood": "game:block/wood/debarked/aged"
+ },
+ "elements": [
+  {
+   "name": "vara",
+   "from": [
+    9,
+    24,
+    7.25
+   ],
+   "to": [
+    10,
+    25,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#logend",
+     "uv": [
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    "south": {
+     "texture": "#logend",
+     "uv": [
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    "east": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      8.75,
+      1
+     ]
+    },
+    "west": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      8.75,
+      1
+     ]
+    },
+    "up": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1,
+      8.75
+     ]
+    },
+    "down": {
+     "texture": "#darkwood",
+     "uv": [
+      0,
+      0,
+      1,
+      8.75
+     ]
+    }
+   }
+  },
+  {
+   "name": "vara_amarra",
+   "from": [
+    8.8,
+    23.4,
+    14.6
+   ],
+   "to": [
+    10.7,
+    25.2,
+    16.15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      1.8999999999999986,
+      1.8000000000000007
+     ]
+    },
+    "south": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      1.8999999999999986,
+      1.8000000000000007
+     ]
+    },
+    "east": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      1.549999999999999,
+      1.8000000000000007
+     ]
+    },
+    "west": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      1.549999999999999,
+      1.8000000000000007
+     ]
+    },
+    "up": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      1.8999999999999986,
+      1.549999999999999
+     ]
+    },
+    "down": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      1.8999999999999986,
+      1.549999999999999
+     ]
+    }
+   }
+  },
+  {
+   "name": "corda_cima",
+   "from": [
+    9.25,
+    14.5,
+    7.75
+   ],
+   "to": [
+    9.75,
+    24,
+    8.25
+   ],
+   "faces": {
+    "north": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      9.5
+     ]
+    },
+    "south": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      9.5
+     ]
+    },
+    "east": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      9.5
+     ]
+    },
+    "west": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      9.5
+     ]
+    },
+    "up": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    },
+    "down": {
+     "texture": "#rope",
+     "uv": [
+      0,
+      0,
+      0.5,
+      0.5
+     ]
+    }
+   }
+  }
+ ]
+}

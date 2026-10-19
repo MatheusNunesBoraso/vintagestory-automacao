@@ -101,59 +101,59 @@
   "base": "automacao:block/roda/full"
  },
  "textures": {
-  "telhado_ferro": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "engrenagens": {
-   "base": "game:block/machine/statictranslocator/statictranslocator_gearboxa"
-  },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
   "rebite": {
    "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
   },
   "mossy": {
    "base": "game:block/wood/debarked/mossy"
   },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
   "bobina": {
    "base": "game:block/metal/sheet/copper1"
   },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
+  },
+  "telhado_ferro": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "engrenagens": {
+   "base": "game:block/machine/statictranslocator/statictranslocator_gearboxa"
   }
  },
  "drawtype": "json",

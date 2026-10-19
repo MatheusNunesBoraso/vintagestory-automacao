@@ -3,21 +3,21 @@
  "textureHeight": 16,
  "textures": {
   "vidro_claro": "game:block/glass/plain",
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "rags": "game:block/cloth/rags/rag2",
-  "ensopado2": "game:block/food/meal/group6-spelt-onion-redcurrant-egg-redmeatstew",
-  "luz": "game:block/machine/statictranslocator/rustyglow",
-  "panela_barro": "game:block/clay/hardened/brown1",
-  "brass": "game:block/metal/tarnished/brass",
-  "carcaca": "game:block/metal/tarnished/rusty-iron1",
-  "coal": "game:block/coal/charcoal",
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
   "rebite": "game:block/metal/tarnished/iron-riveted1",
   "corroded": "game:block/metal/corroded/rusty3",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
+  "carcaca": "game:block/metal/tarnished/rusty-iron1",
+  "coal": "game:block/coal/charcoal",
+  "luz": "game:block/machine/statictranslocator/rustyglow",
+  "rags": "game:block/cloth/rags/rag2",
+  "ensopado2": "game:block/food/meal/group6-spelt-onion-redcurrant-egg-redmeatstew",
   "bobina": "game:block/metal/sheet/copper1",
+  "brass": "game:block/metal/tarnished/brass",
+  "ember": "game:block/coal/ember",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
   "isolador": "game:block/clay/hardened/cream",
-  "ember": "game:block/coal/ember"
+  "panela_barro": "game:block/clay/hardened/brown1"
  },
  "elements": [
   {

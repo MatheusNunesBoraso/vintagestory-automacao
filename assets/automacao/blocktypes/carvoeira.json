@@ -86,62 +86,62 @@
   "base": "automacao:block/carvoeira/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
   "logend": {
    "base": "game:block/wood/firewood/aged/north"
-  },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
-  },
-  "chimney": {
-   "base": "game:block/clay/bloomery/aged/chimney"
-  },
-  "ember": {
-   "base": "game:block/coal/ember"
-  },
-  "logbark": {
-   "base": "game:block/wood/firewood/aged/bark"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "coal": {
-   "base": "game:block/coal/charcoal"
-  },
-  "kilnwall": {
-   "base": "game:block/clay/bloomery/aged/base"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
   },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "logbark": {
+   "base": "game:block/wood/firewood/aged/bark"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "kilnwall": {
+   "base": "game:block/clay/bloomery/aged/base"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "ember": {
+   "base": "game:block/coal/ember"
+  },
+  "chimney": {
+   "base": "game:block/clay/bloomery/aged/chimney"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   }
  },
  "drawtype": "json",

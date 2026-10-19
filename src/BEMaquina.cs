@@ -174,6 +174,7 @@ namespace Automacao
             try { m = t.Modo(this); } catch { }
             if (m != null) return m;
             var modos = Modos;
+            if (t.Manual) return Usando ? ModoTrabalhando : modos[0];
             if (t.Tipo == "fonte") return Trabalhando ? ModoTrabalhando : modos[0];
             if (t.Tipo == "poste") return Energizado ? ModoTrabalhando : modos[0];
             return Trabalhando ? ModoTrabalhando : modos[0];
@@ -192,6 +193,94 @@ namespace Automacao
             try { if (t != null && t.Interagir(this, byPlayer, blockSel)) return true; }
             catch (Exception e) { Api.Logger.Warning("[Automação] {0} interagir: {1}", Codigo, e.Message); }
             return OnPlayerRightClick(byPlayer, blockSel);
+        }
+
+        // ================== peças à mão (segurar o clique) ==================
+        /// <summary>Até quando conta como "sendo usada" (cada passo do clique empurra pra frente).</summary>
+        public long UsandoAteMs;
+        public bool Usando => Api != null && Api.World.ElapsedMilliseconds < UsandoAteMs;
+        /// <summary>Segundos (do clique segurado) em que o último ciclo terminou.</summary>
+        public float ProximoManual;
+
+        // ---- automático (Shift + clique): o servidor "segura" por você enquanto você está por perto ----
+        public const double AutoAlcance = 8;
+        public string AutoUid;
+        public bool Auto => !string.IsNullOrEmpty(AutoUid);
+        long autoTick;
+        float autoSegundos;
+
+        public void AlternarAuto(IPlayer p)
+        {
+            if (Api.Side != EnumAppSide.Server) return;
+            if (Auto) { PararAuto("auto-desligou"); return; }
+            AutoUid = p.PlayerUID;
+            autoSegundos = 0;
+            ProximoManual = 0;
+            if (autoTick == 0) autoTick = RegisterGameTickListener(TickAuto, 250);
+            AvisarDono("auto-ligou");
+            TickAuto(0);
+            MarkDirty(true);
+        }
+
+        void TickAuto(float dt)
+        {
+            if (!Auto) return;
+            var p = Api.World.PlayerByUid(AutoUid) as IServerPlayer;
+            if (p?.Entity == null || !p.Entity.Alive || p.ConnectionState != EnumClientState.Playing) { PararAuto(null); return; }
+            if (p.Entity.Pos.DistanceTo(Pos.ToVec3d().Add(0.5, 0.5, 0.5)) > AutoAlcance) { PararAuto("auto-longe"); return; }
+            if (!SegurarManual(p, autoSegundos)) { PararAuto("auto-acabou"); return; }
+            autoSegundos += dt;
+        }
+
+        void PararAuto(string aviso)
+        {
+            if (aviso != null) AvisarDono(aviso);
+            AutoUid = null;
+            if (autoTick != 0) { UnregisterGameTickListener(autoTick); autoTick = 0; }
+            MarkDirty(true);
+        }
+
+        void AvisarDono(string key)
+        {
+            if (Api.World.PlayerByUid(AutoUid) is IServerPlayer p)
+                p.SendMessage(GlobalConstants.GeneralChatGroup,
+                    $"<strong>{Lang.GetL(p.LanguageCode, "automacao:block-" + Block.Code.FirstCodePart())}:</strong> {Lang.GetL(p.LanguageCode, "automacao:" + key)}",
+                    EnumChatType.Notification);
+        }
+
+        public bool ComecarManual(IPlayer p)
+        {
+            if (string.IsNullOrEmpty(OwnerUid) && Api.Side == EnumAppSide.Server)
+            {
+                OwnerUid = p.PlayerUID;
+                OwnerName = p.PlayerName;
+            }
+            ProximoManual = 0;
+            return SegurarManual(p, 0);
+        }
+
+        public bool SegurarManual(IPlayer p, float segundos)
+        {
+            var t = Trabalho;
+            if (t == null) return false;
+            bool seguir;
+            try { seguir = t.Segurar(this, p, segundos); }
+            catch (Exception e) { Api.Logger.Warning("[Automação] {0} segurar: {1}", Codigo, e.Message); seguir = false; }
+            if (!seguir) { SoltarManual(); return false; }
+            UsandoAteMs = Api.World.ElapsedMilliseconds + 1500;
+            if (ModoAtual != ModoTrabalhando)
+            {
+                ModoAtual = ModoTrabalhando;   // no cliente já começa a mexer, sem esperar o servidor
+                if (Api.Side == EnumAppSide.Server) MarkDirty(true);
+            }
+            return true;
+        }
+
+        public void SoltarManual()
+        {
+            if (Api?.Side != EnumAppSide.Client) return;   // no servidor para sozinho quando os passos param
+            UsandoAteMs = 0;
+            ModoAtual = Modos[0];
         }
 
         public override bool OnPlayerRightClick(IPlayer byPlayer, BlockSelection blockSel)
@@ -426,7 +515,8 @@ namespace Automacao
         {
             var t = Trabalho;
             if (t == null) return;
-            dsc.AppendLine(StatusTexto());
+            string st = StatusTexto();
+            if (!string.IsNullOrEmpty(st)) dsc.AppendLine(st);
             string extra = null;
             try { extra = t.Info(this); } catch { }
             if (!string.IsNullOrEmpty(extra)) dsc.AppendLine(extra);
@@ -441,11 +531,17 @@ namespace Automacao
             {
                 case "fonte":
                     if (!NaRede) return L("st-fonte-semposte", UltimaGeracao.ToString("0.#"));
+                    if (UltimaGeracao <= 0.01f && t.Manual) return L("st-fonte-manivela");
+                    if (Auto) return L("st-gerando", UltimaGeracao.ToString("0.#")) + "\n" + L("st-manual-auto");
                     return UltimaGeracao > 0.01f ? L("st-gerando", UltimaGeracao.ToString("0.#")) : L("st-fonte-parada");
                 case "bateria":
                     return L("st-bateria", (int)Carga, (int)t.Capacidade, (int)(Carga / Math.Max(1, t.Capacidade) * 100)) + (NaRede ? "" : "\n" + L("st-semposte"));
                 case "poste":
                     return Energizado ? L("st-poste-ok") : L("st-poste-sem");
+                case "manual":
+                    return Auto ? L("st-manual-auto") : L("st-manual-segure");
+                case "pedestal":
+                    return "";   // o Pedestal do Raio diz tudo no Info
                 default:
                     if (!Ligada) return L("st-desligada");
                     if (!NaRede) return L("st-semposte");
@@ -474,6 +570,7 @@ namespace Automacao
             tree.SetFloat("carga", Carga);
             tree.SetString("modo", ModoAtual ?? "");
             tree.SetInt("feitos", Feitos);
+            tree.SetString("auto", AutoUid ?? "");
             tree.SetDouble("procPronto", ProcessoProntoEm);
             tree.SetLong("alarmeAte", AlarmeAteMs);
             var op = new TreeAttribute();
@@ -503,6 +600,7 @@ namespace Automacao
             Carga = tree.GetFloat("carga");
             ModoAtual = tree.GetString("modo", "");
             Feitos = tree.GetInt("feitos");
+            if (Api?.Side == EnumAppSide.Client) AutoUid = tree.GetString("auto", "");
             ProcessoProntoEm = tree.GetDouble("procPronto");
             AlarmeAteMs = tree.GetLong("alarmeAte");
             Opcoes.Clear();

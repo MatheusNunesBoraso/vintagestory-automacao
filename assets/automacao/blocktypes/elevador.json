@@ -127,56 +127,56 @@
   "base": "automacao:block/elevador/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "rope": {
-   "base": "game:block/cloth/reedrope"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
   },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
-  },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
   },
   "red": {
    "base": "game:block/cloth/basic/red"
   },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "rope": {
+   "base": "game:block/cloth/reedrope"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
   }
  },
  "drawtype": "json",

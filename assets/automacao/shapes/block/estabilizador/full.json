@@ -2,19 +2,19 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "engrenagens_b": "game:block/machine/statictranslocator/statictranslocator_gearboxb",
+  "canos": "game:block/machine/statictranslocator/statictranslocator_pipes",
+  "cobre": "game:block/metal/tarnished/tarnished-copper",
+  "moss": "game:block/plant/moss",
   "cobble": "game:block/stone/cobblestone/andesite2",
   "luz": "game:block/machine/statictranslocator/rustyglow",
-  "engrenagens": "game:block/machine/statictranslocator/statictranslocator_gearboxa",
-  "canos": "game:block/machine/statictranslocator/statictranslocator_pipes",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
-  "cobre": "game:block/metal/tarnished/tarnished-copper",
   "brick": "game:block/stone/agedbrick/andesite1",
   "brass": "game:block/metal/tarnished/brass",
-  "moss": "game:block/plant/moss",
-  "engrenagens_b": "game:block/machine/statictranslocator/statictranslocator_gearboxb",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
   "estrutura": "game:block/machine/statictranslocator/statictranslocator_structure",
-  "isolador": "game:block/clay/hardened/cream"
+  "isolador": "game:block/clay/hardened/cream",
+  "engrenagens": "game:block/machine/statictranslocator/statictranslocator_gearboxa",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron"
  },
  "elements": [
   {

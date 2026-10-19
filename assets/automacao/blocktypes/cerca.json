@@ -84,35 +84,35 @@
   "base": "automacao:block/cerca/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "f_aviso": {
-   "base": "game:block/cloth/paper/blank-small"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
+  "red": {
+   "base": "game:block/cloth/basic/red"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
   "mossy": {
    "base": "game:block/wood/debarked/mossy"
   },
-  "red": {
-   "base": "game:block/cloth/basic/red"
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "f_aviso": {
+   "base": "game:block/cloth/paper/blank-small"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"

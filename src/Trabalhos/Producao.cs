@@ -556,11 +556,9 @@ namespace Automacao
 
         public IEnumerable<(string code, string texto)> Botoes(BEMaquina m)
         {
-            var e = Escolhida(m);
-            string nome = e == null ? Lang.Get("automacao:forja-sem-receita") : (Saida(m, e.Value.r, e.Value.metal)?.GetName() ?? "?") + $" ({Lingotes(e.Value.r)})";
-            yield return ("ant", "◀ " + Lang.Get("automacao:forja-anterior"));
-            yield return ("nome", nome);
-            yield return ("prox", Lang.Get("automacao:forja-proxima") + " ▶");
+            // O nome da receita escolhida aparece no texto da janela (info-forja)
+            yield return ("ant", "« " + Lang.Get("automacao:forja-anterior"));
+            yield return ("prox", Lang.Get("automacao:forja-proxima") + " »");
         }
 
         public void Acao(BEMaquina m, IPlayer p, string acao)
@@ -576,7 +574,7 @@ namespace Automacao
             var e = Escolhida(m);
             if (e == null) return Lang.Get("automacao:info-forja-nada");
             var (r, metal) = e.Value;
-            return Lang.Get("automacao:info-forja", Saida(m, r, metal)?.GetName() ?? "?", Lingotes(r), metal);
+            return Lang.Get("automacao:info-forja", Saida(m, r, metal)?.GetName() ?? "?", Lingotes(r), Lang.Get("game:material-" + metal).ToLowerInvariant());
         }
     }
 

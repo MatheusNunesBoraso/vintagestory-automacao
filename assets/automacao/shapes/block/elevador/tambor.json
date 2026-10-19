@@ -2,8 +2,8 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "rope": "game:block/cloth/reedrope",
   "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
+  "rope": "game:block/cloth/reedrope",
   "darkwood": "game:block/wood/debarked/aged"
  },
  "elements": [

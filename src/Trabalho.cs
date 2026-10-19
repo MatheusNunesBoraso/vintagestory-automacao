@@ -65,6 +65,13 @@ namespace Automacao
         /// <summary>Linhas extras ao olhar o bloco e na janela.</summary>
         public virtual string Info(BEMaquina m) => null;
 
+        /// <summary>Peça movida à mão (Começo à mão): segurar o clique direito usa; não abre janela.</summary>
+        public virtual bool Manual => false;
+
+        /// <summary>Peça manual: chamado enquanto o jogador segura o clique (nos dois lados).
+        /// segundos = desde que começou a segurar. false = para.</summary>
+        public virtual bool Segurar(BEMaquina m, IPlayer p, float segundos) => true;
+
         /// <summary>Clique direito antes da janela abrir. true = já tratou (não abre a janela).</summary>
         public virtual bool Interagir(BEMaquina m, IPlayer p, BlockSelection sel) => false;
 

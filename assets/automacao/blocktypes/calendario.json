@@ -103,56 +103,56 @@
   "vidro_claro": {
    "base": "game:block/glass/plain"
   },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "yellow": {
-   "base": "game:block/cloth/basic/yellow"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "gray": {
-   "base": "game:block/cloth/basic/gray"
-  },
-  "orangeskin": {
-   "base": "game:block/cloth/basic/orange"
-  },
-  "white": {
-   "base": "game:block/cloth/basic/white"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "coal": {
-   "base": "game:block/coal/charcoal"
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
   },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "greenhair": {
-   "base": "game:block/cloth/basic/green"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
+  "orangeskin": {
+   "base": "game:block/cloth/basic/orange"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "alarme": {
-   "base": "game:block/cloth/basic/red"
-  },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
-  },
   "blue": {
    "base": "game:block/cloth/basic/blue"
   },
+  "alarme": {
+   "base": "game:block/cloth/basic/red"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "greenhair": {
+   "base": "game:block/cloth/basic/green"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "gray": {
+   "base": "game:block/cloth/basic/gray"
+  },
+  "yellow": {
+   "base": "game:block/cloth/basic/yellow"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
   "paper": {
    "base": "game:block/cloth/paper/blank-small"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "white": {
+   "base": "game:block/cloth/basic/white"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
   }
  },
  "drawtype": "json",

@@ -3,11 +3,11 @@
  "textureHeight": 16,
  "textures": {
   "net": "game:item/resource/netold",
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "darkwood": "game:block/wood/debarked/aged",
-  "panwood": "game:block/wood-generic",
   "corroded": "game:block/metal/corroded/rusty3",
-  "gravel": "game:block/stone/gravel/andesite"
+  "gravel": "game:block/stone/gravel/andesite",
+  "darkwood": "game:block/wood/debarked/aged",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "panwood": "game:block/wood-generic"
  },
  "elements": [
   {

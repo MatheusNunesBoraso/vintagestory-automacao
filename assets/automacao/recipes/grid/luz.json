@@ -1,6 +1,6 @@
 [
  {
-  "ingredientPattern": "_L_,_I_,_K_",
+  "ingredientPattern": "_V_,_I_,_K_",
   "ingredients": {
    "I": {
     "type": "item",
@@ -12,7 +12,7 @@
     "code": "game:stick",
     "quantity": 1
    },
-   "L": {
+   "V": {
     "type": "block",
     "code": "game:glass-plain",
     "quantity": 1

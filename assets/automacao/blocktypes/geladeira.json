@@ -138,32 +138,11 @@
   "base": "automacao:block/geladeira/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
   },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "leather": {
-   "base": "game:block/leather/aged1"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "escarcha": {
-   "base": "game:block/liquid/ice/glacier1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
   },
   "gelo": {
    "base": "game:block/liquid/ice/lake1"
@@ -171,20 +150,41 @@
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
+  "moss": {
+   "base": "game:block/plant/moss"
   },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
   },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "leather": {
+   "base": "game:block/leather/aged1"
   },
   "bobina": {
    "base": "game:block/metal/sheet/copper1"
   },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
+  },
+  "escarcha": {
+   "base": "game:block/liquid/ice/glacier1"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
   }
  },
  "drawtype": "json",

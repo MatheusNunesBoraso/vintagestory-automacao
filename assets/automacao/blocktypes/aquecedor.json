@@ -82,47 +82,47 @@
   "base": "automacao:block/aquecedor/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "coal": {
-   "base": "game:block/coal/charcoal"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
   "rebite": {
    "base": "game:block/metal/tarnished/iron-riveted1"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
   "red": {
    "base": "game:block/cloth/basic/red"
   },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
   },
   "ember": {
    "base": "game:block/coal/ember"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
   }
  },
  "drawtype": "json",

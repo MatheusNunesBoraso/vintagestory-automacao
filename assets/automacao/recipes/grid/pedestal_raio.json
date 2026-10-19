@@ -1,0 +1,24 @@
+[
+ {
+  "ingredientPattern": "_F_,FLF,LLL",
+  "ingredients": {
+   "F": {
+    "type": "item",
+    "code": "game:flint",
+    "quantity": 1
+   },
+   "L": {
+    "type": "item",
+    "code": "game:firewood",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+   "type": "block",
+   "code": "automacao:pedestal_raio-south",
+   "quantity": 1
+  }
+ }
+]

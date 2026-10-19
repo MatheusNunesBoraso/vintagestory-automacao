@@ -1,0 +1,34 @@
+[
+ {
+  "ingredientPattern": "LUL,OKO,LUL",
+  "ingredients": {
+   "K": {
+    "type": "item",
+    "code": "game:stick",
+    "quantity": 1
+   },
+   "L": {
+    "type": "item",
+    "code": "game:firewood",
+    "quantity": 1
+   },
+   "O": {
+    "type": "item",
+    "code": "game:stone-*",
+    "quantity": 1
+   },
+   "U": {
+    "type": "item",
+    "code": "game:nugget-nativecopper",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+   "type": "block",
+   "code": "automacao:gerador_manivela-south",
+   "quantity": 1
+  }
+ }
+]

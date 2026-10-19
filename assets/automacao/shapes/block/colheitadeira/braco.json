@@ -2,16 +2,16 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "darkwood": "game:block/wood/debarked/aged",
-  "cobble": "game:block/stone/cobblestone/andesite2",
-  "rope": "game:block/cloth/reedrope",
-  "carcaca": "game:block/metal/tarnished/rusty-iron1",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
-  "basketside": "game:block/reed/basket/aged-northsouth",
-  "fruta_cereja": "game:item/food/fruit/cherry",
   "corroded": "game:block/metal/corroded/rusty3",
-  "mossy": "game:block/wood/debarked/mossy"
+  "fruta_cereja": "game:item/food/fruit/cherry",
+  "carcaca": "game:block/metal/tarnished/rusty-iron1",
+  "cobble": "game:block/stone/cobblestone/andesite2",
+  "mossy": "game:block/wood/debarked/mossy",
+  "basketside": "game:block/reed/basket/aged-northsouth",
+  "rope": "game:block/cloth/reedrope",
+  "darkwood": "game:block/wood/debarked/aged",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron"
  },
  "elements": [
   {

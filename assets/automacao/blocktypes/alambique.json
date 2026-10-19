@@ -86,65 +86,53 @@
   "base": "automacao:block/alambique/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "chestlid": {
-   "base": "game:block/wood/chest/aged/lid"
-  },
-  "aguardente": {
-   "base": "game:block/liquid/whiskey"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "vidro_fino": {
-   "base": "game:block/glass/plain"
-  },
-  "ember": {
-   "base": "game:block/coal/ember"
+  "barril_fundo": {
+   "base": "game:block/wood/barrel/bottom"
   },
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
   },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "aguardente": {
+   "base": "game:block/liquid/whiskey"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "vidro_fino": {
+   "base": "game:block/glass/plain"
+  },
   "chestside": {
    "base": "game:block/wood/chest/aged/sides"
   },
-  "coal": {
-   "base": "game:block/coal/charcoal"
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
   },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "chestlid": {
+   "base": "game:block/wood/chest/aged/lid"
   },
   "kilnwall": {
    "base": "game:block/clay/bloomery/aged/base"
-  },
-  "barril_fundo": {
-   "base": "game:block/wood/barrel/bottom"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
   },
   "barril": {
    "base": "game:block/wood/barrel/sides"
@@ -152,11 +140,23 @@
   "water": {
    "base": "game:block/liquid/water"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
+  "moss": {
+   "base": "game:block/plant/moss"
   },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "ember": {
+   "base": "game:block/coal/ember"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   }
  },
  "drawtype": "json",

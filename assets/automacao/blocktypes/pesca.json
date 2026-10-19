@@ -103,32 +103,14 @@
   "base": "automacao:block/pesca/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  "net": {
+   "base": "game:item/resource/netold"
   },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
+  "fishfresh": {
+   "base": "game:item/food/meat/fish-cured"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
@@ -136,29 +118,47 @@
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
   },
-  "rope": {
-   "base": "game:block/cloth/reedrope"
-  },
   "mossy": {
    "base": "game:block/wood/debarked/mossy"
   },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
+  "rope": {
+   "base": "game:block/cloth/reedrope"
   },
-  "net": {
-   "base": "game:item/resource/netold"
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
   },
   "basketside": {
    "base": "game:block/reed/basket/aged-northsouth"
   },
-  "fishfresh": {
-   "base": "game:item/food/meat/fish-cured"
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
   },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   }
  },
  "drawtype": "json",

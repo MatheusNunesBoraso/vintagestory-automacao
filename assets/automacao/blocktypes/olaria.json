@@ -101,86 +101,86 @@
   "base": "automacao:block/olaria/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "chestlid": {
-   "base": "game:block/wood/chest/aged/lid"
-  },
-  "fired": {
-   "base": "game:block/clay/hardened/brown1"
-  },
-  "kilnfront": {
-   "base": "game:block/clay/bloomery/aged/front"
-  },
   "telha_vermelha": {
    "base": "game:block/clay/shingles/red"
-  },
-  "leather": {
-   "base": "game:block/leather/aged1"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
-  },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
-  },
-  "chimney": {
-   "base": "game:block/clay/bloomery/aged/chimney"
-  },
-  "ember": {
-   "base": "game:block/coal/ember"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "chestside": {
-   "base": "game:block/wood/chest/aged/sides"
-  },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
-  },
-  "kilnwall": {
-   "base": "game:block/clay/bloomery/aged/base"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
-  },
-  "barro": {
-   "base": "game:block/clay/hardened/earthyorange"
-  },
-  "ceramica": {
-   "base": "game:block/clay/aged-ceramic2"
   },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
   },
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "leather": {
+   "base": "game:block/leather/aged1"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "fired": {
+   "base": "game:block/clay/hardened/brown1"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "kilnfront": {
+   "base": "game:block/clay/bloomery/aged/front"
+  },
+  "barro": {
+   "base": "game:block/clay/hardened/earthyorange"
+  },
+  "chestside": {
+   "base": "game:block/wood/chest/aged/sides"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "ceramica": {
+   "base": "game:block/clay/aged-ceramic2"
+  },
+  "chestlid": {
+   "base": "game:block/wood/chest/aged/lid"
+  },
+  "kilnwall": {
+   "base": "game:block/clay/bloomery/aged/base"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "ember": {
+   "base": "game:block/coal/ember"
+  },
+  "chimney": {
+   "base": "game:block/clay/bloomery/aged/chimney"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   }
  },
  "drawtype": "json",

@@ -111,26 +111,17 @@
   "base": "automacao:block/fornalha/full"
  },
  "textures": {
-  "refratario": {
-   "base": "game:block/clay/fireclay"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
   },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
   },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
   },
   "rebite": {
    "base": "game:block/metal/tarnished/iron-riveted1"
@@ -138,17 +129,23 @@
   "lingote": {
    "base": "game:block/metal/ingot/copper"
   },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
   },
-  "chimney": {
-   "base": "game:block/clay/bloomery/aged/chimney"
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
-  "ember": {
-   "base": "game:block/coal/ember"
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
   },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "kilnwall": {
+   "base": "game:block/clay/bloomery/aged/base"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
   },
   "coal": {
    "base": "game:block/coal/charcoal"
@@ -156,17 +153,20 @@
   "brick": {
    "base": "game:block/stone/agedbrick/andesite1"
   },
-  "kilnwall": {
-   "base": "game:block/clay/bloomery/aged/base"
-  },
   "bobina": {
    "base": "game:block/metal/sheet/copper1"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
+  "ember": {
+   "base": "game:block/coal/ember"
   },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
+  "chimney": {
+   "base": "game:block/clay/bloomery/aged/chimney"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
+  },
+  "refratario": {
+   "base": "game:block/clay/fireclay"
   }
  },
  "drawtype": "json",

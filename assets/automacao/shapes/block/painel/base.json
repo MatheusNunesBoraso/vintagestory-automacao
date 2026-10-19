@@ -2,18 +2,18 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
-  "darkwood": "game:block/wood/debarked/aged",
-  "brass": "game:block/metal/tarnished/brass",
-  "coal": "game:block/coal/charcoal",
-  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
   "cobre": "game:block/metal/tarnished/tarnished-copper",
-  "planks": "game:block/wood/planks/aged1",
   "corroded": "game:block/metal/corroded/rusty3",
-  "mossy": "game:block/wood/debarked/mossy",
+  "paper": "game:block/cloth/paper/blank-small",
   "red": "game:block/cloth/basic/red",
+  "mossy": "game:block/wood/debarked/mossy",
+  "coal": "game:block/coal/charcoal",
+  "brass": "game:block/metal/tarnished/brass",
+  "darkwood": "game:block/wood/debarked/aged",
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "iron": "game:block/metal/tarnished/rivets3x3/rusty-iron",
   "isolador": "game:block/clay/hardened/cream",
-  "paper": "game:block/cloth/paper/blank-small"
+  "planks": "game:block/wood/planks/aged1"
  },
  "elements": [
   {

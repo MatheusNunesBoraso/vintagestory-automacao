@@ -1,0 +1,29 @@
+[
+ {
+  "ingredientPattern": "K_K,LDL,K_K",
+  "ingredients": {
+   "D": {
+    "type": "item",
+    "code": "game:drygrass",
+    "quantity": 1
+   },
+   "K": {
+    "type": "item",
+    "code": "game:stick",
+    "quantity": 1
+   },
+   "L": {
+    "type": "item",
+    "code": "game:firewood",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+   "type": "block",
+   "code": "automacao:peneira_balanco-south",
+   "quantity": 1
+  }
+ }
+]

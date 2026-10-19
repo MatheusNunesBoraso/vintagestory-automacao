@@ -43,9 +43,20 @@ namespace Automacao
         int atual;
         string filtroGrupo;
 
+        static GuiDialogManual aberto;
+
         public GuiDialogManual(ICoreClientAPI capi) : base(Lang.Get("automacao:manual-titulo"), capi)
         {
             Carregar();
+        }
+
+        /// <summary>Abre o manual direto no capítulo com esse título (botão "Como funciona" das peças).</summary>
+        public static void AbrirEm(ICoreClientAPI capi, string titulo)
+        {
+            aberto ??= new GuiDialogManual(capi);
+            int i = aberto.capitulos.FindIndex(c => c.Titulo == titulo);
+            if (i >= 0) { aberto.atual = i; aberto.filtroGrupo = aberto.capitulos[i].Grupo; }
+            if (aberto.IsOpened()) aberto.Compor(); else aberto.TryOpen();
         }
 
         void Carregar()
@@ -112,7 +123,7 @@ namespace Automacao
             {
                 int idx = i;
                 var b = ElementBounds.Fixed(0, y, menuW - 8, 30);
-                var botao = new GuiElementTextButton(capi, (idx == atual ? "▶ " : "") + c.Titulo,
+                var botao = new GuiElementTextButton(capi, (idx == atual ? "» " : "") + c.Titulo,
                     CairoFont.WhiteSmallText(), CairoFont.WhiteSmallText().WithColor(GuiStyle.ActiveButtonTextColor),
                     () => { atual = idx; Compor(); return true; }, b, EnumButtonStyle.Small);
                 cont.Add(botao);

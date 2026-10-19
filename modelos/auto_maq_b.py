@@ -457,7 +457,7 @@ def modelos(k):
             },
             "auto": {
                 "cat": "maquina",
-                "desc": "Versão elétrica do Cogumeleiro: o motor toca a bomba, que puxa água do barril, sobe pelo cano e o aspersor gira soltando névoa nos troncos de cogumelo da área — nascem mais rápido e mesmo fora da sombra. Colhe sozinha e põe na bandeja da frente (ignora os venenosos se você quiser). Gasta pouca energia. Receita: tora, barril, cobre e engrenagem enferrujada.",
+                "desc": "Cultiva cogumelos sozinha, sem tronco: coloque cogumelos no bauzinho e escolha até 2 espécies por estufa (quer mais espécies? faça mais estufas). Com energia, cada espécie dá 1 ou 2 cogumelos por dia, e o aspersor mantém a névoa úmida lá dentro. Também pode catar cogumelo do mato na área (ignorando os venenosos, se você quiser). Gasta pouca energia. Receita: tora, barril, cobre e engrenagem enferrujada.",
                 "pivots": {"aspersor": [8, 11.375, 8], "polia": [10.75, 2.5, 2.5]},
                 "modes": MODOS,
                 "anim": [{"part": "aspersor", "spin": "y", "speed": 3}, {"part": "polia", "spin": "x", "speed": 8}],

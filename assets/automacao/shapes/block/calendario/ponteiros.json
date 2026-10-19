@@ -2,8 +2,8 @@
  "textureWidth": 16,
  "textureHeight": 16,
  "textures": {
-  "brass": "game:block/metal/tarnished/brass",
-  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2"
+  "darkiron": "game:block/metal/tarnished/sheet/rusty-iron2",
+  "brass": "game:block/metal/tarnished/brass"
  },
  "elements": [
   {

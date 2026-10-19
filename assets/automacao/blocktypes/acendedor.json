@@ -116,53 +116,53 @@
   "base": "automacao:block/acendedor/full"
  },
  "textures": {
-  "flame": {
-   "base": "game:block/fire-orange"
-  },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "cobble": {
-   "base": "game:block/stone/cobblestone/andesite2"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "brick": {
-   "base": "game:block/stone/agedbrick/andesite1"
-  },
-  "coal": {
-   "base": "game:block/coal/charcoal"
-  },
   "rebite": {
    "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "glass": {
-   "base": "game:block/glass/leaded-brown"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "glass": {
+   "base": "game:block/glass/leaded-brown"
+  },
+  "flame": {
+   "base": "game:block/fire-orange"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "cobble": {
+   "base": "game:block/stone/cobblestone/andesite2"
+  },
   "mossy": {
    "base": "game:block/wood/debarked/mossy"
   },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
+  },
   "bobina": {
    "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"

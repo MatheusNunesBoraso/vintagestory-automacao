@@ -1,0 +1,194 @@
+{
+ "code": "pedestal_raio",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "pedestal_raio",
+  "chave": "pedestal_raio",
+  "modos": [
+   "vazio",
+   "enferrujada",
+   "tempestade",
+   "temporal"
+  ],
+  "modoTrabalhando": "tempestade",
+  "partes": [
+   {
+    "nome": "engr_ferrugem",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": false,
+    "anim": [],
+    "show": [
+     "enferrujada",
+     "tempestade"
+    ]
+   },
+   {
+    "nome": "engr_temporal",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": [],
+    "show": [
+     "temporal"
+    ]
+   }
+  ],
+  "usaArea": false,
+  "bau": false,
+  "glowModos": [
+   "temporal"
+  ]
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/pedestal_raio/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/pedestal_raio/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/pedestal_raio/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/pedestal_raio/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/pedestal_raio/full"
+ },
+ "textures": {
+  "logend": {
+   "base": "game:block/wood/firewood/aged/north"
+  },
+  "ferrugem": {
+   "base": "game:block/metal/tarnished/rusty-iron"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "bark": {
+   "base": "game:block/wood/bark/oak"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "logbark": {
+   "base": "game:block/wood/firewood/aged/bark"
+  },
+  "silex": {
+   "base": "game:block/stone/flint"
+  },
+  "temporal": {
+   "base": "game:item/resource/temporalgear"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Wood",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.046875,
+  "y1": 0,
+  "z1": 0.171875,
+  "x2": 0.96875,
+  "y2": 1.11875,
+  "z2": 0.953125
+ },
+ "selectionbox": {
+  "x1": 0.046875,
+  "y1": 0,
+  "z1": 0.171875,
+  "x2": 0.96875,
+  "y2": 1.11875,
+  "z2": 0.953125
+ },
+ "sounds": {
+  "place": "game:block/planks",
+  "break": "game:block/planks",
+  "hit": "game:block/planks",
+  "walk": "game:walk/wood"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.559375,
+   "z": 0.5
+  },
+  "scale": 1.0
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

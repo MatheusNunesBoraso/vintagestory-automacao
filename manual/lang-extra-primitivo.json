@@ -1,0 +1,16 @@
+{
+ "item-engrenagemmadeira": "Engrenagem de Madeira",
+ "itemdesc-engrenagemmadeira": "Engrenagem entalhada no Torno de Vara. Serve no lugar da engrenagem enferrujada nas fontes de energia da Automação (Roda Geradora, Cata-vento, Gerador a Lenha, Torre, Painel Solar). Não vale nada no comerciante.\n\nMod de @mtnunes",
+ "st-manual-segure": "Segure o botão direito pra usar · Shift + clique (mão vazia) = automático",
+ "info-peneira_balanco": "Segure cascalho ou areia na mão e segure o botão direito (4 por vez)",
+ "info-torno_vara": "Segure lenha (ou tábuas) na mão e segure o botão direito (2 = 1 engrenagem)",
+ "info-gerador_manivela": "Segure o botão direito pra girar a manivela (cansa: dá fome) · Shift + clique (mão vazia) = automático",
+ "erro-peneira_balanco": "Segure cascalho ou areia na mão",
+ "erro-torno_vara": "Segure lenha ou tábuas na mão (precisa de 2)",
+ "st-fonte-manivela": "Parado: segure o botão direito pra girar",
+ "st-manual-auto": "Automático: trabalhando sozinho enquanto você estiver por perto",
+ "auto-ligou": "automático ligado. Pega o material do seu inventário e para se você se afastar mais de 8 blocos. Shift + clique de novo desliga.",
+ "auto-desligou": "automático desligado.",
+ "auto-longe": "parou: você se afastou demais.",
+ "auto-acabou": "parou: acabou o material no seu inventário."
+}

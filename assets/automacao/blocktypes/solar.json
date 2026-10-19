@@ -96,35 +96,35 @@
   "base": "automacao:block/solar/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "vidro_escuro": {
-   "base": "game:block/glass/smoky"
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
   },
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
   },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
   "luz": {
    "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "brass": {
    "base": "game:block/metal/tarnished/brass"
   },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "vidro_escuro": {
+   "base": "game:block/glass/smoky"
+  },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "coal": {
-   "base": "game:block/coal/charcoal"
-  },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"

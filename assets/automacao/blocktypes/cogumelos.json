@@ -23,31 +23,16 @@
   "modoTrabalhando": "ligado",
   "partes": [
    {
-    "nome": "aspersor",
+    "nome": "eixo",
     "pivo": [
-     8,
-     11.375,
-     8
+     14,
+     3.15,
+     2.75
     ],
     "luz": false,
     "anim": [
      {
-      "spin": "y",
-      "speed": 3
-     }
-    ]
-   },
-   {
-    "nome": "polia",
-    "pivo": [
-     10.75,
-     2.5,
-     2.5
-    ],
-    "luz": false,
-    "anim": [
-     {
-      "spin": "x",
+      "spin": "z",
       "speed": 8
      }
     ]
@@ -101,62 +86,56 @@
   "base": "automacao:block/cogumelos/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "logend": {
-   "base": "game:block/wood/firewood/aged/north"
-  },
-  "flyagaric": {
-   "base": "game:block/plant/mushroom/flyagariccap"
-  },
-  "bark": {
-   "base": "game:block/wood/bark/oak"
-  },
-  "stipebolete": {
-   "base": "game:block/plant/mushroom/boletestipe"
-  },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
-  },
-  "chanterelle": {
-   "base": "game:block/plant/mushroom/chanterelle"
-  },
-  "flyagaricstipe": {
-   "base": "game:block/plant/mushroom/flyagaricstipe"
-  },
-  "capfield": {
-   "base": "game:block/plant/mushroom/fieldmushroomcap"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
   },
-  "shelf": {
-   "base": "game:block/plant/mushroom/chickenofthewoods"
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
   },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "terra": {
+   "base": "game:block/soil/fertcompost"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "capfield": {
+   "base": "game:block/plant/mushroom/fieldmushroomcap"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "stipebolete": {
+   "base": "game:block/plant/mushroom/boletestipe"
+  },
+  "paper": {
+   "base": "game:block/cloth/paper/blank-small"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "vidro_estufa": {
+   "base": "game:block/glass/leaded"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "capbolete": {
+   "base": "game:block/plant/mushroom/boletecap"
+  },
+  "stipefield": {
+   "base": "game:block/plant/mushroom/fieldmushroomstipe"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
   },
   "barril": {
    "base": "game:block/wood/barrel/sides"
@@ -164,17 +143,14 @@
   "water": {
    "base": "game:block/liquid/water"
   },
-  "stipefield": {
-   "base": "game:block/plant/mushroom/fieldmushroomstipe"
+  "brick": {
+   "base": "game:block/stone/agedbrick/andesite1"
   },
-  "capbolete": {
-   "base": "game:block/plant/mushroom/boletecap"
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "isolador": {
-   "base": "game:block/clay/hardened/cream"
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   }
  },
  "drawtype": "json",
@@ -189,20 +165,20 @@
  "resistance": 3,
  "replaceable": 500,
  "collisionbox": {
-  "x1": 0.0625,
+  "x1": 0,
   "y1": 0,
-  "z1": 0.00625,
-  "x2": 0.984375,
-  "y2": 0.828125,
-  "z2": 0.96875
+  "z1": 0,
+  "x2": 1,
+  "y2": 1.1,
+  "z2": 1
  },
  "selectionbox": {
-  "x1": 0.0625,
+  "x1": 0,
   "y1": 0,
-  "z1": 0.00625,
-  "x2": 0.984375,
-  "y2": 0.828125,
-  "z2": 0.96875
+  "z1": 0,
+  "x2": 1,
+  "y2": 1.1,
+  "z2": 1
  },
  "sounds": {
   "place": "game:block/anvil",
@@ -218,7 +194,7 @@
   },
   "origin": {
    "x": 0.5,
-   "y": 0.4140625,
+   "y": 0.55,
    "z": 0.5
   },
   "scale": 1.0

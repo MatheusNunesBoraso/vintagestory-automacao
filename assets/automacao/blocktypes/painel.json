@@ -71,11 +71,23 @@
   "base": "automacao:block/painel/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
+  "corroded": {
+   "base": "game:block/metal/corroded/rusty3"
+  },
+  "paper": {
+   "base": "game:block/cloth/paper/blank-small"
+  },
+  "red": {
+   "base": "game:block/cloth/basic/red"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
   },
   "luz": {
    "base": "game:block/machine/statictranslocator/rustyglow"
@@ -83,32 +95,20 @@
   "brass": {
    "base": "game:block/metal/tarnished/brass"
   },
-  "coal": {
-   "base": "game:block/coal/charcoal"
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
   },
   "iron": {
    "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
-  },
-  "corroded": {
-   "base": "game:block/metal/corroded/rusty3"
-  },
-  "mossy": {
-   "base": "game:block/wood/debarked/mossy"
-  },
-  "red": {
-   "base": "game:block/cloth/basic/red"
-  },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
   },
-  "paper": {
-   "base": "game:block/cloth/paper/blank-small"
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
   }
  },
  "drawtype": "json",

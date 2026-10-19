@@ -101,50 +101,11 @@
   "base": "automacao:block/defumador/full"
  },
  "textures": {
-  "raw": {
-   "base": "game:item/food/meat/raw"
-  },
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "smoked": {
-   "base": "game:item/food/meat/smoked"
-  },
-  "fishsmoked": {
-   "base": "game:item/food/meat/fish-smoked"
-  },
-  "fishraw": {
-   "base": "game:item/food/meat/fish-cured"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
-  },
-  "ember": {
-   "base": "game:block/coal/ember"
   },
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
@@ -152,14 +113,53 @@
   "mossy": {
    "base": "game:block/wood/debarked/mossy"
   },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
+  "smoked": {
+   "base": "game:item/food/meat/smoked"
   },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
+  },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "fishraw": {
+   "base": "game:item/food/meat/fish-cured"
+  },
+  "fishsmoked": {
+   "base": "game:item/food/meat/fish-smoked"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "raw": {
+   "base": "game:item/food/meat/raw"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "ember": {
+   "base": "game:block/coal/ember"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   }
  },
  "drawtype": "json",

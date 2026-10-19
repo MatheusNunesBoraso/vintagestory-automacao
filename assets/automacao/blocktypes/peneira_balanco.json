@@ -1,0 +1,187 @@
+{
+ "code": "peneira_balanco",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "peneira_balanco",
+  "chave": "peneira_balanco",
+  "modos": [
+   "parado",
+   "usando"
+  ],
+  "modoTrabalhando": "usando",
+  "partes": [
+   {
+    "nome": "balanco",
+    "pivo": [
+     8,
+     22,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "swing": "z",
+      "freq": 0.9,
+      "amp": 0.12
+     }
+    ]
+   }
+  ],
+  "usaArea": false,
+  "bau": false
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/peneira_balanco/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/peneira_balanco/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/peneira_balanco/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/peneira_balanco/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/peneira_balanco/full"
+ },
+ "textures": {
+  "logend": {
+   "base": "game:block/wood/firewood/aged/north"
+  },
+  "pepita": {
+   "base": "game:item/resource/nugget/nativecopper"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "areia": {
+   "base": "game:block/stone/sand/andesite"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "gravel": {
+   "base": "game:block/stone/gravel/andesite"
+  },
+  "leather": {
+   "base": "game:block/leather/aged1"
+  },
+  "basketside": {
+   "base": "game:block/reed/basket/aged-northsouth"
+  },
+  "rope": {
+   "base": "game:block/cloth/reedrope"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "logbark": {
+   "base": "game:block/wood/firewood/aged/bark"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "silex": {
+   "base": "game:block/stone/flint"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Wood",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.0625,
+  "y1": 0,
+  "z1": 0.015625,
+  "x2": 1,
+  "y2": 1.478125,
+  "z2": 0.984375
+ },
+ "selectionbox": {
+  "x1": 0.0625,
+  "y1": 0,
+  "z1": 0.015625,
+  "x2": 1,
+  "y2": 1.478125,
+  "z2": 0.984375
+ },
+ "sounds": {
+  "place": "game:block/planks",
+  "break": "game:block/planks",
+  "hit": "game:block/planks",
+  "walk": "game:walk/wood"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.7390625,
+   "z": 0.5
+  },
+  "scale": 0.78
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

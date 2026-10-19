@@ -1,6 +1,6 @@
 [
  {
-  "ingredientPattern": "PHP,LGL,PIP",
+  "ingredientPattern": "PHP,VGV,PIP",
   "ingredients": {
    "G": {
     "type": "item",
@@ -17,14 +17,14 @@
     "code": "game:ingot-copper",
     "quantity": 1
    },
-   "L": {
-    "type": "block",
-    "code": "game:glass-plain",
-    "quantity": 1
-   },
    "P": {
     "type": "item",
     "code": "game:plank-*",
+    "quantity": 1
+   },
+   "V": {
+    "type": "block",
+    "code": "game:glass-plain",
     "quantity": 1
    }
   },

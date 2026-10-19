@@ -1,6 +1,6 @@
 [
  {
-  "ingredientPattern": "_I_,PGP,SLS",
+  "ingredientPattern": "_I_,PGP,SVS",
   "ingredients": {
    "G": {
     "type": "item",
@@ -12,9 +12,41 @@
     "code": "game:ingot-copper",
     "quantity": 1
    },
-   "L": {
+   "P": {
+    "type": "item",
+    "code": "game:plank-*",
+    "quantity": 1
+   },
+   "S": {
+    "type": "block",
+    "code": "game:cobblestone-*",
+    "quantity": 1
+   },
+   "V": {
     "type": "block",
     "code": "game:glass-plain",
+    "quantity": 1
+   }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+   "type": "block",
+   "code": "automacao:torre-south",
+   "quantity": 1
+  }
+ },
+ {
+  "ingredientPattern": "_I_,PGP,SVS",
+  "ingredients": {
+   "G": {
+    "type": "item",
+    "code": "automacao:engrenagemmadeira",
+    "quantity": 1
+   },
+   "I": {
+    "type": "item",
+    "code": "game:ingot-copper",
     "quantity": 1
    },
    "P": {
@@ -25,6 +57,11 @@
    "S": {
     "type": "block",
     "code": "game:cobblestone-*",
+    "quantity": 1
+   },
+   "V": {
+    "type": "block",
+    "code": "game:glass-plain",
     "quantity": 1
    }
   },

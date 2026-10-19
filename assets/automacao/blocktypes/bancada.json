@@ -86,50 +86,50 @@
   "base": "automacao:block/bancada/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "leather": {
-   "base": "game:block/leather/aged1"
-  },
-  "chestside": {
-   "base": "game:block/wood/chest/aged/sides"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
   "cobre": {
    "base": "game:block/metal/tarnished/tarnished-copper"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
   },
-  "grindtop": {
-   "base": "game:block/stone/polishedrock-old/full/andesite2"
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "chestside": {
+   "base": "game:block/wood/chest/aged/sides"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
   },
   "mossy": {
    "base": "game:block/wood/debarked/mossy"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "leather": {
+   "base": "game:block/leather/aged1"
+  },
+  "grindtop": {
+   "base": "game:block/stone/polishedrock-old/full/andesite2"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   },
   "chestlid": {
    "base": "game:block/wood/chest/aged/lid"
@@ -137,8 +137,8 @@
   "isolador": {
    "base": "game:block/clay/hardened/cream"
   },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
   }
  },
  "drawtype": "json",

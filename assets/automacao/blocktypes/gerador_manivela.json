@@ -1,0 +1,205 @@
+{
+ "code": "gerador_manivela",
+ "class": "BlockMaquina",
+ "entityClass": "BEMaquina",
+ "variantgroups": [
+  {
+   "code": "side",
+   "states": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ ],
+ "attributes": {
+  "trabalho": "gerador_manivela",
+  "chave": "gerador_manivela",
+  "modos": [
+   "parado",
+   "girando"
+  ],
+  "modoTrabalhando": "girando",
+  "partes": [
+   {
+    "nome": "gira",
+    "pivo": [
+     8,
+     6.5,
+     8
+    ],
+    "luz": false,
+    "anim": [
+     {
+      "spin": "x",
+      "speed": 3
+     }
+    ]
+   },
+   {
+    "nome": "luzes",
+    "pivo": [
+     8,
+     0,
+     8
+    ],
+    "luz": true,
+    "anim": []
+   }
+  ],
+  "usaArea": false,
+  "bau": false,
+  "glowModos": [
+   "girando"
+  ]
+ },
+ "behaviors": [
+  {
+   "name": "AutomacaoGirarChave"
+  }
+ ],
+ "creativeinventory": {
+  "general": [
+   "*-south"
+  ],
+  "mechanics": [
+   "*-south"
+  ]
+ },
+ "shapeByType": {
+  "*-south": {
+   "base": "automacao:block/gerador_manivela/base",
+   "rotateY": 0
+  },
+  "*-east": {
+   "base": "automacao:block/gerador_manivela/base",
+   "rotateY": 90
+  },
+  "*-north": {
+   "base": "automacao:block/gerador_manivela/base",
+   "rotateY": 180
+  },
+  "*-west": {
+   "base": "automacao:block/gerador_manivela/base",
+   "rotateY": 270
+  }
+ },
+ "shapeInventory": {
+  "base": "automacao:block/gerador_manivela/full"
+ },
+ "textures": {
+  "ima": {
+   "base": "game:block/stone/rock/basalt1"
+  },
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
+  },
+  "stonewheel": {
+   "base": "game:block/stone/polishedrock/andesite"
+  },
+  "bronze": {
+   "base": "game:block/metal/tarnished/copper"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
+  "mossy": {
+   "base": "game:block/wood/debarked/mossy"
+  },
+  "coal": {
+   "base": "game:block/coal/charcoal"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "leather": {
+   "base": "game:block/leather/aged1"
+  },
+  "rope": {
+   "base": "game:block/cloth/reedrope"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "isolador": {
+   "base": "game:block/clay/hardened/cream"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  }
+ },
+ "drawtype": "json",
+ "blockmaterial": "Wood",
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaque": {
+  "all": false
+ },
+ "lightAbsorption": 0,
+ "resistance": 3,
+ "replaceable": 500,
+ "collisionbox": {
+  "x1": 0.015625,
+  "y1": 0,
+  "z1": 0.1546875,
+  "x2": 0.953125,
+  "y2": 0.8125,
+  "z2": 0.825
+ },
+ "selectionbox": {
+  "x1": 0.015625,
+  "y1": 0,
+  "z1": 0.1546875,
+  "x2": 0.953125,
+  "y2": 0.8125,
+  "z2": 0.825
+ },
+ "sounds": {
+  "place": "game:block/planks",
+  "break": "game:block/planks",
+  "hit": "game:block/planks",
+  "walk": "game:walk/wood"
+ },
+ "guiTransform": {
+  "rotation": {
+   "x": -22,
+   "y": -30,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.40625,
+   "z": 0.5
+  },
+  "scale": 1.0
+ },
+ "groundTransform": {
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 2.2
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.9,
+   "y": -0.3,
+   "z": -0.5
+  },
+  "rotation": {
+   "x": 0,
+   "y": -90,
+   "z": 0
+  },
+  "scale": 0.4
+ }
+}

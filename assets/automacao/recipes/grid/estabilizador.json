@@ -1,6 +1,6 @@
 [
  {
-  "ingredientPattern": "ITI,LGL,SSS",
+  "ingredientPattern": "ITI,VGV,SSS",
   "ingredients": {
    "G": {
     "type": "item",
@@ -12,11 +12,6 @@
     "code": "game:ingot-copper",
     "quantity": 1
    },
-   "L": {
-    "type": "block",
-    "code": "game:glass-plain",
-    "quantity": 1
-   },
    "S": {
     "type": "block",
     "code": "game:cobblestone-*",
@@ -25,6 +20,11 @@
    "T": {
     "type": "item",
     "code": "game:gear-temporal",
+    "quantity": 1
+   },
+   "V": {
+    "type": "block",
+    "code": "game:glass-plain",
     "quantity": 1
    }
   },

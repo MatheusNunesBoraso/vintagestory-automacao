@@ -117,38 +117,14 @@
   "base": "automacao:block/prensa/full"
  },
  "textures": {
-  "darkiron": {
-   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
-  },
-  "darkwood": {
-   "base": "game:block/wood/debarked/aged"
-  },
-  "luz": {
-   "base": "game:block/machine/statictranslocator/rustyglow"
-  },
-  "moss": {
-   "base": "game:block/plant/moss"
-  },
-  "brass": {
-   "base": "game:block/metal/tarnished/brass"
-  },
-  "carcaca": {
-   "base": "game:block/metal/tarnished/rusty-iron1"
-  },
-  "fruta_cereja": {
-   "base": "game:item/food/fruit/cherry"
-  },
-  "iron": {
-   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
-  },
-  "rebite": {
-   "base": "game:block/metal/tarnished/iron-riveted1"
-  },
-  "planks": {
-   "base": "game:block/wood/planks/aged1"
+  "cobre": {
+   "base": "game:block/metal/tarnished/tarnished-copper"
   },
   "corroded": {
    "base": "game:block/metal/corroded/rusty3"
+  },
+  "fruta_cereja": {
+   "base": "game:item/food/fruit/cherry"
   },
   "cobble": {
    "base": "game:block/stone/cobblestone/andesite2"
@@ -156,26 +132,50 @@
   "mossy": {
    "base": "game:block/wood/debarked/mossy"
   },
-  "bobina": {
-   "base": "game:block/metal/sheet/copper1"
-  },
-  "basketside": {
-   "base": "game:block/reed/basket/aged-northsouth"
-  },
-  "fruta_verm": {
-   "base": "game:item/food/fruit/raspberry"
-  },
-  "cobre": {
-   "base": "game:block/metal/tarnished/tarnished-copper"
-  },
   "suco": {
    "base": "game:block/liquid/wine"
+  },
+  "darkwood": {
+   "base": "game:block/wood/debarked/aged"
   },
   "isolador": {
    "base": "game:block/clay/hardened/cream"
   },
+  "rebite": {
+   "base": "game:block/metal/tarnished/iron-riveted1"
+  },
+  "fruta_verm": {
+   "base": "game:item/food/fruit/raspberry"
+  },
+  "luz": {
+   "base": "game:block/machine/statictranslocator/rustyglow"
+  },
+  "darkiron": {
+   "base": "game:block/metal/tarnished/sheet/rusty-iron2"
+  },
+  "carcaca": {
+   "base": "game:block/metal/tarnished/rusty-iron1"
+  },
+  "brass": {
+   "base": "game:block/metal/tarnished/brass"
+  },
+  "planks": {
+   "base": "game:block/wood/planks/aged1"
+  },
+  "moss": {
+   "base": "game:block/plant/moss"
+  },
   "balde": {
    "base": "game:block/wood/bucket/aged-sides"
+  },
+  "basketside": {
+   "base": "game:block/reed/basket/aged-northsouth"
+  },
+  "bobina": {
+   "base": "game:block/metal/sheet/copper1"
+  },
+  "iron": {
+   "base": "game:block/metal/tarnished/rivets3x3/rusty-iron"
   }
  },
  "drawtype": "json",

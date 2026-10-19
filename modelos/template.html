@@ -310,6 +310,7 @@ function faceMaterial(face) {
   const uv = face?.uv || [0, 0, 16, 16];
   t.repeat.set((uv[2] - uv[0]) / 16, (uv[3] - uv[1]) / 16);
   t.offset.set(uv[0] / 16, 1 - uv[3] / 16);
+  if (face.rotation) { t.center.set(0.5, 0.5); t.rotation = -face.rotation * Math.PI / 180; }
   if (glow) return new THREE.MeshBasicMaterial({ map: t, transparent: true, alphaTest: 0.1 });
   return new THREE.MeshLambertMaterial({ map: t, transparent: true, alphaTest: 0.1 });
 }
@@ -514,6 +515,7 @@ function applyMode() {
       const pt = MODELS[modelKey].parts[n];
       if (pt) pt.elements.forEach(e => hidden.add(e.name)); else hidden.add(n);
     }
+    Object.assign(swaps, (am.swaps || {})[mode] || {});
     if (autoOn(am, am.glow)) (am.glowTex || ['luz']).forEach(t => forceGlow.add(t));
   }
   glowLight.intensity = 0;
@@ -956,7 +958,7 @@ function renderModels() {
   const cat = c => keys.filter(k => MODELS[k].auto?.cat === c);
   const grp = (t, ks) => ks.length ? `<span class="grp">${t}</span>${ks.map(btn).join('')}` : '';
   const autoRow = keys.some(k => MODELS[k].auto)
-    ? `<div class="autorow">${grp('⚡ Energia', cat('energia'))}${grp('Baterias e fios', cat('bateria'))}${grp('Rede', cat('rede'))}${grp('Máquinas', cat('maquina'))}</div>` : '';
+    ? `<div class="autorow">${grp('📦 Arca de Lenha (mod novo)', cat('arca'))}${grp('⚡ Pedestal do Raio (novo)', cat('pedestal'))}${grp('🪵 Começo à mão', cat('primitivo'))}${grp('⚡ Energia', cat('energia'))}${grp('Baterias e fios', cat('bateria'))}${grp('Rede', cat('rede'))}${grp('Máquinas', cat('maquina'))}</div>` : '';
   const outros = showOld || !MODELS[modelKey].auto;
   $('models').innerHTML = `${autoRow}<button id="bOld" class="${outros ? 'on' : ''}">Outros mods (${novos.length + feitos.length}) ${outros ? '▴' : '▾'}</button><button id="bIcons" class="${iconsOpen ? 'on' : ''}">Ícones</button>${outros ? grp('Novos', novos) + grp('Já feitos', feitos) : ''}`;
   $('bOld').onclick = () => { showOld = !outros; renderModels(); };

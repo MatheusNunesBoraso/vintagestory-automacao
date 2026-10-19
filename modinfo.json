@@ -6,7 +6,7 @@
 		"Matheus"
 	],
 	"description": "Energia sem fio pro Vintage Story, com cara de máquina velha e enferrujada. Fontes: Roda Geradora (rio), Torre de Tempestade (chuva e raio), Cata-vento, Painel Solar e Gerador a Lenha. Baterias guardam, Postes de Energia levam por alcance (sem fio nenhum). Mais de 35 máquinas fazem o trabalho chato: moer, peneirar, pescar, serrar, carvão, defumar, mel, cogumelos, transporte, ração, consertos, tochas, olaria, fornalha, forja, prensa, alambique, fogão, curtume, tear, chocadeira, pedreira, sonda, geladeira, aquecedor, luz, irrigação, portão, cerca elétrica, elevador, calendário com previsão do tempo e da tempestade temporal, estabilizador temporal e a Sentinela. Vem com um Manual: guia de cada máquina + tutorial dos primeiros 100 dias.\n\nMod de @mtnunes",
-	"version": "1.0.0",
+	"version": "1.3.0",
 	"iconPath": "modicon.png",
 	"side": "Universal",
 	"requiredOnClient": true,
