@@ -7,7 +7,7 @@
 **Energia sem fio, máquinas velhas e enferrujadas fazendo o trabalho chato — e um Manual que ensina tudo.**
 
 ![Vintage Story 1.22](https://img.shields.io/badge/Vintage%20Story-1.22-6fe8ff?style=for-the-badge)
-![Versão](https://img.shields.io/badge/vers%C3%A3o-1.3.1-e0a64a?style=for-the-badge)
+![Versão](https://img.shields.io/badge/vers%C3%A3o-1.3.3-e0a64a?style=for-the-badge)
 ![Peças](https://img.shields.io/badge/pe%C3%A7as-47-9cff8f?style=for-the-badge)
 ![Idioma](https://img.shields.io/badge/idioma-pt--br-ff9ce0?style=for-the-badge)
 

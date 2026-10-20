@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
@@ -95,8 +96,37 @@ namespace Automacao
             Berco(m).MarkDirty();
             m.Feitos++;
             m.Som("game:sounds/effect/translocate-active", 0.8f, 24);
-            m.Falar("pedestal-virou", true);
+            AvisarTodos(m);
             Atualizar(m);
+        }
+
+        /// <summary>Avisa no chat todo mundo online (o raio pode cair longe de quem está esperando), com distância e direção.</summary>
+        static void AvisarTodos(BEMaquina m)
+        {
+            var centro = m.Pos.ToVec3d().Add(0.5, 0.5, 0.5);
+            foreach (var p in m.Api.World.AllOnlinePlayers.OfType<IServerPlayer>())
+            {
+                string lc = p.LanguageCode;
+                string onde = "";
+                if (p.Entity != null)
+                {
+                    double dx = centro.X - p.Entity.Pos.X, dz = centro.Z - p.Entity.Pos.Z;
+                    int dist = (int)Math.Round(Math.Sqrt(dx * dx + dz * dz));
+                    onde = dist < 8 ? Lang.GetL(lc, "automacao:fala-pedestal-aqui")
+                        : Lang.GetL(lc, "automacao:fala-pedestal-longe", dist, Lang.GetL(lc, "automacao:rumo-" + Rumo(dx, dz)));
+                }
+                p.SendMessage(GlobalConstants.GeneralChatGroup,
+                    $"<strong>{Lang.GetL(lc, "automacao:block-pedestal_raio")}:</strong> {Lang.GetL(lc, "automacao:fala-pedestal-virou")}{onde}",
+                    EnumChatType.Notification);
+            }
+        }
+
+        /// <summary>Rumo de 8 pontas (o norte do jogo é -Z).</summary>
+        static string Rumo(double dx, double dz)
+        {
+            string[] r = { "l", "se", "s", "so", "o", "no", "n", "ne" };
+            double ang = Math.Atan2(dz, dx) * GameMath.RAD2DEG;
+            return r[((int)Math.Round(ang / 45) % 8 + 8) % 8];
         }
 
         public override string Info(BEMaquina m)
@@ -108,25 +138,103 @@ namespace Automacao
         }
 
         /// <summary>
-        /// O jogo só solta raio no evento de trovoada (heavythunder / lightthunder) e só com 12°C ou mais:
-        /// chuva comum não tem raio. Diz pro jogador em qual caso está.
+        /// Chance de raio, com as mesmas contas do jogo (WeatherSimulationRegion.TickEvery25ms): a cada 200 ms cada
+        /// região sorteia um raio com chance LightningRate, se no CENTRO dela fizer o calor mínimo e houver nuvem
+        /// (RainCloudOverlay > 0,15); o raio cai num ponto qualquer a até 200 blocos do centro. O pedestal pega o que
+        /// cair a até <see cref="Alcance"/> blocos — inclusive raio das regiões vizinhas.
+        /// Sem trovoada, mostra quando o tempo muda e a chance da próxima ser trovoada com raio.
         /// </summary>
         static string Clima(BEMaquina m)
         {
             try
             {
                 var clima = m.Api.ModLoader.GetModSystem<WeatherSystemBase>();
-                int tam = m.Api.World.BlockAccessor.RegionSize;
-                long idx = clima.MapRegionIndex2D(m.Pos.X / tam, m.Pos.Z / tam);
-                if (!clima.weatherSimByMapRegion.TryGetValue(idx, out var sim) || sim?.CurWeatherEvent == null) return "";
-                var ev = sim.CurWeatherEvent.State;
-                if (ev.LightningRate <= 0) return Mao.L("info-pedestal-semtrovoada");
-                float temp = m.Api.World.BlockAccessor.GetClimateAt(m.Pos, EnumGetClimateMode.NowValues)?.Temperature ?? 99;
-                if (temp < ev.LightningMinTemp) return Mao.L("info-pedestal-frio", (int)temp, (int)ev.LightningMinTemp);
-                return Mao.L("info-pedestal-trovoada");
+                var ba = m.Api.World.BlockAccessor;
+                int tam = ba.RegionSize;
+                int rx = m.Pos.X / tam, rz = m.Pos.Z / tam;
+                if (!clima.weatherSimByMapRegion.TryGetValue(clima.MapRegionIndex2D(rx, rz), out var aqui) || aqui?.CurWeatherEvent == null) return "";
+
+                // Raios por minuto que caem no alcance (soma da região do pedestal e das 8 vizinhas)
+                double porMinuto = 0;
+                for (int dx = -1; dx <= 1; dx++)
+                    for (int dz = -1; dz <= 1; dz++)
+                    {
+                        if (!clima.weatherSimByMapRegion.TryGetValue(clima.MapRegionIndex2D(rx + dx, rz + dz), out var sim) || sim?.CurWeatherEvent == null) continue;
+                        var ev = sim.CurWeatherEvent.State;
+                        if (ev.LightningRate <= 0) continue;
+                        var cc = CentroClima(m, rx + dx, rz + dz, tam);
+                        if (cc == null || cc.Temperature < ev.LightningMinTemp || cc.RainCloudOverlay <= 0.15f) continue;
+                        double cx = (rx + dx) * tam + tam / 2, cz = (rz + dz) * tam + tam / 2;
+                        porMinuto += 300 * ev.LightningRate * Cobre(m.Pos.X + 0.5 - cx) * Cobre(m.Pos.Z + 0.5 - cz);
+                    }
+
+                var lin = new List<string>();
+                double horasAte = aqui.CurWeatherEvent.State.ActiveUntilTotalHours - m.Api.World.Calendar.TotalHours;
+                if (porMinuto > 0)
+                {
+                    int pct = Pct(1 - Math.Exp(-porMinuto));
+                    lin.Add(Mao.L("info-pedestal-chance", pct, (int)Math.Round(60 / porMinuto)));
+                    if (horasAte > 0) lin.Add(Mao.L("info-pedestal-dura", Horas(horasAte)));
+                    return string.Join("\n", lin);
+                }
+
+                // Sem raio agora: diz o porquê (olhando a região do pedestal)
+                var st = aqui.CurWeatherEvent.State;
+                var centro = CentroClima(m, rx, rz, tam);
+                if (st.LightningRate <= 0) lin.Add(Mao.L("info-pedestal-semtrovoada"));
+                else if (centro != null && centro.Temperature < st.LightningMinTemp) lin.Add(Mao.L("info-pedestal-frio", (int)centro.Temperature, (int)st.LightningMinTemp));
+                else lin.Add(Mao.L("info-pedestal-semnuvem"));
+
+                int prox = Pct(ChanceProximaTrovoada(aqui, centro));
+                lin.Add(horasAte > 0 ? Mao.L("info-pedestal-proxima", Horas(horasAte), prox) : Mao.L("info-pedestal-proxima-ja", prox));
+                return string.Join("\n", lin);
             }
             catch { return ""; }
         }
+
+        /// <summary>Clima no centro da região, na altura da chuva (é onde o jogo confere calor e nuvem).</summary>
+        static ClimateCondition CentroClima(BEMaquina m, int rx, int rz, int tam)
+        {
+            var ba = m.Api.World.BlockAccessor;
+            var c = new BlockPos(rx * tam + tam / 2, 0, rz * tam + tam / 2);
+            c.Y = ba.GetRainMapHeightAt(c);
+            if (c.Y == 0) c.Y = m.Api.World.SeaLevel;
+            return ba.GetClimateAt(c, EnumGetClimateMode.NowValues);
+        }
+
+        /// <summary>Parte (0–1) do quadrado de ±200 blocos onde o raio cai que fica dentro do alcance, num eixo.</summary>
+        static double Cobre(double distCentro) => GameMath.Clamp(200 + Alcance - Math.Abs(distCentro), 0, 400) / 400.0;
+
+        /// <summary>
+        /// Chance do próximo tempo ser trovoada com raio. Imita WeatherSimulationRegion.RandomWeatherEvent — que soma os
+        /// pesos ajustados ao clima mas desconta o peso cheio de cada um — e o re-sorteio quando sai um tempo que não
+        /// pode acontecer ali (ShouldStop).
+        /// </summary>
+        static double ChanceProximaTrovoada(WeatherSimulationRegion sim, ClimateCondition c)
+        {
+            var evs = sim.WeatherEvents;
+            if (evs == null || evs.Length == 0 || c == null) return 0;
+            float total = 0;
+            foreach (var e in evs) total += e.config.getWeight(c.WorldgenRainfall, c.Temperature);
+            if (total <= 0) return 0;
+            double acum = 0, valido = 0, raio = 0;
+            for (int i = 0; i < evs.Length; i++)
+            {
+                double antes = Math.Min(acum, total);
+                acum += evs[i].config.Weight;
+                double p = (i == evs.Length - 1 ? total : Math.Min(acum, total)) - antes;
+                if (p <= 0) continue;
+                if (evs[i].AllowStop && evs[i].config.getWeight(c.Rainfall, c.Temperature) <= 0) continue;
+                valido += p;
+                var l = evs[i].config.Lightning;
+                if (l != null && l.LightningRate > 0 && c.Temperature >= l.MinTemperature) raio += p;
+            }
+            return valido > 0 ? raio / valido : 0;
+        }
+
+        static int Pct(double p) => p <= 0 ? 0 : Math.Max(1, Math.Min(100, (int)Math.Round(p * 100)));
+
+        static string Horas(double h) => h < 1 ? Mao.L("info-pedestal-menos1h") : Mao.L("info-pedestal-horas", (int)Math.Round(h));
     }
 
     /// <summary>Desvia os raios do jogo pro Pedestal do Raio mais perto que esteja esperando um.</summary>
